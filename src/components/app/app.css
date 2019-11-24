@@ -3,3 +3,45 @@
     background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+.header a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-nav a {
+    color: #000;
+    text-decoration: none;
+}
+
+.hero {
+    font-size: 3vw;
+    font-weight: 800;
+    text-align: center;
+}
+
+.alert-success {
+    background: #009A1D;
+    color: #fff;
+}
+
+.alert-error {
+    background: #DE2D23;
+    color: #fff;
+}
+
+.mdl-snackbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mdl-snackbar__text {
+    padding: 14px 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        font-size: 6vw;
+    }
+}

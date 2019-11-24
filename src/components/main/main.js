@@ -1,10 +1,10 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import Landing from '../landing';
-import About from '../about';
-import Contact from '../contact';
-import Projects from '../projects';
-import Resume from '../resume';
+import Landing from '../../pages/landing';
+import About from '../../pages/about';
+import Contact from '../../pages/contact';
+import Projects from '../../pages/projects';
+import Resume from '../../pages/resume';
 
 const Main = () => {
     return (

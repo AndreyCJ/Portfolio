@@ -9,7 +9,7 @@ export default class App extends Component {
         return (
             <div className="demo-big-content">
                 <Layout>
-                    <Header className="header-color" title="Title" scroll>
+                    <Header className="header header-color" title={<a href="/">Андрей Чеботарь</a>} scroll>
                         <Navigation>
                             <Link to="/resume">Резюме</Link>
                             <Link to="/about">О себе</Link>
@@ -17,7 +17,7 @@ export default class App extends Component {
                             <Link to="/contact">Связаться</Link>
                         </Navigation>
                     </Header>
-                    <Drawer title="Title">
+                    <Drawer className="header-nav" title={<a href="/">Андрей Чеботарь</a>}>
                         <Navigation>
                             <Link to="/resume">Резюме</Link>
                             <Link to="/about">О себе</Link>
