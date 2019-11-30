@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    color: #999999;
+}
+
+.social a svg {
+    color: #999999;
+}
+
+.name {
+    display: block;
+    align-items: flex-start;
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.social {
+    display: block;
+    align-items: flex-end;
+}
+
+.social a {
+    color: #999999;
+    font-size: 1rem;
+    padding-left: 1rem;
+}

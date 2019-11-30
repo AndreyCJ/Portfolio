@@ -16,7 +16,6 @@ export default class Form extends Component {
     }
 
     handleChange = (event) => {
-        console.log(event);
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
@@ -30,7 +29,7 @@ export default class Form extends Component {
         event.preventDefault();
         this.setState({
             disabled: true,
-            emailSent: false
+            emailSent: true
         });
 
         this.handleShowSnackbar();
@@ -56,24 +55,25 @@ export default class Form extends Component {
     render() {
         return (
             <form className="contact-form" onSubmit={this.handleSubmit}>
+                <h1 className="hero">Обратная связь</h1>
                 <Textfield
                     onChange={this.handleChange}
                     label="Имя"
                     floatingLabel
-                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box'}}
+                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box', color: '#fcfcfc'}}
                 />
                 <Textfield
                     onChange={this.handleChange}
                     label="Email"
                     floatingLabel
-                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box'}}
+                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box', color: '#fcfcfc'}}
                 />
                 <Textfield
                     onChange={this.handleChange}
                     label="Сообщение"
                     floatingLabel
                     maxRows={3}
-                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box'}}
+                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box', color: '#fcfcfc'}}
                 />
 
                 <Button

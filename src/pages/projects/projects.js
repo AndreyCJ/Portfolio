@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton} from 'react-mdl';
+import {Grid, Cell, Tabs, Tab, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton} from 'react-mdl';
 import './projects.css';
 
 export default class Projects extends Component {
@@ -16,7 +16,7 @@ export default class Projects extends Component {
             case 0: // React Page
                 return (
                     <div className="projects-grid">
-                        <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+                        <Card shadow={2} style={{minWidth: '450', margin: '20px auto'}}>
                             <CardTitle style={{color: '#fff', height: '176px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
                                 React Project #1
                             </CardTitle>
@@ -33,8 +33,8 @@ export default class Projects extends Component {
                                 <IconButton name="share" />
                             </CardMenu>
                         </Card>
-                        <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-                            <CardTitle style={{color: '#fff', height: '176px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
+                        <Card shadow={2} style={{minWidth: '450', margin: '20px auto'}}>
+                            <CardTitle style={{color: '#fff', height: '176px', background: `url(${require('../../assets/html-css-1.jpg')}) center / cover`}}>
                                 React Project #1
                             </CardTitle>
                             <CardText>
@@ -50,7 +50,7 @@ export default class Projects extends Component {
                                 <IconButton name="share" />
                             </CardMenu>
                         </Card>
-                        <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+                        <Card shadow={2} style={{minWidth: '450', margin: '20px auto'}}>
                             <CardTitle style={{color: '#fff', height: '176px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
                                 React Project #1
                             </CardTitle>
@@ -96,15 +96,13 @@ export default class Projects extends Component {
                     <Tab>HTML/CSS</Tab>
                 </Tabs>
 
-                <section className="project-grid">
-                    <Grid className="project-grid">
-                        <Cell col={12}>
-                            <div className="content">
-                                {this.toggleCategories()}
-                            </div>
-                        </Cell>
-                    </Grid>
-                </section>
+                <Grid>
+                    <Cell col={12}>
+                        <div className="content">
+                            {this.toggleCategories()}
+                        </div>
+                    </Cell>
+                </Grid>              
             </div>
         );
     };

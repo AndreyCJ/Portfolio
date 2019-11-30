@@ -1,23 +1,40 @@
-.header-color {
-    background: #1488CC;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #2B32B2, #1488CC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #2B32B2, #1488CC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    /* color: #1B1B1C; #1B1B1C */
 }
 
-.header a{
-    color: #ffffff;
+a {
+    color: #1B1B1C; /* #1B1B1C */
     text-decoration: none;
 }
 
-.header-nav a {
-    color: #000;
-    text-decoration: none;
+a:hover {
+    color: #464647; /* #dfdfdf */
 }
 
-.hero {
-    font-size: 3vw;
-    font-weight: 800;
-    text-align: center;
+button{
+    outline: none;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #F6F6F6; /* #1B1B1C */
+}
+
+.page-content {
+    flex: 1;
+    color: #1B1B1C;
+    padding: 20px 20px;
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
 }
 
 .alert-success {
@@ -40,8 +57,3 @@
     padding: 14px 24px;
 }
 
-@media only screen and (max-width: 600px) {
-    .hero {
-        font-size: 6vw;
-    }
-}

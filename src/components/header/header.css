@@ -1,0 +1,132 @@
+.header {
+    background: #F6F6F6; /* #1B1B1C */
+    display: flex;
+    flex-basis: 100%;
+    font-size: 1rem;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    color: #1B1B1C;
+}
+
+.headerNavList {
+    display: flex;
+    flex-direction: row;
+}
+
+.overlay {
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    background: #F6F6F6; /* #1B1B1C */
+    display: none;
+    z-index: 2;
+}
+
+.mobileHeaderNavList {
+    flex-direction: column;
+    justify-content: center;  
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.overlay.showMenu {
+   opacity: 1;
+   visibility: visible;
+   display: block;
+}
+
+.overlay.hideMenu {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.mobileHeaderNavList.fadeIn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobileHeaderNavList.fadeOut {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobileHeaderNavList .headerNavItem {
+    display: flex;
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+.headerNavItem {
+    list-style: none;
+}
+
+.headerNavList .headerNavItem {
+    padding-left: 20px;
+}
+
+.header .logo img {
+    width: 4rem;
+    height: auto;
+}
+
+a.active {
+    font-weight: 600;
+    position: relative;
+}
+
+.menuBtn {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #1B1B1C; /* #fcfcfc */
+    display: none;
+    font-size: 2rem;
+    visibility: visible;
+    user-select: none;
+}
+
+.showBtn {
+    z-index: 3;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: block;
+}
+
+.hideBtn {
+    position: relative;
+    z-index: 1;
+}
+
+.stop-scroll {
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .headerNavList {
+        display: none;
+    }
+    
+    .menuBtn{
+        display: block;
+    }
+    
+}

@@ -1,0 +1,32 @@
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mdl-card__title {
+    position: relative;
+}
+
+
+
+.mdl-card__title-text {
+    color: #fff;
+    z-index: 1;
+    padding: 3px;
+    background: #333333;
+}
+
+
+
+
+/*  Night mode
+
+    .mdl-tabs__tab {
+        color: #cfcfcf;
+    }
+
+    .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
+        color: #fcfcfc;
+        font-weight: normal;
+    }
+*/
