@@ -1,0 +1,9 @@
+.mdl-textfield__input {
+    color: #1B1B1C; /* #fcfcfc */
+    /* border-bottom-color: #999999; #cfcfcf */
+}
+
+.mdl-textfield__label {
+    /* color: #cfcfcf;   Light Color */
+    color: #999999; /* 464647 */
+}

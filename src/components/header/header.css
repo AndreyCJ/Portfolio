@@ -84,11 +84,6 @@
     height: auto;
 }
 
-a.active {
-    font-weight: 600;
-    position: relative;
-}
-
 .menuBtn {
     background: transparent;
     outline: none;

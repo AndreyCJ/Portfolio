@@ -7,7 +7,7 @@ export default class Contact extends Component {
     render() {
         return (
             <div className="contact-box">
-                <Form />
+                <Form title={this.props.title}/>
             </div>
         );
     }

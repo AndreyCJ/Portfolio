@@ -12,13 +12,21 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    color: #464647; /* #dfdfdf */
+.active {
+    color: #3F51B5;
 }
 
-button{
+a:hover {
+    color: rgb(75, 95, 211); /* #dfdfdf */
+}
+
+button {
     outline: none;
     cursor: pointer;
+}
+
+button:hover {
+    color: rgb(75, 95, 211); /* #dfdfdf */
 }
 
 .wrapper {
@@ -31,7 +39,7 @@ button{
 .page-content {
     flex: 1;
     color: #1B1B1C;
-    padding: 20px 20px;
+    padding: 0 20px;
     width: 100%;
     max-width: 970px;
     margin: 0 auto;

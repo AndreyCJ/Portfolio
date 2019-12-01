@@ -14,22 +14,32 @@ export default class App extends Component {
         super(props);
         this.state = {
             title: 'Andrey Chebotar',
-            headerLinks: [
-                {title: 'О себе', path: '/'},
-                {title: 'Портфолио', path: '/projects'},
-                {title: 'Обратная связь', path: '/contact'}
-            ],
-            about: {
-                title: 'Full Stack Веб-разработчик',
-                subTitle: 'Андрей Чеботарь',
-                text: 'Стек технологий, который я использую: '
-            },
-            portfolio: {
-                title: 'Мои работы'
-            },
-            contact: {
-                title: 'Связаться со мной'
-            }
+            pageData: [
+                {
+                    component: About,
+                    title: 'О себе',
+                    path: '/',
+                    hero: 'Full Stack Веб-разработчик',
+                    subTitle: 'Андрей Чеботарь',
+                    text: 'Стек технологий, который я использую: '
+                },
+                {
+                    component: Projects,
+                    title: 'Портфолио',
+                    path: '/portfolio',
+                    hero: 'Мои работы',
+                    subTitle: '',
+                    text: ''
+                },
+                {
+                    component: Contact,
+                    title: 'Обратная связь',
+                    path: '/contact',
+                    hero: 'Оставьте ваше сообщение',
+                    subTitle: '',
+                    text: ''
+                }
+            ]
         };
     }
 
@@ -37,11 +47,18 @@ export default class App extends Component {
         return (
             <Router>
                 <div className="wrapper">
-                    <Header />                    
+                    <Header headerLinks={this.state.pageData}/>                    
                         <div className="page-content">
-                            <Route path="/" exact render={() => <About title={this.state.about.title} subTitle={this.state.about.subTitle} text={this.state.about.text} />} />
-                            <Route path="/portfolio" render={() => <Projects title={this.state.portfolio.title} subTitle={this.state.portfolio.subTitle} text={this.state.portfolio.text} />} />
-                            <Route path="/contact" render={() => <Contact title={this.state.contact.title} subTitle={this.state.contact.subTitle} text={this.state.contact.text} />} />
+                            {
+                                this.state.pageData.map(({ component: C, path, hero, subTitle, text }, i) => {
+                                    return  <Route
+                                                exact
+                                                key={i}
+                                                path={path}
+                                                render={(props) => < C {...props} title={hero} subTitle={subTitle} text={text}  />} />
+                                })
+                            }
+                            
                         </div>
                     <Footer />
                 </div>

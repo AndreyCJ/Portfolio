@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {Grid, Cell, Tabs, Tab, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton} from 'react-mdl';
+
 import './projects.css';
+import Hero from '../../components/hero';
 
 export default class Projects extends Component {
     constructor(props) {
@@ -89,6 +91,7 @@ export default class Projects extends Component {
     render() {
         return (
             <div className="category-tabs">
+                <Hero title={this.props.title}/>
                 <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
                     <Tab>React</Tab>
                     <Tab>PHP</Tab>

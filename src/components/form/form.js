@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import {Textfield, Button, Snackbar} from 'react-mdl';
+import Hero from '../hero/hero';
+
+import './form.css';
 
 export default class Form extends Component {
     constructor(props) {
@@ -55,25 +58,26 @@ export default class Form extends Component {
     render() {
         return (
             <form className="contact-form" onSubmit={this.handleSubmit}>
-                <h1 className="hero">Обратная связь</h1>
+                {/* <h1 className="hero">Обратная связь</h1> */}
+                <Hero title={this.props.title} />
                 <Textfield
                     onChange={this.handleChange}
                     label="Имя"
                     floatingLabel
-                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box', color: '#fcfcfc'}}
+                    style={{width: '100%', boxSizing: 'border-box', color: '#fcfcfc'}}
                 />
                 <Textfield
                     onChange={this.handleChange}
                     label="Email"
                     floatingLabel
-                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box', color: '#fcfcfc'}}
+                    style={{width: '100%', boxSizing: 'border-box', color: '#fcfcfc'}}
                 />
                 <Textfield
                     onChange={this.handleChange}
                     label="Сообщение"
                     floatingLabel
                     maxRows={3}
-                    style={{width: '100%', maxWidth: '600px', boxSizing: 'border-box', color: '#fcfcfc'}}
+                    style={{width: '100%', boxSizing: 'border-box', color: '#fcfcfc'}}
                 />
 
                 <Button
