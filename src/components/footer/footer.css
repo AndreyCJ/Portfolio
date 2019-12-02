@@ -11,6 +11,11 @@
     color: #999999;
 }
 
+.social a:hover svg {
+    color: #1B1B1C;
+    
+}
+
 .name {
     display: block;
     align-items: flex-start;
@@ -26,5 +31,10 @@
 .social a {
     color: #999999;
     font-size: 1rem;
-    padding-left: 1rem;
+    margin-left: 2px;
+    padding: 0.5rem;
+}
+
+.social a:hover {
+    background: rgba(0, 0, 0, 0.055);
 }

@@ -3,7 +3,6 @@
     display: flex;
     flex-basis: 100%;
     font-size: 1rem;
-    padding: 20px;
     align-items: center;
     justify-content: space-between;
     margin: 0;
@@ -84,12 +83,29 @@
 }
 
 .headerNavList .headerNavItem {
-    padding-left: 20px;
+    margin-left: 2px;
+}
+.headerNavList .headerNavItem a {
+    padding: 22px 20px;
 }
 
-.header .logo img {
-    width: 4rem;
-    height: auto;
+.headerNavList .headerNavItem a:hover {
+    background: rgba(0, 0, 0, 0.055);
+}
+
+.header .logo a {
+    display: block;
+    padding: 20px;
+}
+
+.header .logo a:hover {
+    background: #1B1B1C;
+    color: #fcfcfc !important;
+
+}
+
+.header .logo a:hover svg path{
+    fill: #fcfcfc;
 }
 
 .menuBtn {

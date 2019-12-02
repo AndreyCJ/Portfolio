@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {ReactComponent as Logo} from '../../assets/logo2.svg';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -26,7 +27,7 @@ export default class Header extends Component {
         return (
             <div className="header">
                 <div className="logo">
-                    <Link to="/"><img src={require('../../assets/logo2.svg')} alt="Андрей Чеботарь" /></Link>
+                    <Link to="/"><Logo /></Link>
                 </div>
 
                 <nav className="headerNav">
