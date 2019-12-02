@@ -26,7 +26,7 @@ button {
 }
 
 button:hover {
-    color: rgb(75, 95, 211); /* #dfdfdf */
+    color: #3F51B5; /* #dfdfdf */
 }
 
 .wrapper {
@@ -37,12 +37,15 @@ button:hover {
 }
 
 .page-content {
-    flex: 1;
     color: #1B1B1C;
     padding: 0 20px;
     width: 100%;
     max-width: 970px;
     margin: 0 auto;
+}
+
+.main {
+    flex: 1;
 }
 
 .alert-success {

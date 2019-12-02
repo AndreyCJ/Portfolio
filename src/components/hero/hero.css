@@ -1,12 +1,24 @@
 .hero-container {
-    color: #1B1B1C;
-    width: 100%;
-    margin: 0;
     margin-bottom: 10px;
+    padding: 20px 0;
+    /* left:0; */
+    /* border-top: 1px solid rgb(224,224,224);
+    border-bottom: 1px solid rgb(224,224,224); */
+    z-index: 1;
+    width: 100%;
+    background: #1B1B1C;
+}
+
+.hero-inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .hero-container h1 {
-    z-index: 1;
+    color: #fcfcfc;
+    z-index: 2;
     font-weight: 600;
     font-size: 2.4rem;
     text-align: left;
@@ -15,6 +27,6 @@
 
 @media only screen and (max-width: 768px) {
     .hero-container h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }

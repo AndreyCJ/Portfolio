@@ -48,14 +48,15 @@ export default class App extends Component {
             <Router>
                 <div className="wrapper">
                     <Header headerLinks={this.state.pageData}/>                    
-                        <div className="page-content">
+                        <div className="main">
                             {
                                 this.state.pageData.map(({ component: C, path, hero, subTitle, text }, i) => {
                                     return  <Route
                                                 exact
                                                 key={i}
                                                 path={path}
-                                                render={(props) => < C {...props} title={hero} subTitle={subTitle} text={text}  />} />
+                                                render={(props) => < C {...props} title={hero} subTitle={subTitle} text={text}  />}
+                                            />
                                 })
                             }
                             

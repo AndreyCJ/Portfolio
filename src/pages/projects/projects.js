@@ -18,8 +18,8 @@ export default class Projects extends Component {
             case 0: // React Page
                 return (
                     <div className="projects-grid">
-                        <Card shadow={2} style={{minWidth: '450', margin: '20px auto'}}>
-                            <CardTitle style={{color: '#fff', height: '176px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
+                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
+                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
                                 React Project #1
                             </CardTitle>
                             <CardText>
@@ -35,8 +35,8 @@ export default class Projects extends Component {
                                 <IconButton name="share" />
                             </CardMenu>
                         </Card>
-                        <Card shadow={2} style={{minWidth: '450', margin: '20px auto'}}>
-                            <CardTitle style={{color: '#fff', height: '176px', background: `url(${require('../../assets/html-css-1.jpg')}) center / cover`}}>
+                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
+                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/html-css-1.jpg')}) center / cover`}}>
                                 React Project #1
                             </CardTitle>
                             <CardText>
@@ -52,8 +52,25 @@ export default class Projects extends Component {
                                 <IconButton name="share" />
                             </CardMenu>
                         </Card>
-                        <Card shadow={2} style={{minWidth: '450', margin: '20px auto'}}>
-                            <CardTitle style={{color: '#fff', height: '176px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
+                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
+                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
+                                React Project #1
+                            </CardTitle>
+                            <CardText>
+                                Est commodo esse commodo est id exercitation. Occaecat amet consectetur nisi laboris sit ut irure id.
+                                Laboris ullamco aliquip deserunt dolore incididunt dolor ad enim veniam do. Sit excepteur esse in consectetur.
+                            </CardText>
+                            <CardActions border>
+                                <Button colored>GitHub</Button>
+                                <Button colored>CodePen</Button>
+                                <Button colored>Live Demo</Button>
+                            </CardActions>
+                            <CardMenu style={{color: '#fff'}}>
+                                <IconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
+                            <CardTitle style={{color: '#fff', width: '100%', height: '220px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
                                 React Project #1
                             </CardTitle>
                             <CardText>
@@ -90,22 +107,26 @@ export default class Projects extends Component {
 
     render() {
         return (
-            <div className="category-tabs">
+            <div>
                 <Hero title={this.props.title}/>
-                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
-                    <Tab>React</Tab>
-                    <Tab>PHP</Tab>
-                    <Tab>JavaScript</Tab>
-                    <Tab>HTML/CSS</Tab>
-                </Tabs>
+                <div className="page-content">
+                    <div className="category-tabs">
+                        <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
+                            <Tab>React</Tab>
+                            <Tab>PHP</Tab>
+                            <Tab>JavaScript</Tab>
+                            <Tab>HTML/CSS</Tab>
+                        </Tabs>
 
-                <Grid>
-                    <Cell col={12}>
-                        <div className="content">
-                            {this.toggleCategories()}
-                        </div>
-                    </Cell>
-                </Grid>              
+                        <Grid>
+                            <Cell col={12}>
+                                <div className="content">
+                                    {this.toggleCategories()}
+                                </div>
+                            </Cell>
+                        </Grid>              
+                    </div>
+                </div>
             </div>
         );
     };

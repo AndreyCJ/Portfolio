@@ -12,7 +12,7 @@ export default class About extends Component {
         const { title, subTitle, text, location } = this.props;
         console.log(location.pathname)
         return (
-            <div>
+            <div className="page-content">
                 <div className="landing">
                     <h2>{ subTitle }</h2>
                     <h1>{ title }</h1>  

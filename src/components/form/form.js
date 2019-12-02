@@ -3,7 +3,6 @@ import {Textfield, Button} from 'react-mdl';
 import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
 
-import Hero from '../hero/hero';
 import './form.css';
 
 export default class Form extends Component {
@@ -70,7 +69,6 @@ export default class Form extends Component {
         return (
             <form className="contact-form" onSubmit={this.handleSubmit}>
                 {/* <h1 className="hero">Обратная связь</h1> */}
-                <Hero title={this.props.title} />
                 <Textfield
                     onChange={this.handleChange}
                     label="Имя"
