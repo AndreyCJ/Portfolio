@@ -46,22 +46,9 @@ button:hover {
 }
 
 .alert-success {
-    background: #009A1D;
-    color: #fff;
+    background: #009A1D !important;
 }
 
 .alert-error {
-    background: #DE2D23;
-    color: #fff;
+    background: #DE2D23 !important;
 }
-
-.mdl-snackbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mdl-snackbar__text {
-    padding: 14px 24px;
-}
-

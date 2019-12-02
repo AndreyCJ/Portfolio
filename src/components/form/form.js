@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import {Textfield, Button, Snackbar} from 'react-mdl';
-import Hero from '../hero/hero';
+import {Textfield, Button} from 'react-mdl';
+import Snackbar from '@material-ui/core/Snackbar';
+import SnackbarContent from '@material-ui/core/SnackbarContent';
 
+import Hero from '../hero/hero';
 import './form.css';
 
 export default class Form extends Component {
@@ -13,8 +15,9 @@ export default class Form extends Component {
             message: '',
             disabled: false,
             emailSent: null,
-            isSnackbarSuccessActive: false,
-            isSnackbarErrorActive: false
+            SnackbarClass: 'alert-success',
+            SnackbarMessage: 'Сообщение отправлено',
+            isSnackbarOpen: false
         }
     }
 
@@ -40,22 +43,30 @@ export default class Form extends Component {
 
     handleTimeoutSnackbar = () => {
         this.setState({
-            isSnackbarSuccessActive: false,
-            isSnackbarErrorActive: false
+            isSnackbarOpen: false
         });
     };
 
     handleShowSnackbar = () => {
         this.setState((state) => {
             if (state.emailSent === true) {
-                return {isSnackbarSuccessActive: true}
+                return {
+                    SnackbarClass: 'alert-success',
+                    isSnackbarOpen: true,
+                    SnackbarMessage: 'Сообщение отправлено'
+                }
             } else {
-                return {isSnackbarErrorActive: true}
+                return {
+                    SnackbarClass: 'alert-error',
+                    isSnackbarOpen: true,
+                    SnackbarMessage: 'Сообщение не удалось отправить'
+                }
             } 
         });
     };
 
     render() {
+        
         return (
             <form className="contact-form" onSubmit={this.handleSubmit}>
                 {/* <h1 className="hero">Обратная связь</h1> */}
@@ -92,23 +103,22 @@ export default class Form extends Component {
                     Отправить
                 </Button>
 
-                <Snackbar
-                    className='alert-success'
-                    active={this.state.isSnackbarSuccessActive}
-                    onTimeout={this.handleTimeoutSnackbar}
-                >
-                    Сообщение отправлено
-                </Snackbar>
 
                 <Snackbar
-                    className='alert-error'
-                    active={this.state.isSnackbarErrorActive}
-                    onTimeout={this.handleTimeoutSnackbar}
+                    open={this.state.isSnackbarOpen}
+                    onClose={this.handleTimeoutSnackbar}
+                    autoHideDuration={2700}
                 >
-                    Сообщение не удалось отправить
+                    <SnackbarContent
+                        classes={
+                            { root: this.state.SnackbarClass }
+                        }
+                        aria-describedby="client-snackbar"
+                        message={<span id="client-snackbar">{this.state.SnackbarMessage}</span>}
+                    />
                 </Snackbar>
-                
  
+        
             </form>
         );
     }
