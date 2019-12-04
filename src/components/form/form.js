@@ -17,8 +17,8 @@ export default class Form extends Component {
             SnackbarClass: 'alert-success',
             SnackbarMessage: 'Сообщение отправлено',
             isSnackbarOpen: false
-        }
-    }
+        };
+    };
 
     handleChange = (event) => {
         const target = event.target;
@@ -53,13 +53,13 @@ export default class Form extends Component {
                     SnackbarClass: 'alert-success',
                     isSnackbarOpen: true,
                     SnackbarMessage: 'Сообщение отправлено'
-                }
+                };
             } else {
                 return {
                     SnackbarClass: 'alert-error',
                     isSnackbarOpen: true,
                     SnackbarMessage: 'Сообщение не удалось отправить'
-                }
+                };
             } 
         });
     };
@@ -119,5 +119,5 @@ export default class Form extends Component {
         
             </form>
         );
-    }
-}
+    };
+};

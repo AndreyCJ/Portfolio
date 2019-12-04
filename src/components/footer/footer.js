@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faVk, faCodepen } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faVk, faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 import './footer.css';
 
@@ -18,7 +18,7 @@ class Footer extends Component {
                 </div>
             </div>
         );
-    }
-}
+    };
+};
 
 export default Footer;

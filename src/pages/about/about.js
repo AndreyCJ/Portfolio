@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJs, faReact, faNodeJs, faPhp} from '@fortawesome/free-brands-svg-icons'
+import { faJs, faReact, faNodeJs, faPhp} from '@fortawesome/free-brands-svg-icons';
 import { ReactComponent as Mysql } from '../../assets/brands/mysql-6.svg';
 import { ReactComponent as MongoDB } from '../../assets/brands/mongodb-icon.svg';
 
@@ -9,8 +9,7 @@ import './about.css';
 
 export default class About extends Component {
     render() {
-        const { title, subTitle, text, location } = this.props;
-        console.log(location.pathname)
+        const { title, subTitle, text } = this.props; // location
         return (
             <div className="page-content">
                 <div className="landing">
@@ -44,5 +43,5 @@ export default class About extends Component {
                 </div>
             </div>
         );
-    }
-}
+    };
+};

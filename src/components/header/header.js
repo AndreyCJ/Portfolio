@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+
 import {ReactComponent as Logo} from '../../assets/logo2.svg';
+import './header.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-
-import './header.css'
+import MobileMenuToggleBtn from '../mobileMenu/mobileMenuToggleBtn';
+import MobileMenu from '../mobileMenu/mobileMenu';
+import Backdrop from '../backdrop/backdrop';
 
 export default class Header extends Component {
     constructor(props) {
@@ -13,16 +14,27 @@ export default class Header extends Component {
         
         this.state = {
             isMenuOpen: false
-        }
-    }
+        };
+    };
 
     handleMenuBtnClick = () => {
-        this.setState({isMenuOpen: !this.state.isMenuOpen});
-    }
+        this.setState(
+            (prevState) => {
+                return {isMenuOpen: !prevState.isMenuOpen};
+            }
+        );
+    };
+
+    handleBackdropClick = () => {
+        this.setState({isMenuOpen: false});
+    };
 
     render() {
-        let {isMenuOpen} = this.state;
-        isMenuOpen ? document.querySelector('html').style.overflow = 'hidden' : document.querySelector('html').style.overflow = 'visible';
+        let backdrop;
+
+        if (this.state.isMenuOpen) {
+            backdrop = <Backdrop click={this.handleBackdropClick}/>
+        }
 
         return (
             <div className="header">
@@ -30,26 +42,24 @@ export default class Header extends Component {
                     <Link to="/"><Logo /></Link>
                 </div>
 
-                <nav className="headerNav">
-                    <ul className="headerNavList">
-                        {
-                            this.props.headerLinks.map(({ title, path }, i) => {
-                                return <li key={i} className='headerNavItem'><Link to={ path } className='nav-link'>{ title }</Link></li>
-                            })
-                        }
-                    </ul>
-                    <button className={`menuBtn ${isMenuOpen ? 'showBtn' : 'hideBtn'}`} onClick={() => this.handleMenuBtnClick()}><FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars}/></button>
-                    <div className={`overlay ${isMenuOpen ? 'showMenu' : 'hideMenu'}`}>
-                        <ul className={`mobileHeaderNavList ${isMenuOpen ? 'fadeIn' : 'fadeOut'}`}>
+                <div className="headerNav-container">
+                    <nav>
+                        <ul className="headerNavList">
                             {
                                 this.props.headerLinks.map(({ title, path }, i) => {
-                                    return <li key={i} className='headerNavItem'><Link onClick={() => this.handleMenuBtnClick()} to={ path } className="nav-link active">{ title }</Link></li>
+                                    return <li key={i} className='headerNavItem'><Link to={ path } className='nav-link'>{ title }</Link></li>
                                 })
                             }
                         </ul>
+                    </nav>
+
+                    <div className="mobileMenu-wrapper">
+                        <MobileMenuToggleBtn click={this.handleMenuBtnClick}/>
+                        <MobileMenu show={this.state.isMenuOpen} headerLinks={this.props.headerLinks} />
+                        {backdrop}
                     </div>
-                </nav>
+                </div>
             </div>
         );
-    }
-}
+    };
+};

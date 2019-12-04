@@ -1,0 +1,46 @@
+.mobileMenu {
+    height: 100vh;
+    box-shadow: 1px 0 1px 0 rgba(0,0,0,0.03), 
+                2px 0 2px 0 rgba(0,0,0,0.03), 
+                4px 0 4px 0 rgba(0,0,0,0.03), 
+                8px 0 8px 0 rgba(0,0,0,0.03), 
+                16px 0 16px 0 rgba(0,0,0,0.03), 
+                32px 0 32px 0 rgba(0,0,0,0.03);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    max-width: 400px;
+    background: #fcfcfc;
+    z-index: 20;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.mobileMenu.open {
+    transform: translateX(0);
+}
+
+.mobileMenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.mobileMenu ul li {
+    margin-bottom: 0.5rem;
+}
+
+.mobileMenu a {
+    text-decoration: none;
+    color: #1B1B1C;
+    font-size: 1.2rem;
+}
+
+.mobileMenu a:hover,
+.mobileMenu a:active {
+    color: rgb(75, 95, 211);;
+}

@@ -9,6 +9,6 @@ const Hero = (props) => {
             </div>
         </div>
     );
-}
+};
 
 export default Hero;
