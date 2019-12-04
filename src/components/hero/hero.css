@@ -1,12 +1,11 @@
 .hero-container {
     margin-bottom: 10px;
     padding: 20px 0;
-    /* left:0; */
-    /* border-top: 1px solid rgb(224,224,224);
-    border-bottom: 1px solid rgb(224,224,224); */
+    border-top: 1px solid rgb(224,224,224);
+    border-bottom: 1px solid rgb(224,224,224);
     z-index: 1;
     width: 100%;
-    background: #1B1B1C;
+    background: #F0F0F0; /* rgba(212, 212, 213, 0.158) */
 }
 
 .hero-inner {
@@ -17,7 +16,7 @@
 }
 
 .hero-container h1 {
-    color: #fcfcfc;
+    color: #424243;  /* #424243 */
     z-index: 2;
     font-weight: 600;
     font-size: 2.4rem;
