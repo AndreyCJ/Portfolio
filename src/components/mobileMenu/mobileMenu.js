@@ -13,6 +13,10 @@ const MobileMenu = props => {
     return (
         <div>
             <nav className={menuClasess}>
+                <div className="mobileLogo">
+                    <h1>Андрей Чеботарь</h1>
+                    <h2>andreyoneup@gmail.com</h2>
+                </div>
                 <ul>
                 {
                     props.headerLinks.map(({ title, path }, i) => {

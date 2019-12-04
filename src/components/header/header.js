@@ -30,12 +30,6 @@ export default class Header extends Component {
     };
 
     render() {
-        let backdrop;
-
-        if (this.state.isMenuOpen) {
-            backdrop = <Backdrop click={this.handleBackdropClick}/>
-        }
-
         return (
             <div className="header">
                 <div className="logo">
@@ -56,7 +50,7 @@ export default class Header extends Component {
                     <div className="mobileMenu-wrapper">
                         <MobileMenuToggleBtn click={this.handleMenuBtnClick}/>
                         <MobileMenu show={this.state.isMenuOpen} headerLinks={this.props.headerLinks} />
-                        {backdrop}
+                        <Backdrop click={this.handleBackdropClick} show={this.state.isMenuOpen} />
                     </div>
                 </div>
             </div>
