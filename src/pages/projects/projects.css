@@ -2,6 +2,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
+}
+
+.mdl-grid {
+    padding: 0 !important;
 }
 
 .mdl-card__title {
@@ -16,6 +21,19 @@
 }
 
 
+
+@media  (max-width: 768px) {
+    .mdl-card {
+        margin: 15px 0 !important; 
+    }
+}
+
+@media  (max-width: 425px) {
+    .mdl-card {
+        width: 100%;
+        margin: 15px 0 !important; 
+    }
+}
 
 
 /*  Night mode

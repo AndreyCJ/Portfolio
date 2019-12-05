@@ -18,8 +18,8 @@ export default class App extends Component {
                     component: About,
                     title: 'О себе',
                     path: '/',
-                    hero: 'Full Stack Веб-разработчик',
-                    subTitle: 'Андрей Чеботарь',
+                    hero: 'Андрей Чеботарь',
+                    subTitle: 'Веб-разработчик',
                     text: 'Стек технологий, который я использую: '
                 },
                 {
@@ -40,7 +40,7 @@ export default class App extends Component {
                 }
             ]
         };
-    }
+    };
 
     render() {
         return (

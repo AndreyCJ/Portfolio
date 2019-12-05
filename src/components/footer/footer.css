@@ -4,7 +4,10 @@
     align-items: center;
     justify-content: space-between;
     padding: 12px 20px;
-    color: #999999;
+}
+
+.social a {
+    margin-right: 5px;
 }
 
 .social a svg {
@@ -13,28 +16,37 @@
 
 .social a:hover svg {
     color: #1B1B1C;
-    
 }
 
 .name {
     display: block;
     align-items: flex-start;
-    color: #999999;
+}
+
+.contactInfo address {
+    display: flex;
+    align-items: center;
+}
+
+.contactInfo address a:hover {
+    color: #4b5fd3;
+}
+
+.name, .contactInfo address a {
+    color: #464647;
     font-size: 0.9rem;
 }
 
-.social {
-    display: block;
-    align-items: flex-end;
+.contactInfo {
+    display: flex;
 }
 
-.social a {
-    color: #999999;
-    font-size: 1rem;
-    margin-left: 2px;
-    padding: 0.5rem;
-}
-
-.social a:hover {
-    background: rgba(0, 0, 0, 0.055);
+@media only screen and (max-width: 768px) {
+    .name {
+        text-align: center;
+        width: 100%;
+    }
+    .contactInfo {
+        display: none;
+    }
 }

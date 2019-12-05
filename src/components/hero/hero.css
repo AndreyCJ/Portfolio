@@ -13,15 +13,39 @@
     max-width: 970px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hero-container h1 {
-    color: #424243;  /* #424243 */
+    color: #464647;  /* #464647 */
     z-index: 2;
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     text-align: left;
     align-self: flex-start;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-container h2 {
+    color: #464647;  /* #424243 */
+    z-index: 2;
+    font-weight: normal;
+    font-size: 1.4rem;
+    text-align: left;
+    align-self: flex-start;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 768px) {

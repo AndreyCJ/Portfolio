@@ -1,5 +1,38 @@
+.aboutPage {
+    height: 100%;
+}
+
+.aboutPage .page-content {
+    padding: 20px;
+}
+
 .landing {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    background: #fff;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.03), 
+                0 2px 4px 2px rgba(0,0,0,0.03), 
+                0 4px 8px 4px rgba(0,0,0,0.03);
+    border-radius: 1rem;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+
+}
+
+.description span {
+    font-size: 1.3rem;
+}
+
+.ladning div {
+    flex: 1;
+}
+
+.personal-info a {
+    font-size: 1.2rem;
 }
 
 .landing h1 {
@@ -14,22 +47,31 @@
     padding: 0;
     font-size: 2rem;
     font-weight: 600;
+    line-height: normal;
+    padding-bottom: 0.5rem;
 }
 
 .description {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     line-height: normal;
-    font-size: 1.3rem;
+    flex-direction: column;
+    
 }
 
 .stack {
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .technology {
-    margin: 8px 0;
+    margin: 8px 8px;
     display: flex;
     align-items: center;
-    width: 100%;
 }
 
 .stack svg{
@@ -49,6 +91,33 @@
     background: #fff;
 }
 
+
+.about-socialLinks-container {
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.about-socialLinks-container .social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-socialLinks-container .social a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+}
+
+.about-socialLinks-container .social a svg{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
 @media only screen and (max-width: 768px) {
     .landing h1  {
         font-size: 1.7rem;
@@ -59,5 +128,30 @@
     
     .description {
         font-size: 1.1rem;
+    }
+
+    .about-socialLinks-container .social a:hover {
+        background: transparent;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .personal-info a {
+        font-size: 1.1rem;
+    }
+
+    .landing {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .personal-info address {
+        text-align: center;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    
+    .about-socialLinks-container .social a {
+        padding: 0;
     }
 }
