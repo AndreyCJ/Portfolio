@@ -1,0 +1,13 @@
+span.blink {
+    font-weight: 400 !important;
+    opacity: 0;
+    position: absolute;
+}
+
+span.blink.visible {
+    opacity: 1;
+}
+
+span.blink.hidden {
+    opacity: 0;
+}

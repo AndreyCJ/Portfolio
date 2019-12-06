@@ -5,29 +5,23 @@ import { faJs, faReact, faNodeJs, faPhp} from '@fortawesome/free-brands-svg-icon
 import { ReactComponent as Mysql } from '../../assets/brands/mysql-6.svg';
 import { ReactComponent as MongoDB } from '../../assets/brands/mongodb-icon.svg';
 
+import Blinker from '../../components/blinker';
 import './about.css';
-
 
 export default class About extends Component {
     render() {
         const { title, subTitle } = this.props; // location
         return (
             <div className="aboutPage">
-                    
-
                 <div className="page-content">
                     <div className="landing">
                         <div className="personal-info">
                             <h2>{ title }</h2>
-                            <h1>{ subTitle }.</h1>
+                            <h1>{ subTitle }.<Blinker /></h1>
                         </div>
                     </div>
-
                                   
                     <div className="description">
-                        {/* <span>
-                            { text }
-                        </span> */}
                         <div className="stack">
                             <div className="technology">
                                 <span>{<FontAwesomeIcon icon={faJs} style={{color: '#F1DA4E'}} />}JavaScript</span>
@@ -50,7 +44,7 @@ export default class About extends Component {
                         </div>
                     </div>
                     <div className="goTo">
-                        <Link to='/portfolio'>Посмотреть мои проекты -></Link>
+                        <Link to='/portfolio'>Посмотреть мои проекты</Link>
                     </div>
                 </div>
             </div>
