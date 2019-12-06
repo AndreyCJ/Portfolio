@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJs, faReact, faNodeJs, faPhp} from '@fortawesome/free-brands-svg-icons';
 import { ReactComponent as Mysql } from '../../assets/brands/mysql-6.svg';
 import { ReactComponent as MongoDB } from '../../assets/brands/mongodb-icon.svg';
-
-import SocialLinks from '../../components/socialLinks/SocialLinks';
 
 import './about.css';
 
 
 export default class About extends Component {
     render() {
-        const { title, text } = this.props; // location
+        const { title, subTitle } = this.props; // location
         return (
             <div className="aboutPage">
                     
@@ -19,21 +18,16 @@ export default class About extends Component {
                 <div className="page-content">
                     <div className="landing">
                         <div className="personal-info">
-                            <address>
-                                <h2>{ title } </h2>
-                                <a href="mailto:andreyoneup@gmail.com">andreyoneup@gmail.com</a>
-                            </address>
+                            <h2>{ title }</h2>
+                            <h1>{ subTitle }.</h1>
                         </div>
-                        <div className="about-socialLinks-container">
-                            <SocialLinks withLabels={true}/>
-                        </div>    
                     </div>
 
                                   
                     <div className="description">
-                        <span>
+                        {/* <span>
                             { text }
-                        </span>
+                        </span> */}
                         <div className="stack">
                             <div className="technology">
                                 <span>{<FontAwesomeIcon icon={faJs} style={{color: '#F1DA4E'}} />}JavaScript</span>
@@ -54,6 +48,9 @@ export default class About extends Component {
                                 <span><MongoDB />MongoDB</span>  
                             </div>  
                         </div>
+                    </div>
+                    <div className="goTo">
+                        <Link to='/portfolio'>Посмотреть мои проекты -></Link>
                     </div>
                 </div>
             </div>
