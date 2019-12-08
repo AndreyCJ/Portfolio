@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Textfield, Button} from 'react-mdl';
 import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
-import axios from 'axios';  
+// import axios from 'axios';  
 
 import './form.css';
 
@@ -37,26 +37,29 @@ export default class Form extends Component {
             disabled: true
         });
 
-        axios.post('http://localhost:3030/api/email', this.state)
-            .then(res => {
-                if (res.data.success) {
-                    this.setState({
-                        disabled: false,
-                        emailSent: true
-                    });
-                } else {
-                    this.setState({
-                        disabled: false,
-                        emailSent: false
-                    });
-                }
-            })
-            .catch(err => {
-                this.setState({
-                    disabled: false,
-                    emailSent: false
-                });
-            });
+        fetch(`http://localhost:3030/api/email?name=${this.state.name}&email=${this.state.email}&message=${this.state.message}`)
+            .catch(err => console.log(err));
+
+        // axios.post('http://localhost:3030/api/email', this.state)
+        //     .then(res => {
+        //         if (res.data.success) {
+        //             this.setState({
+        //                 disabled: false,
+        //                 emailSent: true
+        //             });
+        //         } else {
+        //             this.setState({
+        //                 disabled: false,
+        //                 emailSent: false
+        //             });
+        //         }
+        //     })
+        //     .catch(err => {
+        //         this.setState({
+        //             disabled: false,
+        //             emailSent: false
+        //         });
+        //     });
 
         this.handleShowSnackbar();
     };

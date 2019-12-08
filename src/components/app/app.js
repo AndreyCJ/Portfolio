@@ -6,7 +6,7 @@ import Header from '../header/header';
 
 import About from '../../pages/about';
 import Projects from '../../pages/projects';
-import Contact from '../../pages/contact';
+// import Contact from '../../pages/contact';
 
 export default class App extends Component {
     constructor(props) {
@@ -29,15 +29,15 @@ export default class App extends Component {
                     hero: 'Мои работы',
                     subTitle: '',
                     text: ''
-                },
-                {
-                    component: Contact,
-                    title: 'Обратная связь',
-                    path: '/contact',
-                    hero: 'Оставьте ваше сообщение',
-                    subTitle: '',
-                    text: ''
                 }
+                // {
+                //     component: Contact,
+                //     title: 'Обратная связь',
+                //     path: '/contact',
+                //     hero: 'Оставьте ваше сообщение',
+                //     subTitle: '',
+                //     text: ''
+                // }
             ]
         };
     };
@@ -58,7 +58,6 @@ export default class App extends Component {
                                             />
                                 })
                             }
-                            
                         </div>
                     <Footer />
                 </div>
