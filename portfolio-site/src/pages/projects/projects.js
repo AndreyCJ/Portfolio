@@ -19,68 +19,15 @@ export default class Projects extends Component {
                 return (
                     <div className="projects-grid">
                         <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
-                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
-                                React Project #1
+                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/portfolio-thumbnail.png')}) center / cover`}}>
+                                
                             </CardTitle>
                             <CardText>
-                                Est commodo esse commodo est id exercitation. Occaecat amet consectetur nisi laboris sit ut irure id.
-                                Laboris ullamco aliquip deserunt dolore incididunt dolor ad enim veniam do. Sit excepteur esse in consectetur.
+                                Сайт-портфолио, написанный с использованием React.js библиотеки.
                             </CardText>
                             <CardActions border>
-                                <Button colored>GitHub</Button>
-                                <Button colored>CodePen</Button>
-                                <Button colored>Live Demo</Button>
-                            </CardActions>
-                            <CardMenu style={{color: '#fff'}}>
-                                <IconButton name="share" />
-                            </CardMenu>
-                        </Card>
-                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
-                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/html-css-1.jpg')}) center / cover`}}>
-                                React Project #1
-                            </CardTitle>
-                            <CardText>
-                                Est commodo esse commodo est id exercitation. Occaecat amet consectetur nisi laboris sit ut irure id.
-                                Laboris ullamco aliquip deserunt dolore incididunt dolor ad enim veniam do. Sit excepteur esse in consectetur.
-                            </CardText>
-                            <CardActions border>
-                                <Button colored>GitHub</Button>
-                                <Button colored>CodePen</Button>
-                                <Button colored>Live Demo</Button>
-                            </CardActions>
-                            <CardMenu style={{color: '#fff'}}>
-                                <IconButton name="share" />
-                            </CardMenu>
-                        </Card>
-                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
-                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
-                                React Project #1
-                            </CardTitle>
-                            <CardText>
-                                Est commodo esse commodo est id exercitation. Occaecat amet consectetur nisi laboris sit ut irure id.
-                                Laboris ullamco aliquip deserunt dolore incididunt dolor ad enim veniam do. Sit excepteur esse in consectetur.
-                            </CardText>
-                            <CardActions border>
-                                <Button colored>GitHub</Button>
-                                <Button colored>CodePen</Button>
-                                <Button colored>Live Demo</Button>
-                            </CardActions>
-                            <CardMenu style={{color: '#fff'}}>
-                                <IconButton name="share" />
-                            </CardMenu>
-                        </Card>
-                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
-                            <CardTitle style={{color: '#fff', width: '100%', height: '220px', background: `url(${require('../../assets/react-logo.png')}) center / cover`}}>
-                                React Project #1
-                            </CardTitle>
-                            <CardText>
-                                Est commodo esse commodo est id exercitation. Occaecat amet consectetur nisi laboris sit ut irure id.
-                                Laboris ullamco aliquip deserunt dolore incididunt dolor ad enim veniam do. Sit excepteur esse in consectetur.
-                            </CardText>
-                            <CardActions border>
-                                <Button colored>GitHub</Button>
-                                <Button colored>CodePen</Button>
-                                <Button colored>Live Demo</Button>
+                                <a href="https://github.com/AndreyCJ/Portfolio" rel="noopener noreferrer" target="_blank"><Button colored>GitHub</Button></a>
+                                <Button disabled colored>Live Demo</Button>
                             </CardActions>
                             <CardMenu style={{color: '#fff'}}>
                                 <IconButton name="share" />
@@ -88,17 +35,65 @@ export default class Projects extends Component {
                         </Card>
                     </div>
                 );
-            case 1: // PHP Page
+            case 1: // Wordpress Page
                 return (
-                    <h1>PHP</h1>
+                    <div className="projects-grid">
+                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
+                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/1school_thumbnail.png')}) center / cover`}}>
+                                
+                            </CardTitle>
+                            <CardText>
+                                Wordpress тема для сайта с поддержкой постов, поиска по страницам и постам, виджет слайдер разработанный для данной темы
+                            </CardText>
+                            <CardActions border>
+                                <a href="https://github.com/AndreyCJ/1school_WpTheme" rel="noopener noreferrer" target="_blank"><Button colored>GitHub</Button></a>
+                                <a href="https://1school-wptheme.000webhostapp.com/" rel="noopener noreferrer" target="_blank"><Button colored>Live Demo</Button></a>
+                            </CardActions>
+                            <CardMenu style={{color: '#fff'}}>
+                                <IconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                    </div>
                 );
             case 2: // JavaScript Page
                 return (
-                    <h1>JavaScript</h1>
+                    <div className="projects-grid">
+                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
+                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/notesApp_thumbnail.png')}) center / cover`}}>
+                                
+                            </CardTitle>
+                            <CardText>
+                                Приложение для заметок, разработанное по паттерну проектирования AJAX на чистом JavaScript, PHP, MySQL
+                            </CardText>
+                            <CardActions border>
+                                <a href="https://github.com/AndreyCJ/NotesApp" rel="noopener noreferrer" target="_blank"><Button colored>GitHub</Button></a>
+                                <a href="https://vanillajsnotesapp.000webhostapp.com/" rel="noopener noreferrer" target="_blank"><Button colored>Live Demo</Button></a>
+                            </CardActions>
+                            <CardMenu style={{color: '#fff'}}>
+                                <IconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                    </div>
                 );
             case 3: // HTML/CSS Page
                 return (
-                    <h1>HTML/CSS</h1>
+                    <div className="projects-grid">
+                        <Card shadow={2} style={{minWidth: '430', margin: '15px'}}>
+                            <CardTitle style={{color: '#fff', height: '220px', background: `url(${require('../../assets/html-css-1.jpg')}) center / cover`}}>
+                                
+                            </CardTitle>
+                            <CardText>
+                                Flexbox шаблон блог-сайта
+                            </CardText>
+                            <CardActions border>
+                                <a href="https://codepen.io/AndreyCJ/pen/wxYgwp" rel="noopener noreferrer" target="_blank"><Button colored>Codepen</Button></a>
+                                <a href="https://codepen.io/AndreyCJ/full/wxYgwp" rel="noopener noreferrer" target="_blank"><Button colored>Live Demo</Button></a>
+                            </CardActions>
+                            <CardMenu style={{color: '#fff'}}>
+                                <IconButton name="share" />
+                            </CardMenu>
+                        </Card>
+                    </div>
                 );
             default:
                 return this.setState({activeTab: 0});
@@ -113,7 +108,7 @@ export default class Projects extends Component {
                     <div className="category-tabs">
                         <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
                             <Tab>React</Tab>
-                            <Tab>PHP</Tab>
+                            <Tab>Wordpress</Tab>
                             <Tab>JavaScript</Tab>
                             <Tab>HTML/CSS</Tab>
                         </Tabs>
