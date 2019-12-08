@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Textfield, Button} from 'react-mdl';
 import Snackbar from '@material-ui/core/Snackbar';
 import SnackbarContent from '@material-ui/core/SnackbarContent';
+import axios from 'axios';  
 
 import './form.css';
 
@@ -33,9 +34,29 @@ export default class Form extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         this.setState({
-            disabled: true,
-            emailSent: true
+            disabled: true
         });
+
+        axios.post('http://localhost:3030/api/email', this.state)
+            .then(res => {
+                if (res.data.success) {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+                } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    });
+                }
+            })
+            .catch(err => {
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                });
+            });
 
         this.handleShowSnackbar();
     };
@@ -65,7 +86,6 @@ export default class Form extends Component {
     };
 
     render() {
-        
         return (
             <form className="contact-form" onSubmit={this.handleSubmit}>
                 {/* <h1 className="hero">Обратная связь</h1> */}
