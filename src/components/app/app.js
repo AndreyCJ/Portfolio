@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './app.css';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {Route, HashRouter} from 'react-router-dom';
 import Footer from '../footer';
 import Header from '../header/header';
 
@@ -44,7 +44,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <Router>
+            <HashRouter>
                 <div className="wrapper">
                     <Header headerLinks={this.state.pageData}/>                    
                         <div className="main">
@@ -61,7 +61,7 @@ export default class App extends Component {
                         </div>
                     <Footer />
                 </div>
-            </Router>
+            </HashRouter>
         );
     };
 };
