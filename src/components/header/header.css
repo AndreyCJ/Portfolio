@@ -13,6 +13,7 @@
     justify-content: space-between;
     position: relative;
     color: #1B1B1C;
+    z-index: 1;
 }
 
 .headerNavList {
