@@ -56,7 +56,7 @@ html {
     flex-direction: column;
     max-width: 970px;
     line-height: 1.6;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased !important;
     -moz-font-smoothing: antialiased !important;
@@ -67,7 +67,7 @@ html {
 }
 
 .aboutPage .moreDetails .content h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 500;
     margin: 5px 0;
     padding-bottom: 1rem;
