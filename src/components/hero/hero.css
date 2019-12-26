@@ -3,9 +3,8 @@
     padding: 20px 0;
     border-top: 1px solid rgb(224,224,224);
     border-bottom: 1px solid rgb(224,224,224);
-    z-index: 1;
     width: 100%;
-    background: #F0F0F0; /* rgba(212, 212, 213, 0.158) */
+    background: rgba(212, 212, 213, 0.158); /* rgba(212, 212, 213, 0.158) */
 }
 
 .hero-inner {
@@ -20,7 +19,6 @@
 
 .hero-container h1 {
     color: #464647;  /* #464647 */
-    z-index: 2;
     font-weight: 500;
     font-size: 2.2rem;
     text-align: left;
@@ -32,7 +30,6 @@
 
 .hero-container h2 {
     color: #464647;  /* #424243 */
-    z-index: 2;
     font-weight: normal;
     font-size: 1.4rem;
     text-align: left;
