@@ -281,11 +281,13 @@ html {
     }
 
     .aboutPage .moreDetails .content {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        text-align: center;
     }
 
     .aboutPage .moreDetails .content h1 {
         font-size: 2.3rem;
+        margin: 0 auto;
     }
 
 }
