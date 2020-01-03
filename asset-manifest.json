@@ -1,31 +1,27 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.80c8432c.chunk.css",
-    "main.js": "/Portfolio/static/js/main.b6159952.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.b6159952.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.5d0a5857.chunk.css",
+    "main.js": "/Portfolio/static/js/main.a999d3b2.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.a999d3b2.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.6a869909.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.6a869909.js.map",
-    "static/css/2.559fd73f.chunk.css": "/Portfolio/static/css/2.559fd73f.chunk.css",
-    "static/js/2.0a1ed637.chunk.js": "/Portfolio/static/js/2.0a1ed637.chunk.js",
-    "static/js/2.0a1ed637.chunk.js.map": "/Portfolio/static/js/2.0a1ed637.chunk.js.map",
+    "static/js/2.a88601aa.chunk.js": "/Portfolio/static/js/2.a88601aa.chunk.js",
+    "static/js/2.a88601aa.chunk.js.map": "/Portfolio/static/js/2.a88601aa.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "precache-manifest.b8cdcdd55a0324cd5c2db08855a61686.js": "/Portfolio/precache-manifest.b8cdcdd55a0324cd5c2db08855a61686.js",
+    "precache-manifest.5e7c1ab133f045143a31b04f6f8ea26f.js": "/Portfolio/precache-manifest.5e7c1ab133f045143a31b04f6f8ea26f.js",
     "service-worker.js": "/Portfolio/service-worker.js",
-    "static/css/2.559fd73f.chunk.css.map": "/Portfolio/static/css/2.559fd73f.chunk.css.map",
-    "static/css/main.80c8432c.chunk.css.map": "/Portfolio/static/css/main.80c8432c.chunk.css.map",
-    "static/media/1school_thumbnail.png": "/Portfolio/static/media/1school_thumbnail.60175515.png",
-    "static/media/html-css-1.jpg": "/Portfolio/static/media/html-css-1.41cb2954.jpg",
+    "static/css/main.5d0a5857.chunk.css.map": "/Portfolio/static/css/main.5d0a5857.chunk.css.map",
+    "static/media/1school_thumbnail2.png": "/Portfolio/static/media/1school_thumbnail2.c505c8f5.png",
     "static/media/logo2.d29588c5.svg": "/Portfolio/static/media/logo2.d29588c5.svg",
     "static/media/mongodb-icon.554c7d4b.svg": "/Portfolio/static/media/mongodb-icon.554c7d4b.svg",
     "static/media/mysql-6.60c2bdb8.svg": "/Portfolio/static/media/mysql-6.60c2bdb8.svg",
-    "static/media/notesApp_thumbnail.png": "/Portfolio/static/media/notesApp_thumbnail.1f8f3659.png",
-    "static/media/portfolio-thumbnail.png": "/Portfolio/static/media/portfolio-thumbnail.220bf18f.png"
+    "static/media/notesApp_thumbnail2.png": "/Portfolio/static/media/notesApp_thumbnail2.790ece7e.png",
+    "static/media/portfolio_thumbnail2.png": "/Portfolio/static/media/portfolio_thumbnail2.c584a0b8.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6a869909.js",
-    "static/css/2.559fd73f.chunk.css",
-    "static/js/2.0a1ed637.chunk.js",
-    "static/css/main.80c8432c.chunk.css",
-    "static/js/main.b6159952.chunk.js"
+    "static/js/2.a88601aa.chunk.js",
+    "static/css/main.5d0a5857.chunk.css",
+    "static/js/main.a999d3b2.chunk.js"
   ]
 }
