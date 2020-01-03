@@ -18,21 +18,21 @@ export default class Header extends Component {
         };
     };
 
-    handleScroll = () => {
-      if (window.pageYOffset > 0) {
-        this.setState({
-          shadow: 'shadow'
-        });
-      } else {
-        this.setState({
-          shadow: 'no-shadow'
-        });
-      }
-    }
+    // handleScroll = () => {
+    //   if (window.pageYOffset > 0) {
+    //     this.setState({
+    //       shadow: 'shadow'
+    //     });
+    //   } else {
+    //     this.setState({
+    //       shadow: 'no-shadow'
+    //     });
+    //   }
+    // }
 
-    componentDidMount() {
-      window.addEventListener('scroll', this.handleScroll);
-    }
+    // componentDidMount() {
+    //   window.addEventListener('scroll', this.handleScroll);
+    // }
 
     handleMenuBtnClick = () => {
         this.setState(

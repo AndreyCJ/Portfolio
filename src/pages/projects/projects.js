@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 import './projects.css';
 import Hero from '../../components/hero';
 
-import school_thumbnail from '../../assets/project_thumbnail/1school_thumbnail.png';
-import notesApp_thumbnail from '../../assets/project_thumbnail/notesApp_thumbnail.png';
-import portfolio_thumbnail from '../../assets/project_thumbnail/portfolio_thumbnail.png';
+import school_thumbnail from '../../assets/project_thumbnail/1school_thumbnail2.png';
+import notesApp_thumbnail from '../../assets/project_thumbnail/notesApp_thumbnail2.png';
+import portfolio_thumbnail from '../../assets/project_thumbnail/portfolio_thumbnail2.png';
 
 export default class Projects extends Component {
     constructor(props) {
