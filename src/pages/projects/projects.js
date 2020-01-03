@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import './projects.css';
 import Hero from '../../components/hero';
@@ -6,6 +8,10 @@ import Hero from '../../components/hero';
 import school_thumbnail from '../../assets/project_thumbnail/1school_thumbnail2.png';
 import notesApp_thumbnail from '../../assets/project_thumbnail/notesApp_thumbnail2.png';
 import portfolio_thumbnail from '../../assets/project_thumbnail/portfolio_thumbnail2.png';
+
+import school_thumbnail__lowres from '../../assets/project_thumbnail/1school_thumbnail2-lowres.png';
+import notesApp_thumbnail__lowres from '../../assets/project_thumbnail/notesApp_thumbnail2-lowres.png';
+import  portfolio_thumbnail__lowres from '../../assets/project_thumbnail/portfolio_thumbnail2-lowres.png';
 
 export default class Projects extends Component {
     constructor(props) {
@@ -30,7 +36,16 @@ export default class Projects extends Component {
                       <div className="project_item">
                         <div className="project_item__img">
                           <a href="https://1school-wptheme.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                            <img style={{width: '100%'}} src={school_thumbnail} alt="1school Wordpress Theme"/>
+                          <LazyLoadImage
+                            alt={school_thumbnail}
+                            effect="blur"
+                            height={"100%"}
+                            src={school_thumbnail} // use normal <img> attributes as props
+                            wrapperClassName="project_item__img"
+                            width={"100%"}
+                            placeholderSrc={school_thumbnail__lowres}
+                          />
+                            {/* <img style={{width: '100%'}} src={school_thumbnail} alt="1school Wordpress Theme"/> */}
                           </a>
                         </div>
                         <div className="project_item__description">
@@ -55,7 +70,15 @@ export default class Projects extends Component {
                       <div className="project_item">
                         <div className="project_item__img">
                           <a href="https://vanillajsnotesapp.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                            <img style={{width: '100%'}} src={notesApp_thumbnail} alt="1school Wordpress Theme"/>
+                            <LazyLoadImage
+                              alt={notesApp_thumbnail}
+                              effect="blur"
+                              height={"100%"}
+                              src={notesApp_thumbnail} // use normal <img> attributes as props
+                              wrapperClassName="project_item__img"
+                              width={"100%"}
+                              placeholderSrc={notesApp_thumbnail__lowres}
+                            />
                           </a>
                         </div>
                         <div className="project_item__description">
@@ -80,7 +103,15 @@ export default class Projects extends Component {
                       <div className="project_item">
                         <div className="project_item__img">
                           <a href="https://github.com/AndreyCJ/Portfolio" target="_blank" rel="noopener noreferrer">
-                            <img style={{width: '100%'}} src={portfolio_thumbnail} alt="1school Wordpress Theme"/>
+                            <LazyLoadImage
+                              alt={portfolio_thumbnail}
+                              effect="blur"
+                              height={"100%"}
+                              src={portfolio_thumbnail} // use normal <img> attributes as props
+                              wrapperClassName="project_item__img"
+                              width={"100%"}
+                              placeholderSrc={portfolio_thumbnail__lowres}
+                            />
                           </a>
                         </div>
                         <div className="project_item__description">
