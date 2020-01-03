@@ -8,7 +8,7 @@ const Footer = props => {
     return (
         <div className="footer">
             <div className="name">
-                Андрей Чеботарь &copy; 2019
+                Андрей Чеботарь &copy; {new Date().getFullYear()}
             </div>
             <div className="contactInfo">
                 <SocialLinks />

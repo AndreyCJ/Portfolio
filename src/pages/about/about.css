@@ -13,7 +13,7 @@ html {
     display: flex;
     flex-direction: column;
     margin-top: -65px;
-    margin-bottom: -44px;
+    margin-bottom: -41px;
 }
 
 .aboutPage .showcase .page-content {
@@ -21,6 +21,7 @@ html {
     flex-direction: column;
     padding: 20px;
     justify-content: space-between;
+    max-width: 970px;
 }
 
 .aboutPage .showcase {
@@ -56,18 +57,19 @@ html {
     flex-direction: column;
     max-width: 970px;
     line-height: 1.6;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased !important;
     -moz-font-smoothing: antialiased !important;
-    text-rendering: optimizelegibility !important;
+    text-rendering: optimizeLegibility;
     letter-spacing: .03em;
     margin-top: -44px;
     padding: 0 30px;
 }
 
 .aboutPage .moreDetails .content h1 {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
+    line-height: normal;
     font-weight: 500;
     margin: 5px 0;
     padding-bottom: 1rem;
@@ -81,7 +83,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased !important;
     -moz-font-smoothing: antialiased !important;
-    text-rendering: optimizelegibility !important;
+    text-rendering: optimizeLegibility;
     /* margin-bottom: 2rem; */
     /* background: #fff;
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.03), 
@@ -108,7 +110,7 @@ html {
 
 .landing h1 {
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0;
     margin: 0;
     color: #1b1b1c;
@@ -116,14 +118,14 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased !important;
     -moz-font-smoothing: antialiased !important;
-    text-rendering: optimizelegibility !important;
+    text-rendering: optimizeLegibility;
 }
 
 .landing h2 {
     margin: 0;
     padding: 0;
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 400;
     line-height: normal;
     /* padding-bottom: 0.5rem; */
     color: #1b1b1c;
@@ -166,7 +168,7 @@ html {
 }
 
 .technology span {
-    border-radius: 6px;
+    border-radius: 0.5rem;
     color: #1b1b1c;
     box-shadow: 0 1px 2px 1px rgba(0,0,0,0.03), 
                 0 2px 4px 2px rgba(0,0,0,0.03), 
@@ -174,8 +176,10 @@ html {
     padding: 8px;
     /* margin-top: 8px; */
     background: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
 }
-
 
 .about-socialLinks-container {
     text-align: right;
@@ -203,25 +207,8 @@ html {
     height: 1.8rem;
 }
 
-.link {
-    display: flex;
-    align-items: center;
-    padding-top: 1rem;
-}
-
-.link a {
-    font-weight: normal;
-    font-size: 1.2rem;
-    color: rgb(75, 95, 211);
-    display: block;
-    padding: 8px;
-    border: 2px solid rgb(75, 95, 211);
-    border-radius: 1rem;
-}
-
-.link a:hover {
-    background: rgb(75, 95, 211);
-    color: #fff;
+.content span {
+    font-size: 1rem;
 }
 
 .link.scroll-to {
@@ -238,7 +225,61 @@ html {
     align-items: center;
     background: transparent;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1rem;
+}
+
+.bounce {
+    -webkit-animation: bounce 2.6s infinite;
+    animation: bounce 2.6s infinite;
+}
+
+@-webkit-keyframes bounce {
+    20%, 53%, 80%, 0%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -7px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
+    }
+    @keyframes bounce {
+    20%, 53%, 80%, 0%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    40%, 43% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -15px, 0);
+        transform: translate3d(0, -15px, 0);
+    }
+    70% {
+        -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+        -webkit-transform: translate3d(0, -7px, 0);
+        transform: translate3d(0, -7px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -4px, 0);
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -265,15 +306,15 @@ html {
     }
 
     .landing h1  {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 
     .landing h2 {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     
     .description {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .about-socialLinks-container .social a:hover {
@@ -281,12 +322,12 @@ html {
     }
 
     .aboutPage .moreDetails .content {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         text-align: center;
     }
 
     .aboutPage .moreDetails .content h1 {
-        font-size: 2.3rem;
+        font-size: 1.8rem;
         margin: 0 auto;
     }
 
@@ -298,7 +339,7 @@ html {
     }
 
     .landing h1  {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .landing h2 {
@@ -331,7 +372,11 @@ html {
     }
 
     .landing h1  {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+    }
+
+    .link.scroll-to button{
+        font-size: 0.9rem;
     }
     
     .landing h2 {
@@ -339,6 +384,14 @@ html {
     }
 
     .technology span {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .aboutPage .moreDetails .content h1 {
+        font-size: 1.6rem;
+    }
+
+    .aboutPage .moreDetails .content {
+        font-size: 0.9rem;
     }
 }

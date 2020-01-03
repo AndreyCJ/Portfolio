@@ -1,6 +1,9 @@
 import React from 'react';
 import './hero.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+
 const Hero = (props) => {
     let subTitle;
     if (props.subTitle) {
@@ -10,11 +13,19 @@ const Hero = (props) => {
         <div className="hero-container">
             <div className="hero-inner">
                 <div className="title-container">
-                    <h1>{props.title}</h1>
-                    {subTitle}
+                    <div>
+                      <h1>{props.title}</h1>
+                      {subTitle}
+                    </div>
                 </div>
                 <div className="socialLinks-container">
                     {props.children}
+                    <div className="link">
+                    <a href="https://github.com/AndreyCJ/" target="_blank" rel="noopener noreferrer">
+                      {<FontAwesomeIcon icon={faGithub} />} Github profile
+                    </a>
+                    </div>
+
                 </div>
             </div>
         </div>

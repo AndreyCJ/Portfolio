@@ -14,6 +14,10 @@ export default class About extends Component {
     window.scrollTo(0, 100000)
   };
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     const { title, subTitle } = this.props; // location
     return (
@@ -62,12 +66,12 @@ export default class About extends Component {
               </div>
             </div>
             <div className="link">
-              <Link to='/portfolio'>Посмотреть мои проекты</Link>
+              <Link to='/portfolio'>Мои проекты</Link>
             </div>
           </div>
             <div className="link scroll-to" onClick={() => this.scrollToBottom()}>
-              <button>
-                Подробнее{<FontAwesomeIcon icon={faAngleDoubleDown} style={{paddingTop: '10px', fontSize: '2rem'}}/>}
+              <button className="bounce">
+                Подробнее{<FontAwesomeIcon icon={faAngleDoubleDown} style={{paddingTop: '8px', fontSize: '1.5rem'}}/>}
               </button>
             </div>
         </div>
@@ -76,11 +80,11 @@ export default class About extends Component {
           <div className="content">
             <h1>О себе</h1>
             <span>
-              Я full-stack веб-разработчик. Опыт работы в сфере разработки сайтов 3 года. Я делаю современные, адаптивные и кроссбраузерные сайты.
+              Я full-stack веб-разработчик. Опыт работы в сфере разработки сайтов 3 года.<br />Я делаю современные, адаптивные и кроссбраузерные сайты.
             </span>
             <br />
             <span>
-              Вы можете связаться со мной по адресу <a href="mailto:andreyoneup@gmail.com">andreyoneup@gmail.com</a>
+              Вы можете связаться со мной по адресу <a className="bold" href="mailto:andreyoneup@gmail.com">andreyoneup@gmail.com</a>
             </span>
           </div>
         </div>

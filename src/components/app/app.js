@@ -30,14 +30,6 @@ export default class App extends Component {
                     subTitle: '',
                     text: ''
                 }
-                // {
-                //     component: Contact,
-                //     title: 'Обратная связь',
-                //     path: '/contact',
-                //     hero: 'Оставьте ваше сообщение',
-                //     subTitle: '',
-                //     text: ''
-                // }
             ]
         };
     };

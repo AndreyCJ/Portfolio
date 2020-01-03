@@ -4,7 +4,7 @@
     border-top: 1px solid rgb(224,224,224);
     border-bottom: 1px solid rgb(224,224,224);
     width: 100%;
-    background: rgba(212, 212, 213, 0.158); /* rgba(212, 212, 213, 0.158) */
+    background: rgba(212, 212, 213, 0.158); 
 }
 
 .hero-inner {
@@ -15,12 +15,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .hero-container h1 {
-    color: #464647;  /* #464647 */
-    font-weight: 500;
-    font-size: 2.2rem;
+    font-weight: 400;
+    font-size: 1.8rem;
     text-align: left;
     align-self: flex-start;
     line-height: normal;
@@ -31,7 +31,7 @@
 .hero-container h2 {
     color: #464647;  /* #424243 */
     font-weight: normal;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: left;
     align-self: flex-start;
     line-height: normal;
@@ -45,8 +45,40 @@
     justify-content: center;
 }
 
+.socialLinks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialLinks-container .link {
+    margin: 0;
+    padding: 0;
+}
+
+.socialLinks-container .link a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.socialLinks-container svg {
+    margin-right: 5px;
+}
+
 @media only screen and (max-width: 768px) {
     .hero-container h1 {
-        font-size: 1.7rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .hero-container h1 {
+        font-size: 1.3rem;
+    }
+
+    .socialLinks-container .link a {
+        font-size: 0.8rem;
     }
 }

@@ -13,9 +13,26 @@ export default class Header extends Component {
         super(props);
         
         this.state = {
-            isMenuOpen: false
+            isMenuOpen: false,
+            shadow: 'no-shadow'
         };
     };
+
+    handleScroll = () => {
+      if (window.pageYOffset > 0) {
+        this.setState({
+          shadow: 'shadow'
+        });
+      } else {
+        this.setState({
+          shadow: 'no-shadow'
+        });
+      }
+    }
+
+    componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll);
+    }
 
     handleMenuBtnClick = () => {
         this.setState(
@@ -31,7 +48,7 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div className="header">
+            <div className={`header ${this.state.shadow}`}>
                 <div className="logo">
                     <Link to="/"><Logo /></Link>
                 </div>
