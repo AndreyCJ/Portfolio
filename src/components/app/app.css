@@ -43,7 +43,6 @@ button:hover {
 
 .wrapper {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
     background-color: #FAFAF9; /* #1B1B1C */
 }

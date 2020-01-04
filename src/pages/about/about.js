@@ -14,10 +14,6 @@ export default class About extends Component {
     window.scrollTo(0, 100000)
   };
 
-  componentDidMount() {
-    window.scrollTo(0, 0);
-  }
-
   render() {
     const { title, subTitle } = this.props; // location
     return (
