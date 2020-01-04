@@ -1,19 +1,16 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.ca4e0273.chunk.css",
-    "main.js": "/Portfolio/static/js/main.bc2bc6e0.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.bc2bc6e0.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.3d632f63.chunk.css",
+    "main.js": "/Portfolio/static/js/main.0f1f25fb.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.0f1f25fb.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.6a869909.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.6a869909.js.map",
-    "static/css/2.27fdde94.chunk.css": "/Portfolio/static/css/2.27fdde94.chunk.css",
-    "static/js/2.cc9d60a2.chunk.js": "/Portfolio/static/js/2.cc9d60a2.chunk.js",
-    "static/js/2.cc9d60a2.chunk.js.map": "/Portfolio/static/js/2.cc9d60a2.chunk.js.map",
+    "static/js/2.b410b821.chunk.js": "/Portfolio/static/js/2.b410b821.chunk.js",
+    "static/js/2.b410b821.chunk.js.map": "/Portfolio/static/js/2.b410b821.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "precache-manifest.5a203ad3030af7469c59f777d13fc48f.js": "/Portfolio/precache-manifest.5a203ad3030af7469c59f777d13fc48f.js",
+    "precache-manifest.4ec0b91d58e3bda0d9c18c1cea089f1d.js": "/Portfolio/precache-manifest.4ec0b91d58e3bda0d9c18c1cea089f1d.js",
     "service-worker.js": "/Portfolio/service-worker.js",
-    "static/css/2.27fdde94.chunk.css.map": "/Portfolio/static/css/2.27fdde94.chunk.css.map",
-    "static/css/main.ca4e0273.chunk.css.map": "/Portfolio/static/css/main.ca4e0273.chunk.css.map",
-    "static/media/1school_thumbnail2-lowres.png": "/Portfolio/static/media/1school_thumbnail2-lowres.acf2bd19.png",
+    "static/css/main.3d632f63.chunk.css.map": "/Portfolio/static/css/main.3d632f63.chunk.css.map",
     "static/media/1school_thumbnail2.png": "/Portfolio/static/media/1school_thumbnail2.c505c8f5.png",
     "static/media/logo2.d29588c5.svg": "/Portfolio/static/media/logo2.d29588c5.svg",
     "static/media/mongodb-icon.554c7d4b.svg": "/Portfolio/static/media/mongodb-icon.554c7d4b.svg",
@@ -23,9 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6a869909.js",
-    "static/css/2.27fdde94.chunk.css",
-    "static/js/2.cc9d60a2.chunk.js",
-    "static/css/main.ca4e0273.chunk.css",
-    "static/js/main.bc2bc6e0.chunk.js"
+    "static/js/2.b410b821.chunk.js",
+    "static/css/main.3d632f63.chunk.css",
+    "static/js/main.0f1f25fb.chunk.js"
   ]
 }

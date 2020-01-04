@@ -1,31 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5f9f23c271058cb7cbb50b3f0e4daed9",
+    "revision": "50c628679d92661261acd978cf331506",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "06d17a282f65eda13b6d",
-    "url": "/Portfolio/static/css/2.27fdde94.chunk.css"
+    "revision": "7dca54cd1ef812ed9cf8",
+    "url": "/Portfolio/static/css/main.3d632f63.chunk.css"
   },
   {
-    "revision": "f816729bd99a9d9cdb33",
-    "url": "/Portfolio/static/css/main.ca4e0273.chunk.css"
+    "revision": "748a7f0151ff55ae7b83",
+    "url": "/Portfolio/static/js/2.b410b821.chunk.js"
   },
   {
-    "revision": "06d17a282f65eda13b6d",
-    "url": "/Portfolio/static/js/2.cc9d60a2.chunk.js"
-  },
-  {
-    "revision": "f816729bd99a9d9cdb33",
-    "url": "/Portfolio/static/js/main.bc2bc6e0.chunk.js"
+    "revision": "7dca54cd1ef812ed9cf8",
+    "url": "/Portfolio/static/js/main.0f1f25fb.chunk.js"
   },
   {
     "revision": "dd65a4e71a8b70668f2c",
     "url": "/Portfolio/static/js/runtime-main.6a869909.js"
-  },
-  {
-    "revision": "acf2bd19718fcfe4127ce7080aa2b023",
-    "url": "/Portfolio/static/media/1school_thumbnail2-lowres.acf2bd19.png"
   },
   {
     "revision": "c505c8f57359cb13a02046bdb8cf36ed",
