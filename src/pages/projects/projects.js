@@ -27,7 +27,6 @@ const Projects = (props) => {
                         src={school_thumbnail}
                         effect="blur"
                         placeholderSrc={school_thumbnail__lowres}
-                        visibleByDefault={true}
                         width={'100%'}
                         height={'100%'}
                       />
@@ -59,7 +58,6 @@ const Projects = (props) => {
                         src={notesApp_thumbnail}
                         effect="blur"
                         placeholderSrc={notesApp_thumbnail__lowres}
-                        visibleByDefault={true}
                         width={'100%'}
                         height={'100%'}
                       />
