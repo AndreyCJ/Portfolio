@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "24ca122eca0b230cbde69d6c1d25b21e",
+    "revision": "11c4c3b173bbf1548ab5a8934ae89226",
     "url": "/Portfolio/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/css/2.27fdde94.chunk.css"
   },
   {
-    "revision": "b1eef35da89502d141d5",
+    "revision": "7550c19d399c1786af67",
     "url": "/Portfolio/static/css/main.81af5025.chunk.css"
   },
   {
@@ -16,16 +16,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/js/2.ae697463.chunk.js"
   },
   {
-    "revision": "b1eef35da89502d141d5",
-    "url": "/Portfolio/static/js/main.848e7085.chunk.js"
+    "revision": "7550c19d399c1786af67",
+    "url": "/Portfolio/static/js/main.381d240e.chunk.js"
   },
   {
     "revision": "dd65a4e71a8b70668f2c",
     "url": "/Portfolio/static/js/runtime-main.6a869909.js"
-  },
-  {
-    "revision": "acf2bd19718fcfe4127ce7080aa2b023",
-    "url": "/Portfolio/static/media/1school_thumbnail2-lowres.acf2bd19.png"
   },
   {
     "revision": "c505c8f57359cb13a02046bdb8cf36ed",
