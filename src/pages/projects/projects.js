@@ -44,6 +44,7 @@ export default class Projects extends Component {
                             wrapperClassName="project_item__img"
                             width={"100%"}
                             placeholderSrc={school_thumbnail__lowres}
+                            visibleByDefault={true}
                           />
                             {/* <img style={{width: '100%'}} src={school_thumbnail} alt="1school Wordpress Theme"/> */}
                           </a>
@@ -78,6 +79,7 @@ export default class Projects extends Component {
                               wrapperClassName="project_item__img"
                               width={"100%"}
                               placeholderSrc={notesApp_thumbnail__lowres}
+                              visibleByDefault={true}
                             />
                           </a>
                         </div>
@@ -111,6 +113,7 @@ export default class Projects extends Component {
                               wrapperClassName="project_item__img"
                               width={"100%"}
                               placeholderSrc={portfolio_thumbnail__lowres}
+                              visibleByDefault={true}
                             />
                           </a>
                         </div>
