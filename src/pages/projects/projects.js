@@ -27,6 +27,9 @@ const Projects = (props) => {
                         src={school_thumbnail}
                         effect="blur"
                         placeholderSrc={school_thumbnail__lowres}
+                        visibleByDefault={true}
+                        width={'100%'}
+                        height={'100%'}
                       />
                     </a>
                   </div>
@@ -56,6 +59,9 @@ const Projects = (props) => {
                         src={notesApp_thumbnail}
                         effect="blur"
                         placeholderSrc={notesApp_thumbnail__lowres}
+                        visibleByDefault={true}
+                        width={'100%'}
+                        height={'100%'}
                       />
                     </a>
                   </div>
@@ -85,6 +91,8 @@ const Projects = (props) => {
                         src={portfolio_thumbnail}
                         effect="blur"
                         placeholderSrc={portfolio_thumbnail__lowres}
+                        width={'100%'}
+                        height={'100%'}
                       />
                     </a>
                   </div>
