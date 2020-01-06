@@ -30,6 +30,15 @@ a:hover {
 
 a:hover {
     color: rgb(75, 95, 211); /* #dfdfdf */
+    outline: none;
+}
+
+:focus {
+    outline: none;
+}
+
+::-moz-focus-inner {
+    border: 0;
 }
 
 button {

@@ -1,25 +1,3 @@
-/* .projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-
-.mdl-grid {
-    padding: 0 !important;
-}
-
-.mdl-card__title {
-    position: relative;
-}
-
-.mdl-card__title-text {
-    color: #fff;
-    z-index: 1;
-    padding: 3px;
-    background: #333333;
-} */
-
 .projects-wrapper {
     margin-top: 3rem;
     padding: 0 5px;
@@ -27,12 +5,15 @@
 
 .project_item {
     margin-bottom: 3.5rem;
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
 }
 
 .project_item__img {
     padding-bottom: 1rem;
     width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .project_item__description h1 {
@@ -53,13 +34,9 @@
     font-size: 0.9rem;
 }
 
-@keyframes fadeInImg {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.project_item__img a img {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes fadeIn {
@@ -69,21 +46,6 @@
     100% {
       opacity: 1;
     }
-  }
-
-.img-loading {
-   opacity: 0;
-   width: 100%;
-   height: auto;
-}
-
-.img-loaded {
-   animation: fadeInImg cubic-bezier(0.23, 1, 0.32, 1) 1;
-   position: relative;
-   opacity: 0;
-   animation-fill-mode: forwards;
-   animation-duration: 0.7s;
-   animation-delay: 0.1s;
 }
 
 @media  (max-width: 768px) {
@@ -96,23 +58,3 @@
         padding-right: 5px;
     }
 }
-
-@media  (max-width: 425px) {
-    /* .mdl-card {
-        width: 100%;
-        margin: 15px 0 !important; 
-    } */
-}
-
-
-/*  Night mode
-
-    .mdl-tabs__tab {
-        color: #cfcfcf;
-    }
-
-    .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active {
-        color: #fcfcfc;
-        font-weight: normal;
-    }
-*/

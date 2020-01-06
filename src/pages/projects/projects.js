@@ -1,17 +1,12 @@
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import './projects.css';
 import Hero from '../../components/hero';
+import LazyImage from '../../components/lazyImage';
 
 import school_thumbnail from '../../assets/project_thumbnail/1school_thumbnail2.png';
 import notesApp_thumbnail from '../../assets/project_thumbnail/notesApp_thumbnail2.png';
 import portfolio_thumbnail from '../../assets/project_thumbnail/portfolio_thumbnail2.png';
-
-import school_thumbnail__lowres from '../../assets/project_thumbnail/1school_thumbnail2-lowres.png';
-import notesApp_thumbnail__lowres from '../../assets/project_thumbnail/notesApp_thumbnail2-lowres.png';
-import  portfolio_thumbnail__lowres from '../../assets/project_thumbnail/portfolio_thumbnail2-lowres.png';
 
 const Projects = (props) => {
     return (
@@ -23,13 +18,7 @@ const Projects = (props) => {
                 <div className="project_item">
                   <div className="project_item__img">
                     <a href="https://1school-wptheme.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                      <LazyLoadImage
-                        src={school_thumbnail}
-                        effect="blur"
-                        placeholderSrc={school_thumbnail__lowres}
-                        width={'100%'}
-                        height={'100%'}
-                      />
+                      <LazyImage src={school_thumbnail} alt="Wordpress School theme"/>
                     </a>
                   </div>
                   <div className="project_item__description">
@@ -54,13 +43,7 @@ const Projects = (props) => {
                 <div className="project_item">
                   <div className="project_item__img">
                     <a href="https://vanillajsnotesapp.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                      <LazyLoadImage
-                        src={notesApp_thumbnail}
-                        effect="blur"
-                        placeholderSrc={notesApp_thumbnail__lowres}
-                        width={'100%'}
-                        height={'100%'}
-                      />
+                      <LazyImage src={notesApp_thumbnail} alt="NotesApp"/>
                     </a>
                   </div>
                   <div className="project_item__description">
@@ -85,13 +68,7 @@ const Projects = (props) => {
                 <div className="project_item">
                   <div className="project_item__img">
                     <a href="https://github.com/AndreyCJ/Portfolio" target="_blank" rel="noopener noreferrer">
-                      <LazyLoadImage
-                        src={portfolio_thumbnail}
-                        effect="blur"
-                        placeholderSrc={portfolio_thumbnail__lowres}
-                        width={'100%'}
-                        height={'100%'}
-                      />
+                      <LazyImage src={portfolio_thumbnail} alt="My Portfolio"/>
                     </a>
                   </div>
                   <div className="project_item__description">
