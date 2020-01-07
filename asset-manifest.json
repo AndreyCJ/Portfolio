@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.2acd92ab.chunk.css",
+    "main.css": "/Portfolio/static/css/main.118bb4b2.chunk.css",
     "main.js": "/Portfolio/static/js/main.dac250c6.chunk.js",
     "main.js.map": "/Portfolio/static/js/main.dac250c6.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.6a869909.js",
@@ -8,9 +8,9 @@
     "static/js/2.7ebe690f.chunk.js": "/Portfolio/static/js/2.7ebe690f.chunk.js",
     "static/js/2.7ebe690f.chunk.js.map": "/Portfolio/static/js/2.7ebe690f.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "precache-manifest.d2ee2fd1093ce5893069478cc01a8a4b.js": "/Portfolio/precache-manifest.d2ee2fd1093ce5893069478cc01a8a4b.js",
+    "precache-manifest.6950d07184f57093f5838dcf5eef5cb5.js": "/Portfolio/precache-manifest.6950d07184f57093f5838dcf5eef5cb5.js",
     "service-worker.js": "/Portfolio/service-worker.js",
-    "static/css/main.2acd92ab.chunk.css.map": "/Portfolio/static/css/main.2acd92ab.chunk.css.map",
+    "static/css/main.118bb4b2.chunk.css.map": "/Portfolio/static/css/main.118bb4b2.chunk.css.map",
     "static/media/1school_thumbnail2.png": "/Portfolio/static/media/1school_thumbnail2.a72b4234.png",
     "static/media/logo2.d29588c5.svg": "/Portfolio/static/media/logo2.d29588c5.svg",
     "static/media/mongodb-icon.554c7d4b.svg": "/Portfolio/static/media/mongodb-icon.554c7d4b.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.6a869909.js",
     "static/js/2.7ebe690f.chunk.js",
-    "static/css/main.2acd92ab.chunk.css",
+    "static/css/main.118bb4b2.chunk.css",
     "static/js/main.dac250c6.chunk.js"
   ]
 }
