@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import {ReactComponent as Logo} from '../../assets/logo2.svg';
 import './header.css';
@@ -8,7 +8,7 @@ import MobileMenuToggleBtn from '../mobileMenu/mobileMenuToggleBtn';
 import MobileMenu from '../mobileMenu/mobileMenu';
 import Backdrop from '../backdrop/backdrop';
 
-export default class Header extends Component {
+class Header extends Component {
     constructor(props) {
         super(props);
         
@@ -16,6 +16,10 @@ export default class Header extends Component {
             isMenuOpen: false,
             shadow: 'no-shadow'
         };
+
+        this.currentPageClass = '#4b5fd3';
+        this.about = '';
+        this.portfolio = '';
     };
 
     // handleScroll = () => {
@@ -58,7 +62,21 @@ export default class Header extends Component {
                         <ul className="headerNavList">
                             {
                                 this.props.headerLinks.map(({ title, path }, i) => {
-                                    return <li key={i} className='headerNavItem'><Link to={ path } className='nav-link'>{ title }</Link></li>
+                                    switch (this.props.history.location.pathname) {
+                                      case '/':
+                                        this.about = this.currentPageClass;
+                                        this.portfolio = '';
+                                        break;
+                                      case '/portfolio':
+                                        this.portfolio = this.currentPageClass;
+                                        this.about = '';
+                                        break;
+                                      default:
+                                        this.about = this.currentPageClass;
+                                        this.portfolio = '';
+                                        break;
+                                    }
+                                    return <li key={i} className={`headerNavItem ${this.currentPageClass}`}><Link to={ path } className={`nav-link`} style={path === '/' ? {color: this.about} : {color: this.portfolio}}>{ title }</Link></li>
                                 })
                             }
                         </ul>
@@ -74,3 +92,5 @@ export default class Header extends Component {
         );
     };
 };
+
+export default withRouter(Header);

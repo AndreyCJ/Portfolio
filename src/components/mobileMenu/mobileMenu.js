@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import './mobileMenu.css';
 
@@ -9,6 +9,8 @@ const MobileMenu = props => {
     if (props.show) {
         menuClasess = 'mobileMenu open';
     };
+    let about, portfolio = '';
+    const currentPageClass = '#4b5fd3';
 
     return (
         <div>
@@ -20,7 +22,29 @@ const MobileMenu = props => {
                 <ul>
                 {
                     props.headerLinks.map(({ title, path }, i) => {
-                        return <li key={i} className='headerNavItem__mobile'><Link  to={ path } className="nav-link active">{ title }</Link></li>
+                      switch (props.history.location.pathname) {
+                        case '/':
+                          about = currentPageClass;
+                          portfolio = '';
+                          break;
+                        case '/portfolio':
+                          portfolio = currentPageClass;
+                          about = '';
+                          break;
+                        default:
+                          about = currentPageClass;
+                          portfolio = '';
+                          break;
+                      }
+                        return <li key={i} className='headerNavItem__mobile'>
+                          <Link
+                            to={ path }
+                            className="nav-link"
+                            style={path === '/' ? {color: about} : {color: portfolio}}
+                          >
+                            { title }
+                          </Link>
+                        </li>
                     })
                 }
                 </ul>
@@ -29,4 +53,4 @@ const MobileMenu = props => {
     );   
 };
 
-export default MobileMenu;
+export default withRouter(MobileMenu);

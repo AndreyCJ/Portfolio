@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './app.css';
-import {Route, HashRouter} from 'react-router-dom';
+import { Route, HashRouter } from 'react-router-dom';
 import Footer from '../footer';
 import Header from '../header/header';
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './projects.css';
 import Hero from '../../components/hero';
-import LazyImage from '../../components/lazyImage';
+import ProgressiveImage from '../../components/ProgressiveImage';
 
 import school_thumbnail from '../../assets/project_thumbnail/1school_thumbnail2.png';
 import notesApp_thumbnail from '../../assets/project_thumbnail/notesApp_thumbnail2.png';
@@ -18,7 +18,10 @@ const Projects = (props) => {
                 <div className="project_item">
                   <div className="project_item__img">
                     <a href="https://1school-wptheme.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                      <LazyImage src={school_thumbnail} alt="Wordpress School theme"/>
+                      <ProgressiveImage
+                        alt="Wordpress School theme"
+                        src={school_thumbnail}
+                      />
                     </a>
                   </div>
                   <div className="project_item__description">
@@ -43,7 +46,10 @@ const Projects = (props) => {
                 <div className="project_item">
                   <div className="project_item__img">
                     <a href="https://vanillajsnotesapp.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                      <LazyImage src={notesApp_thumbnail} alt="NotesApp"/>
+                      <ProgressiveImage
+                        src={notesApp_thumbnail}
+                        alt="NotesApp"
+                      /> 
                     </a>
                   </div>
                   <div className="project_item__description">
@@ -68,7 +74,10 @@ const Projects = (props) => {
                 <div className="project_item">
                   <div className="project_item__img">
                     <a href="https://github.com/AndreyCJ/Portfolio" target="_blank" rel="noopener noreferrer">
-                      <LazyImage src={portfolio_thumbnail} alt="My Portfolio"/>
+                      <ProgressiveImage
+                        src={portfolio_thumbnail}
+                        alt="My Portfolio"
+                      />
                     </a>
                   </div>
                   <div className="project_item__description">
