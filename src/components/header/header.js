@@ -76,7 +76,15 @@ class Header extends Component {
                                         this.portfolio = '';
                                         break;
                                     }
-                                    return <li key={i} className={`headerNavItem ${this.currentPageClass}`}><Link to={ path } className={`nav-link`} style={path === '/' ? {color: this.about} : {color: this.portfolio}}>{ title }</Link></li>
+                                    return <li key={i} className={`headerNavItem ${this.currentPageClass}`}>
+                                      <Link
+                                        to={ path }
+                                        className={`nav-link`}
+                                        style={path === '/' ? {color: this.about} : {color: this.portfolio}}
+                                      >
+                                        { title }
+                                      </Link>
+                                    </li>
                                 })
                             }
                         </ul>
