@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b7ba1ff85b6c1582fa499c3f5a2d6802",
+    "revision": "3fdcd6a6975076ca86b7039b58517984",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "57b6455e591d4f47119d",
-    "url": "/Portfolio/static/css/main.3cf77cb0.chunk.css"
+    "revision": "80dc1955bb544327ce08",
+    "url": "/Portfolio/static/css/main.bb4a46aa.chunk.css"
   },
   {
-    "revision": "780ed858d0a1d2d2fae5",
-    "url": "/Portfolio/static/js/2.2e6a7fbe.chunk.js"
+    "revision": "175495c69492764f954a",
+    "url": "/Portfolio/static/js/2.1534cadc.chunk.js"
   },
   {
-    "revision": "57b6455e591d4f47119d",
-    "url": "/Portfolio/static/js/main.2582622f.chunk.js"
+    "revision": "80dc1955bb544327ce08",
+    "url": "/Portfolio/static/js/main.5e431097.chunk.js"
   },
   {
     "revision": "dd65a4e71a8b70668f2c",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/media/1school_thumbnail2.a72b4234.png"
   },
   {
-    "revision": "d29588c5f7cea8dbabd596df4ab3d588",
-    "url": "/Portfolio/static/media/logo2.d29588c5.svg"
+    "revision": "b5b527ca2d83c66a7887d3603ecc4228",
+    "url": "/Portfolio/static/media/logo2.b5b527ca.svg"
   },
   {
     "revision": "554c7d4bfd63a3da33773978fd291c06",
