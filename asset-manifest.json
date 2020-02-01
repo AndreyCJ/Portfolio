@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.bb4a46aa.chunk.css",
-    "main.js": "/Portfolio/static/js/main.5e431097.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.5e431097.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.900e2d93.chunk.css",
+    "main.js": "/Portfolio/static/js/main.15a718e5.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.15a718e5.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.6a869909.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.6a869909.js.map",
     "static/js/2.1534cadc.chunk.js": "/Portfolio/static/js/2.1534cadc.chunk.js",
     "static/js/2.1534cadc.chunk.js.map": "/Portfolio/static/js/2.1534cadc.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "precache-manifest.a9c76d7d8b59d237b1606bbdfa607cd4.js": "/Portfolio/precache-manifest.a9c76d7d8b59d237b1606bbdfa607cd4.js",
+    "precache-manifest.dd0094e0b685b606822f1daf46caef5c.js": "/Portfolio/precache-manifest.dd0094e0b685b606822f1daf46caef5c.js",
     "service-worker.js": "/Portfolio/service-worker.js",
-    "static/css/main.bb4a46aa.chunk.css.map": "/Portfolio/static/css/main.bb4a46aa.chunk.css.map",
-    "static/media/1school_thumbnail2.png": "/Portfolio/static/media/1school_thumbnail2.a72b4234.png",
-    "static/media/logo2.b5b527ca.svg": "/Portfolio/static/media/logo2.b5b527ca.svg",
+    "static/css/main.900e2d93.chunk.css.map": "/Portfolio/static/css/main.900e2d93.chunk.css.map",
+    "static/media/1school_thumbnail2.png": "/Portfolio/static/media/1school_thumbnail2.fbaa9968.png",
+    "static/media/logo2.d29588c5.svg": "/Portfolio/static/media/logo2.d29588c5.svg",
     "static/media/mongodb-icon.554c7d4b.svg": "/Portfolio/static/media/mongodb-icon.554c7d4b.svg",
     "static/media/mysql-6.60c2bdb8.svg": "/Portfolio/static/media/mysql-6.60c2bdb8.svg",
-    "static/media/notesApp_thumbnail2.png": "/Portfolio/static/media/notesApp_thumbnail2.503cc226.png",
-    "static/media/portfolio_thumbnail2.png": "/Portfolio/static/media/portfolio_thumbnail2.5128a4f6.png"
+    "static/media/notesApp_thumbnail2.png": "/Portfolio/static/media/notesApp_thumbnail2.841ff62c.png",
+    "static/media/portfolio_thumbnail2.png": "/Portfolio/static/media/portfolio_thumbnail2.62af917a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6a869909.js",
     "static/js/2.1534cadc.chunk.js",
-    "static/css/main.bb4a46aa.chunk.css",
-    "static/js/main.5e431097.chunk.js"
+    "static/css/main.900e2d93.chunk.css",
+    "static/js/main.15a718e5.chunk.js"
   ]
 }
