@@ -3,7 +3,6 @@ import React from 'react';
 import './projects.css';
 import Hero from '../../components/hero';
 import Img from 'react-image';
-import VisibilitySensor from 'react-visibility-sensor';
 
 import school_thumbnail from '../../assets/project_thumbnail/1school_thumbnail2.png';
 import notesApp_thumbnail from '../../assets/project_thumbnail/notesApp_thumbnail2.png';
@@ -24,7 +23,7 @@ const Projects = (props) => {
                   <div className="project_item">
                     <div className="project_item__img">
                       <a href="https://1school-wptheme.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                        <VisibilitySensor>
+                        
                           <Img
                             alt="Wordpress School theme"
                             src={school_thumbnail}
@@ -41,7 +40,7 @@ const Projects = (props) => {
                               />
                             }
                           />
-                        </VisibilitySensor>
+                        
                       </a>
                     </div>
                     <div className="project_item__description">
@@ -66,7 +65,7 @@ const Projects = (props) => {
                   <div className="project_item">
                     <div className="project_item__img">
                       <a href="https://vanillajsnotesapp.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                        <VisibilitySensor>
+                        
                           <Img
                             src={notesApp_thumbnail}
                             alt="NotesApp"
@@ -83,7 +82,7 @@ const Projects = (props) => {
                               />
                             }
                           />
-                        </VisibilitySensor> 
+                         
                       </a>
                     </div>
                     <div className="project_item__description">
@@ -105,7 +104,7 @@ const Projects = (props) => {
                       </div>
                     </div>
                   </div>
-                {/* <VisibilitySensor>
+                {/* 
                   <div className="project_item">
                     <div className="project_item__img">
                       <a href="https://vanillajsnotesapp.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
@@ -134,11 +133,11 @@ const Projects = (props) => {
                       </div>
                     </div>
                   </div>
-                </VisibilitySensor> */}
+                 */}
                 <div className="project_item">
                   <div className="project_item__img">
                     <a href="https://github.com/AndreyCJ/Portfolio" target="_blank" rel="noopener noreferrer">
-                      <VisibilitySensor>
+                      
                         <Img
                           src={portfolio_thumbnail}
                           alt="My Portfolio"
@@ -155,7 +154,7 @@ const Projects = (props) => {
                             />
                           }
                         />
-                      </VisibilitySensor>
+                      
                     </a>
                   </div>
                   <div className="project_item__description">
