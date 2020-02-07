@@ -10,6 +10,10 @@ import Blinker from '../../components/blinker';
 import './about.css';
 
 export default class About extends Component {
+  componentDidMount() {
+    window.scrollTo(0,0);
+  }
+
   scrollToBottom = () => {
     window.scrollTo(0, 100000)
   };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './projects.css';
 import Hero from '../../components/hero';
@@ -14,6 +14,10 @@ import portfolio_overlay from '../../assets/project_thumbnail/portfolio_thumbnai
 
 
 const Projects = (props) => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
     return (
       <div>
         <Hero title={props.title}/>
