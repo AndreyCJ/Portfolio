@@ -26,34 +26,7 @@ const Projects = (props) => {
             <div className="content">
               <div className="projects-wrapper">
 
-                <div className="project_item">
-                    <div className="project_item__img">
-                      <a href="https://github.com/AndreyCJ/College-Timetables" target="_blank" rel="noopener noreferrer">
-                        <Img
-                          src={timetable_thumbnail}
-                          alt="NotesApp"
-                          loader={
-                            <img src={timetable_overlay} alt="Wordpress School theme"/>
-                          }
-                        /> 
-                      </a>
-                    </div>
-                    <div className="project_item__description">
-                      <h1>
-                        <a href="https://github.com/AndreyCJ/College-Timetables" target="_blank" rel="noopener noreferrer">
-                          Расписание колледжа
-                        </a>
-                      </h1>
-                      <p>
-                        Прогрессивное web-приложение для просмотра расписания занятий, звонов, замен. 
-                      </p>
-                      <div className="project_item__links">
-                        <div className="link">
-                          <a href="https://github.com/AndreyCJ/College-Timetables" target="_blank" rel="noopener noreferrer">GitHub</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                
                   
                   <div className="project_item">
                     <div className="project_item__img">
@@ -93,6 +66,40 @@ const Projects = (props) => {
                         </div>
                         <div className="link">
                           <a href="https://vanillajsnotesapp.000webhostapp.com/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="project_item">
+                    <div className="project_item__img">
+                      <a href="https://github.com/AndreyCJ/College-Timetables" target="_blank" rel="noopener noreferrer">
+                        <Img
+                          src={timetable_thumbnail}
+                          alt="TimetableApp"
+                          loader={
+                            <img src={timetable_overlay} alt="TimetableApp"/>
+                          }
+                          style={{
+                            opacity: 1,
+                            marginTop: "2px",
+                            marginBottom: "2px"
+                          }}
+                        /> 
+                      </a>
+                    </div>
+                    <div className="project_item__description">
+                      <h1>
+                        <a href="https://github.com/AndreyCJ/College-Timetables" target="_blank" rel="noopener noreferrer">
+                          Расписание колледжа
+                        </a>
+                      </h1>
+                      <p>
+                        Прогрессивное web-приложение для просмотра расписания занятий, звонов, замен. 
+                      </p>
+                      <div className="project_item__links">
+                        <div className="link">
+                          <a href="https://github.com/AndreyCJ/College-Timetables" target="_blank" rel="noopener noreferrer">GitHub</a>
                         </div>
                       </div>
                     </div>

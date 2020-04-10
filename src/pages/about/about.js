@@ -80,7 +80,7 @@ export default class About extends Component {
           <div className="content">
             <h1>О себе</h1>
             <span>
-              Я full-stack веб-разработчик. Опыт работы в сфере разработки сайтов 3 года.<br />Я делаю современные, адаптивные и кроссбраузерные сайты.
+              Я full-stack веб-разработчик. Стек технологий, который я использую: JavaScript, React, NodeJS, PHP.<br />Я делаю современные, адаптивные и кроссбраузерные сайты.
             </span>
             <br />
             <span>
