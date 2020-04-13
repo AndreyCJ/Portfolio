@@ -21,6 +21,25 @@
     font-weight: 500;
 }
 
+.project_item__description ul {
+    padding-left: 40px;
+    list-style: disc;
+    margin-bottom: 1rem;
+}
+
+.project_item__description p{
+    margin-bottom: 1rem;
+}
+
+.project_item__description p, .project_item__description li, .project_item__description span {
+    line-height: 1.7;
+    max-width: 42rem;
+}
+
+.project_item__description li a {
+    color: rgb(75, 95, 211);
+}
+
 .project_item__links {
     display: flex;
 }
@@ -73,3 +92,4 @@
         padding-right: 5px;
     }
 }
+

@@ -1,0 +1,47 @@
+.selfEducation h1 {
+    padding-bottom: 0.9rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.selfEducation ul {
+    padding-left: 40px;
+    list-style: disc;
+    margin-bottom: 1rem;
+}
+
+.selfEducation p{
+    margin-bottom: 1rem;
+}
+
+.selfEducation p, .selfEducation li, .selfEducation span {
+    line-height: 1.7;
+    max-width: 42rem;
+}
+
+.selfEducation li a {
+    color: rgb(75, 95, 211);
+}
+
+.selfEducation img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin: 3rem 0;
+}
+
+.roadMap-placeholder {
+    display: block;
+    background: #fff;
+    height: 3449px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+    .selfEducation {
+        padding: 0 15px;
+    }
+}

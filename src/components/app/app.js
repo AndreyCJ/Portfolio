@@ -6,7 +6,9 @@ import Header from '../header/header';
 
 import About from '../../pages/about';
 import Projects from '../../pages/projects';
-// import Contact from '../../pages/contact';
+import Selfeducation from '../../pages/selfeducation';
+import Achievements from '../../pages/achievements';
+import Contact from '../../pages/contact';
 
 export default class App extends Component {
     constructor(props) {
@@ -16,17 +18,41 @@ export default class App extends Component {
             pageData: [
                 {
                     component: About,
-                    title: 'О себе',
+                    title: 'Визитка',
                     path: '/',
                     hero: 'Андрей Чеботарь',
-                    subTitle: 'Веб-разработчик',
+                    subTitle: 'Web-разработчик',
                     text: 'Стек технологий, который я использую: '
                 },
                 {
                     component: Projects,
-                    title: 'Портфолио',
+                    title: 'Разработка ПО',
                     path: '/portfolio',
                     hero: 'Мои работы',
+                    subTitle: '',
+                    text: ''
+                },
+                {
+                    component: Selfeducation,
+                    title: 'Самообразование',
+                    path: '/selfeducation',
+                    hero: 'Самообразование',
+                    subTitle: '',
+                    text: ''
+                },
+                {
+                    component: Achievements,
+                    title: 'Достижения',
+                    path: '/achievemnts',
+                    hero: 'Достижения',
+                    subTitle: '',
+                    text: ''
+                },
+                {
+                    component: Contact,
+                    title: 'Обратная связь',
+                    path: '/contact',
+                    hero: 'Обратная связь',
                     subTitle: '',
                     text: ''
                 }

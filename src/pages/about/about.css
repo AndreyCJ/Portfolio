@@ -21,7 +21,7 @@ html {
     flex-direction: column;
     padding: 20px;
     justify-content: space-between;
-    max-width: 970px;
+    width: 820px;
 }
 
 .aboutPage .showcase {
@@ -52,12 +52,12 @@ html {
 
 .aboutPage .moreDetails .content {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: flex-start;
     flex-direction: column;
-    max-width: 970px;
-    line-height: 1.6;
-    font-size: 1.1rem;
+    /* max-width: 970px; */
+    width: 820px;
+    line-height: 1.9;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased !important;
     -moz-font-smoothing: antialiased !important;
@@ -71,7 +71,6 @@ html {
     font-size: 1.9rem;
     line-height: normal;
     font-weight: 500;
-    margin: 5px 0;
     padding-bottom: 1rem;
 }
 
@@ -110,7 +109,7 @@ html {
 
 .landing h1 {
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     padding: 0;
     margin: 0;
     color: #1b1b1c;
@@ -124,7 +123,7 @@ html {
 .landing h2 {
     margin: 0;
     padding: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: normal;
     /* padding-bottom: 0.5rem; */
@@ -145,6 +144,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .stack .technology:first-child {
@@ -231,6 +231,10 @@ html {
 .bounce {
     -webkit-animation: bounce 2.6s infinite;
     animation: bounce 2.6s infinite;
+}
+
+.mt1 {
+    margin-top: 15px;
 }
 
 @-webkit-keyframes bounce {
@@ -321,16 +325,22 @@ html {
         background: transparent;
     }
 
-    .aboutPage .moreDetails .content {
+    .content span {
         font-size: 1.1rem;
-        text-align: center;
     }
 
     .aboutPage .moreDetails .content h1 {
         font-size: 1.8rem;
-        margin: 0 auto;
     }
 
+    .aboutPage .showcase .page-content {
+        width: 100%;
+    }
+
+    .aboutPage .moreDetails .content {
+        line-height: 1.6;
+        font-size: 0.9rem;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -349,6 +359,12 @@ html {
     .aboutPage .moreDetails .content {
         padding: 0 15px;
     }
+
+    .content span {
+        font-size: 1rem;
+    }
+
+
 }
 
 @media only screen and (max-width: 320px) {
@@ -392,6 +408,6 @@ html {
     }
 
     .aboutPage .moreDetails .content {
-        font-size: 0.9rem;
+        font-size: 0.4rem;
     }
 }

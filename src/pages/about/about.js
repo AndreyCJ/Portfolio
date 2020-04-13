@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faJs, faReact, faNodeJs, faPhp} from '@fortawesome/free-brands-svg-icons';
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
@@ -80,10 +80,13 @@ export default class About extends Component {
           <div className="content">
             <h1>О себе</h1>
             <span>
-              Я full-stack веб-разработчик. Стек технологий, который я использую: JavaScript, React, NodeJS, PHP.<br />Я делаю современные, адаптивные и кроссбраузерные сайты.
+              Front-end web-разработчик. Основной стек технологий, который я использую: JavaScript, React, NodeJS, PHP, MySQL, MongoDB.
+              Уверенное знание JavaScript/ES6, а в частности ReactJS, методологии БЭМ, HTML/CSS адаптивной верстки.
+              Умение работать с системой контроля версий Git.
+              Есть опыт работы в созданнии сайтов с использованием CMS Wordpress, разработки REST API для web-приложений.
+              <br />Я делаю современные, адаптивные и кроссбраузерные сайты. Опыт работы в сфере web-разработки 3 года.
             </span>
-            <br />
-            <span>
+            <span className="mt1">
               Вы можете связаться со мной по адресу <a className="bold" href="mailto:andreyoneup@gmail.com">andreyoneup@gmail.com</a>
             </span>
           </div>

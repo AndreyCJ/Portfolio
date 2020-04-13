@@ -1,8 +1,4 @@
-import React, {Component} from 'react';
-import {Textfield, Button} from 'react-mdl';
-import Snackbar from '@material-ui/core/Snackbar';
-import SnackbarContent from '@material-ui/core/SnackbarContent';
-// import axios from 'axios';  
+import React, { Component } from 'react';
 
 import './form.css';
 
@@ -14,14 +10,16 @@ export default class Form extends Component {
             email: '',
             message: '',
             disabled: false,
-            emailSent: null,
-            SnackbarClass: 'alert-success',
+            SnackbarClass: 'alert',
             SnackbarMessage: 'Сообщение отправлено',
-            isSnackbarOpen: false
+            isInputEmpty: true,
+            showSnackbarClass: ''
         };
     };
 
     handleChange = (event) => {
+        this.isInputEmpty(event);
+
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
@@ -33,114 +31,119 @@ export default class Form extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        this.setState({
-            disabled: true
-        });
-
-        fetch(`http://localhost:3030/api/email?name=${this.state.name}&email=${this.state.email}&message=${this.state.message}`)
-            .catch(err => console.log(err));
-
-        // axios.post('http://localhost:3030/api/email', this.state)
-        //     .then(res => {
-        //         if (res.data.success) {
-        //             this.setState({
-        //                 disabled: false,
-        //                 emailSent: true
-        //             });
-        //         } else {
-        //             this.setState({
-        //                 disabled: false,
-        //                 emailSent: false
-        //             });
-        //         }
-        //     })
-        //     .catch(err => {
-        //         this.setState({
-        //             disabled: false,
-        //             emailSent: false
-        //         });
-        //     });
-
-        this.handleShowSnackbar();
+        const templateID = 'template_zt3IY7cH';
+        if (this.validateForm()) {
+            this.sendFeedback(templateID, {
+                message_html: this.state.message,
+                from_name: this.state.name,
+                reply_to: this.state.email
+            });
+            this.setState({
+                disabled: true
+            });
+        } else {
+            console.log('Неправильно заполненная форма');
+            this.setState({
+                SnackbarClass: 'error',
+                showSnackbarClass: 'show',
+                SnackbarMessage: 'Неправильно заполненная форма',
+                disabled: true
+            });
+            setTimeout(() => {
+                this.setState({showSnackbarClass: ''});
+            }, 2900)
+        }
     };
 
-    handleTimeoutSnackbar = () => {
-        this.setState({
-            isSnackbarOpen: false
-        });
+    validateForm = () => {
+        const mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        if (this.state.email.match(mailformat) && this.state.name !== '' && this.state.message !== '') {
+            return true;
+        } else {
+            return false;
+        }
     };
 
-    handleShowSnackbar = () => {
-        this.setState((state) => {
-            if (state.emailSent === true) {
-                return {
-                    SnackbarClass: 'alert-success',
-                    isSnackbarOpen: true,
-                    SnackbarMessage: 'Сообщение отправлено'
-                };
-            } else {
-                return {
-                    SnackbarClass: 'alert-error',
-                    isSnackbarOpen: true,
-                    SnackbarMessage: 'Сообщение не удалось отправить'
-                };
-            } 
-        });
+    sendFeedback = (templateId, variables) => {
+        window.emailjs.send(
+            'gmail', templateId,
+            variables
+            ).then(res => {
+                this.handleShowSnackbar(true, 'Сообщение отправлено');
+                console.log('Email successfully sent!')
+            })
+            // Handle errors here however you like, or use a React error boundary
+            .catch(err => {
+                console.error('Oh well, you failed. Here some thoughts on the error that occured:', err)
+                this.handleShowSnackbar(false, err);
+            });
+    };
+
+    handleShowSnackbar = (success, message) => {
+        if (success) {
+            this.setState({SnackbarClass: 'success', showSnackbarClass: 'show'})
+            setTimeout(() => {
+                this.setState({showSnackbarClass: ''});
+            }, 2900)
+        } else {
+            this.setState({SnackbarClass: 'error', showSnackbarClass: 'show', SnackbarMessage: message})
+            setTimeout(() => {
+                this.setState({showSnackbarClass: ''});
+            }, 2900)
+        }
+    };
+
+    isInputEmpty = (e) => {
+        if (e.target.value !== '') {
+            e.target.className = 'input-text js-input not-empty'
+        } else {
+            e.target.className = 'input-text js-input';
+        }
     };
 
     render() {
         return (
-            <form className="contact-form" onSubmit={this.handleSubmit}>
-                {/* <h1 className="hero">Обратная связь</h1> */}
-                <Textfield
-                    onChange={this.handleChange}
-                    label="Имя"
-                    floatingLabel
-                    style={{width: '100%', boxSizing: 'border-box', color: '#fcfcfc'}}
-                />
-                <Textfield
-                    onChange={this.handleChange}
-                    label="Email"
-                    floatingLabel
-                    style={{width: '100%', boxSizing: 'border-box', color: '#fcfcfc'}}
-                />
-                <Textfield
-                    onChange={this.handleChange}
-                    label="Сообщение"
-                    floatingLabel
-                    maxRows={3}
-                    style={{width: '100%', boxSizing: 'border-box', color: '#fcfcfc'}}
-                />
-
-                <Button
-                    ripple
-                    colored
-                    raised
-                    className="submit-form"
-                    type="submit"
-                    style={{alignSelf: 'flex-start', margin: '20px 0'}}
-                    disabled={this.state.disabled}
-                >
-                    Отправить
-                </Button>
-
-
-                <Snackbar
-                    open={this.state.isSnackbarOpen}
-                    onClose={this.handleTimeoutSnackbar}
-                    autoHideDuration={2700}
-                >
-                    <SnackbarContent
-                        classes={
-                            { root: this.state.SnackbarClass }
-                        }
-                        aria-describedby="client-snackbar"
-                        message={<span id="client-snackbar">{this.state.SnackbarMessage}</span>}
-                    />
-                </Snackbar>
- 
-        
-            </form>
+            <div>
+                <form className="contact-form row" onSubmit={this.handleSubmit}>
+                    <div className="form-field col x-50">
+                        <input
+                            id="name"
+                            name="name"
+                            value={this.state.name}
+                            className={`input-text js-input `}
+                            onChange={this.handleChange}
+                            type="text" required
+                        />
+                        <label className="label" name="name" >Имя</label>
+                    </div>
+                    <div className="form-field col x-50">
+                        <input
+                            id="email"
+                            name="email"
+                            value={this.state.email}
+                            className={`input-text js-input `}
+                            onChange={this.handleChange}
+                            type="email" required
+                        />
+                        <label className="label" name="email">E-mail</label>
+                    </div>
+                    <div className="form-field col x-100">
+                        <input
+                            id="message"
+                            name="message"
+                            value={this.state.message}
+                            className={`input-text js-input `}
+                            onChange={this.handleChange}
+                            type="text" required
+                        />
+                        <label className="label" name="message">Сообщение</label>
+                    </div>
+                    <div className="form-field col x-100 align-center">
+                        <button className="submit-btn" type="submit" value="Отправить" disabled={this.state.disabled} onClick={this.handleSubmit} >Отправить</button>
+                    </div>
+                </form>
+                <div className={`snackbar ${this.state.showSnackbarClass} ${this.state.SnackbarClass} `}>{this.state.SnackbarMessage}</div>
+            </div>
         );
     };
 };
