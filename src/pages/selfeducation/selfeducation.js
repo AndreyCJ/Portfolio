@@ -30,6 +30,13 @@ export default class Selfeducation extends Component {
                                 }}
                             /> 
                         </a>
+                        <h1>Опыт работы</h1>
+                        <p>
+                        Front-end web-разработчик. Основной стек технологий, который я использую: JavaScript, React, NodeJS, PHP, MySQL, MongoDB.
+                        Уверенное знание JavaScript/ES6, а в частности ReactJS, методологии БЭМ, HTML/CSS адаптивной верстки.
+                        Умение работать с системой контроля версий Git.
+                        Есть опыт работы в созданнии сайтов с использованием CMS Wordpress, разработки REST API для web-приложений.
+                        </p>
                         <h1>Курсы</h1>
                         <p>Прошел различные курсы по JavaScript, некоторые из них:</p>
                         <ul>

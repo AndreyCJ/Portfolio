@@ -8,12 +8,13 @@ html {
 
 .aboutPage {
     position: relative;
-    height: 200vh;
+    /* height: 200vh; */
     /* height: calc(200vh - 109px); */
     display: flex;
     flex-direction: column;
-    margin-top: -65px;
-    margin-bottom: -41px;
+    /* margin-top: -65px; */
+    /* margin-bottom: -41px; */
+    flex: 1;
 }
 
 .aboutPage .showcase .page-content {
@@ -25,29 +26,30 @@ html {
 }
 
 .aboutPage .showcase {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    height: 100vh;
+    position: relative;
+
+    min-height: 100vh;
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: -65px;
+    /* margin-bottom: 65px; */
 }
 
 .aboutPage .moreDetails {
     display: flex;
-    flex: 1;
+    /* flex: 1; */
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: absolute;
-    height: 100vh;
+    /* position: absolute; */
+    min-height: 100vh;
     left: 0;
     bottom: 0;
     right: 0;
+    margin-top: 65px;
 }
 
 .aboutPage .moreDetails .content {
@@ -237,6 +239,18 @@ html {
     margin-top: 15px;
 }
 
+.moreDetails ul {
+    padding-left: 40px;
+    list-style: disc;
+    margin-bottom: 1rem;
+}
+
+.moreDetails li {
+    line-height: 1.7;
+    max-width: 42rem;
+}
+
+
 @-webkit-keyframes bounce {
     20%, 53%, 80%, 0%, 100% {
         -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -340,6 +354,11 @@ html {
     .aboutPage .moreDetails .content {
         line-height: 1.6;
         font-size: 0.9rem;
+    }
+    
+    .aboutPage .moreDetails {
+        height: 100%;
+        margin-bottom: 1rem;
     }
 }
 

@@ -82,7 +82,7 @@
     }
 }
 
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
     .project_item__description {
        padding-left: 10px;
        padding-right: 10px;

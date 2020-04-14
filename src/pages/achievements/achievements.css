@@ -36,12 +36,9 @@
     max-width: 50%;
 }
 
-.achievements p, .achievements h1 {
-    padding: 0 15px;
-}
-
 .achievements .flexbox img {
     max-height: 500px;
+    margin: 0;
 }
 
 .sertificate_placeholder {
@@ -50,4 +47,13 @@
     max-width: 100%;
     max-height: 100%;
     height: 500px;
+}
+
+@media only screen and (max-width: 620px) {
+    .achievements p, .achievements h1 {
+        margin: 0 15px;
+    }
+    .sertificate_placeholder {
+        height: 280px;
+    }
 }

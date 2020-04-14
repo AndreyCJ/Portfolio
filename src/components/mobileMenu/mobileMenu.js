@@ -9,8 +9,8 @@ const MobileMenu = props => {
     if (props.show) {
         menuClasess = 'mobileMenu open';
     };
-    let about, portfolio = '';
-    const currentPageClass = '#4b5fd3';
+    // let about, portfolio = '';
+    // const currentPageClass = '#4b5fd3';
 
     return (
         <div>
@@ -22,25 +22,25 @@ const MobileMenu = props => {
                 <ul>
                 {
                     props.headerLinks.map(({ title, path }, i) => {
-                      switch (props.history.location.pathname) {
-                        case '/':
-                          about = currentPageClass;
-                          portfolio = '';
-                          break;
-                        case '/portfolio':
-                          portfolio = currentPageClass;
-                          about = '';
-                          break;
-                        default:
-                          about = currentPageClass;
-                          portfolio = '';
-                          break;
-                      }
+                      // switch (props.history.location.pathname) {
+                      //   case '/':
+                      //     about = currentPageClass;
+                      //     portfolio = '';
+                      //     break;
+                      //   case '/portfolio':
+                      //     portfolio = currentPageClass;
+                      //     about = '';
+                      //     break;
+                      //   default:
+                      //     about = currentPageClass;
+                      //     portfolio = '';
+                      //     break;
+                      // }
                         return <li key={i} className='headerNavItem__mobile'>
                           <Link
                             to={ path }
                             className="nav-link"
-                            style={path === '/' ? {color: about} : {color: portfolio}}
+                            // style={path === '/' ? {color: about} : {color: portfolio}}
                           >
                             { title }
                           </Link>
