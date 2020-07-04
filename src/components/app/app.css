@@ -137,6 +137,10 @@ button:hover {
                 0 4px 8px 4px rgba(0,0,0,0.03);
 }
 
+.headerNavItem--selected {
+    color: rgb(75, 95, 211) !important;
+}
+
 @media only screen and (max-width: 620px) {
     .flexbox a {
         max-width: 50%;

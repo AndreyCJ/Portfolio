@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 import {ReactComponent as Logo} from '../../assets/logo2.svg';
 import './header.css';
@@ -16,27 +16,7 @@ class Header extends Component {
             // isMenuOpen: false,
             shadow: 'no-shadow'
         };
-
-        // this.currentPageClass = '#4b5fd3';
-        // this.about = '';
-        // this.portfolio = '';
-    };
-
-    // handleScroll = () => {
-    //   if (window.pageYOffset > 0) {
-    //     this.setState({
-    //       shadow: 'shadow'
-    //     });
-    //   } else {
-    //     this.setState({
-    //       shadow: 'no-shadow'
-    //     });
-    //   }
-    // }
-
-    // componentDidMount() {
-    //   window.addEventListener('scroll', this.handleScroll);
-    // }
+    }
 
     handleMenuBtnClick = () => {
         this.setState(
@@ -54,7 +34,7 @@ class Header extends Component {
         return (
             <div className={`header ${this.state.shadow}`}>
                 <div className="logo">
-                    <Link to="/"><Logo /></Link>
+                    <NavLink to="/"><Logo /></NavLink>
                 </div>
 
                 <div className="headerNav-container">
@@ -63,12 +43,14 @@ class Header extends Component {
                             {
                                 this.props.headerLinks.map(({ title, path }, i) => {
                                     return <li key={i} className={`headerNavItem`}>
-                                      <Link
+                                      <NavLink
                                         to={ path }
-                                        className={`nav-link`}
+                                        className="nav-link"
+                                        activeClassName="headerNavItem--selected"
+                                        exact={true}
                                       >
                                         { title }
-                                      </Link>
+                                      </NavLink>
                                     </li>
                                 })
                             }

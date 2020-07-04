@@ -6,8 +6,6 @@ import Header from '../header/header';
 
 import About from '../../pages/about';
 import Projects from '../../pages/projects';
-import Selfeducation from '../../pages/selfeducation';
-import Achievements from '../../pages/achievements';
 import Contact from '../../pages/contact';
 
 export default class App extends Component {
@@ -26,25 +24,9 @@ export default class App extends Component {
                 },
                 {
                     component: Projects,
-                    title: 'Разработка ПО',
+                    title: 'Проекты',
                     path: '/portfolio',
                     hero: 'Мои работы',
-                    subTitle: '',
-                    text: ''
-                },
-                {
-                    component: Selfeducation,
-                    title: 'Самообразование',
-                    path: '/selfeducation',
-                    hero: 'Самообразование',
-                    subTitle: '',
-                    text: ''
-                },
-                {
-                    component: Achievements,
-                    title: 'Достижения',
-                    path: '/achievemnts',
-                    hero: 'Достижения',
                     subTitle: '',
                     text: ''
                 },
