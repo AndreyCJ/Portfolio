@@ -1,5 +1,5 @@
 .mobileMenu {
-    height: 100vh;
+    height: 100vh !important;
     position: fixed;
     top: 0;
     left: 0;

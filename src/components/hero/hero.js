@@ -20,7 +20,7 @@ const Hero = (props) => {
                 </div>
                 <div className="socialLinks-container">
                     {props.children}
-                    <div className="link">
+                    <div className="link link--hero-btn">
                     <a href="https://github.com/AndreyCJ/" target="_blank" rel="noopener noreferrer">
                       {<FontAwesomeIcon icon={faGithub} />} Github profile
                     </a>

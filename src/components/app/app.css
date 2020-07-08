@@ -102,9 +102,19 @@ button:hover {
     border-radius: 0.5rem;
 }
 
+.link--hero-btn a{
+  border-color: #f4f4f4 !important;
+  color: #f4f4f4 !important;
+}
+
+.link--hero-btn a:hover {
+  border-color: rgb(75, 95, 211) !important;
+}
+
 .link a:hover {
     background: rgb(75, 95, 211);
     color: #fff;
+
 }
 
 .gallery img{
