@@ -14,7 +14,8 @@
 }
 
 .image-container[data-ratio="16:9"] {
-  padding-bottom: 56.25%;
+  /* padding-bottom: 56.25%; */
+  padding-bottom: 46.08%;
 }
 
 .image-container--loading > * {
