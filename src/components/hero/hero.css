@@ -75,13 +75,15 @@
     margin-right: 5px;
 }
 
+@media only screen and (max-width: 860px) {
+    .hero-container {
+        padding: 40px 15px;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .hero-container h1 {
         font-size: 1.4rem;
-    }
-
-    .hero-container {
-      padding: 40px 15px;
     }
 }
 

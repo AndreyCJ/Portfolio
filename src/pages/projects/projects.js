@@ -2,15 +2,11 @@ import React, { useEffect } from 'react';
 
 import './projects.css';
 import Hero from '../../components/hero';
-import Img from 'react-image';
+import ImageContainer from '../../components/imageContainer/image-container';
 
 import school_thumbnail from '../../assets/project_thumbnail/1school_thumbnail2.png';
 import notesApp_thumbnail from '../../assets/project_thumbnail/notesApp_thumbnail2.png';
 import timetable_thumbnail from '../../assets/project_thumbnail/timetable_thumbnail2.png';
-
-import school_thumbnail_overlay from '../../assets/project_thumbnail/1school_thumbnail2-overlay.png';
-import notes_app_overlay from '../../assets/project_thumbnail/notesApp_thumbnail2-overlay.png';
-import timetable_overlay from '../../assets/project_thumbnail/timetable_thumbnail2-overlay.png';
 
 const Projects = (props) => {
     useEffect(() => {
@@ -27,17 +23,13 @@ const Projects = (props) => {
                   <div className="project_item">
                     <div className="project_item__img">
                       <a href="https://college-timetable.herokuapp.com/" target="_blank" rel="noopener noreferrer">
-                        <Img
+                        <ImageContainer 
                           src={timetable_thumbnail}
-                          alt="TimetableApp"
-                          loader={
-                            <img src={timetable_overlay} alt="TimetableApp"/>
-                          }
-                          style={{
-                            opacity: 1,
-                            marginTop: "2px",
-                            marginBottom: "2px"
-                          }}
+                          alt="Class Timetable App"
+                          // overlaySrc={timetable_overlay}
+                          // loader={
+                          //   <img src={timetable_overlay} alt="TimetableApp"/>
+                          // }
                         /> 
                       </a>
                     </div>
@@ -64,24 +56,17 @@ const Projects = (props) => {
                   <div className="project_item">
                     <div className="project_item__img">
                       <a href="https://1school-wptheme.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                        
-                          <Img
-                            alt="Wordpress School theme"
-                            src={school_thumbnail}
-                            loader={
-                              <img
-                                src={school_thumbnail_overlay}
-                                alt="Wordpress School theme"
-                                className={'loader'}
-                                style={{
-                                  opacity: 1,
-                                  marginTop: "2px",
-                                  marginBottom: "2px"
-                                }}
-                              />
-                            }
-                          />
-                        
+                        <ImageContainer 
+                          alt="Wordpress School theme"
+                          src={school_thumbnail}
+                          // overlaySrc={school_thumbnail_overlay}
+                          // loader={
+                          //   <img
+                          //     src={school_thumbnail_overlay}
+                          //     alt="Wordpress School theme"
+                          //   />
+                          // }
+                        />
                       </a>
                     </div>
                     <div className="project_item__description">
@@ -107,24 +92,17 @@ const Projects = (props) => {
                   <div className="project_item">
                     <div className="project_item__img">
                       <a href="https://vanillajsnotesapp.000webhostapp.com/" target="_blank" rel="noopener noreferrer">
-                        
-                          <Img
-                            src={notesApp_thumbnail}
-                            alt="NotesApp"
-                            loader={
-                              <img
-                                src={notes_app_overlay}
-                                alt="Wordpress School theme"
-                                className={'loader'}
-                                style={{
-                                  opacity: 1,
-                                  marginTop: "2px",
-                                  marginBottom: "2px"
-                                }}
-                              />
-                            }
-                          />
-                         
+                        <ImageContainer 
+                          src={notesApp_thumbnail}
+                          alt="Notes App"
+                          // overlaySrc={notes_app_overlay}
+                          // loader={
+                          //   <img
+                          //     src={notes_app_overlay}
+                          //     alt="Wordpress School theme"
+                          //   />
+                          // }
+                        />
                       </a>
                     </div>
                     <div className="project_item__description">

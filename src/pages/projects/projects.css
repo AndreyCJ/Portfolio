@@ -8,10 +8,10 @@
 
 .project_item__img {
     padding-bottom: 1rem;
-    max-width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden;
+    /* max-width: 100%; */
+    /* height: auto; */
+    /* position: relative; */
+    /* overflow: hidden; */
 }
 
 .project_item__description h1 {
@@ -51,11 +51,11 @@
     font-size: 0.9rem;
 }
 
-.project_item__img a img {
+/* .project_item__img a img {
     width: 100%;
     max-height: 374px;
     height: auto;
-}
+} */
 
 .loader {
     opacity: 0;
