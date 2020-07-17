@@ -250,6 +250,9 @@ html {
     max-width: 42rem;
 }
 
+.page-content--big {
+  max-width: 820px !important;
+}
 
 @-webkit-keyframes bounce {
     20%, 53%, 80%, 0%, 100% {

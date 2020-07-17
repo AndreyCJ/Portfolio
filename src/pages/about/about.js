@@ -28,7 +28,7 @@ export default class About extends Component {
     return (
       <div className="aboutPage">
         <div className="showcase">
-          <div className="page-content">
+          <div className="page-content page-content--big">
             <div className="landing">
               <div className="personal-info">
                 <h2>{ title }</h2>

@@ -1,27 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './image-container.css';
 
-import useIntersectionObserver from '../../hooks/useIntersectionObserver';
+import LazyLoad from 'react-lazyload';
 
 const ImageContainer = props => {
-  const [imgLoaded, setImgLoaded] = useState(false);
-  const [setRef, visible] = useIntersectionObserver({ rootMargin: '200px' });
+  const [imgLoaded, setImgLoaded] = useState(false);  
+
+  const refPlaceholder = useRef();
+
+  const removePlaceholder = () => {
+    setImgLoaded(true)
+    refPlaceholder.current.remove();
+  };
 
   return (
-    <div 
-      className={`image-container ${!imgLoaded && 'image-container--loading'}`}
-      data-ratio={!imgLoaded && '16:9'}
-      
-    >
-        <div ref={setRef}>
-          <img
-            
-            className="image-product"
-            src={visible || imgLoaded ? props.src : ''}
-            alt={props.alt}
-            onLoad={() => setImgLoaded(true)}
-            style={{display: `${!imgLoaded ? 'none' : 'block'}`}}
-          />
+    <div className="image-container">
+        <div ref={refPlaceholder} className="image-container--loading" style={{paddingBottom: "46.08%"}}></div>
+        <div>
+          <LazyLoad offset={200} once>
+            <img
+              className="image-product"
+              src={props.src}
+              alt={props.alt}
+              onLoad={removePlaceholder}
+              onError={removePlaceholder}
+              style={{display: `${!imgLoaded ? 'none' : 'block'}`}}
+            />
+          </LazyLoad>
         </div>
     </div>
   );
