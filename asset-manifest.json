@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.30ebb30a.chunk.css",
-    "main.js": "/Portfolio/static/js/main.2e0f542b.chunk.js",
-    "main.js.map": "/Portfolio/static/js/main.2e0f542b.chunk.js.map",
+    "main.css": "/Portfolio/static/css/main.5b683e90.chunk.css",
+    "main.js": "/Portfolio/static/js/main.1285f95c.chunk.js",
+    "main.js.map": "/Portfolio/static/js/main.1285f95c.chunk.js.map",
     "runtime-main.js": "/Portfolio/static/js/runtime-main.e029fae7.js",
     "runtime-main.js.map": "/Portfolio/static/js/runtime-main.e029fae7.js.map",
-    "static/js/2.f2cfc3b0.chunk.js": "/Portfolio/static/js/2.f2cfc3b0.chunk.js",
-    "static/js/2.f2cfc3b0.chunk.js.map": "/Portfolio/static/js/2.f2cfc3b0.chunk.js.map",
+    "static/js/2.35118b14.chunk.js": "/Portfolio/static/js/2.35118b14.chunk.js",
+    "static/js/2.35118b14.chunk.js.map": "/Portfolio/static/js/2.35118b14.chunk.js.map",
     "index.html": "/Portfolio/index.html",
-    "precache-manifest.ee2bf661951eef0375f9639ea8bf72c1.js": "/Portfolio/precache-manifest.ee2bf661951eef0375f9639ea8bf72c1.js",
+    "precache-manifest.b67a1f48325fbd86a0bc7dcb8d732d15.js": "/Portfolio/precache-manifest.b67a1f48325fbd86a0bc7dcb8d732d15.js",
     "service-worker.js": "/Portfolio/service-worker.js",
-    "static/css/main.30ebb30a.chunk.css.map": "/Portfolio/static/css/main.30ebb30a.chunk.css.map",
-    "static/js/2.f2cfc3b0.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.f2cfc3b0.chunk.js.LICENSE.txt",
+    "static/css/main.5b683e90.chunk.css.map": "/Portfolio/static/css/main.5b683e90.chunk.css.map",
+    "static/js/2.35118b14.chunk.js.LICENSE.txt": "/Portfolio/static/js/2.35118b14.chunk.js.LICENSE.txt",
     "static/media/1school_thumbnail2.png": "/Portfolio/static/media/1school_thumbnail2.fbaa9968.png",
-    "static/media/logo2.b5b527ca.svg": "/Portfolio/static/media/logo2.b5b527ca.svg",
+    "static/media/logo2.d29588c5.svg": "/Portfolio/static/media/logo2.d29588c5.svg",
     "static/media/mongodb-icon.554c7d4b.svg": "/Portfolio/static/media/mongodb-icon.554c7d4b.svg",
     "static/media/mysql-6.60c2bdb8.svg": "/Portfolio/static/media/mysql-6.60c2bdb8.svg",
     "static/media/notesApp_thumbnail2.png": "/Portfolio/static/media/notesApp_thumbnail2.841ff62c.png",
@@ -21,8 +21,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e029fae7.js",
-    "static/js/2.f2cfc3b0.chunk.js",
-    "static/css/main.30ebb30a.chunk.css",
-    "static/js/main.2e0f542b.chunk.js"
+    "static/js/2.35118b14.chunk.js",
+    "static/css/main.5b683e90.chunk.css",
+    "static/js/main.1285f95c.chunk.js"
   ]
 }
