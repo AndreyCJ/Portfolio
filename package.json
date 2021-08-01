@@ -1,45 +1,54 @@
 {
-  "name": "portfolio",
-  "homepage": "https://andreycj.github.io/Portfolio/",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-brands-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.7",
-    "emailjs-com": "^2.4.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-lazyload": "^3.0.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.1",
-    "react-visibility-sensor": "^5.1.1"
-  },
+  "name": "portfolio-vue3-vite",
+  "version": "0.0.0",
+  "author": "Andrey Chebotar",
+  "license": "MIT",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && cp build/index.html build/404.html",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "vite",
+    "build": "vite build",
+    "lint:markup": "vue-tsc --noEmit",
+    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "lint:style": "stylelint src/**/*.{css,scss,vue}",
+    "commit": "cz"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "vue": "^3.1.4"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vue/compiler-sfc": "^3.1.4",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.1",
+    "vue-tsc": "^0.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,vue}": "eslint --fix",
+    "*.{css,scss,vue}": "stylelint --fix",
+    "*": "prettier -w -u"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
