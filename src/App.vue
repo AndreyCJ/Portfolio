@@ -1,28 +1,39 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
 
-  import HelloWorld from '@/components/HelloWorld.vue';
+  import OHeader from '@/components/organisms/OHeader/OHeader.vue';
 
   export default defineComponent({
     name: 'App',
     components: {
-      HelloWorld,
+      OHeader,
+    },
+    data() {
+      return {
+        isDarkTheme: true,
+      };
+    },
+    methods: {
+      switchTheme(): void {
+        this.isDarkTheme = !this.isDarkTheme;
+      },
     },
   });
 </script>
 
 <template>
-  <img alt="Vue logo" src="@/assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <main class="main" :class="{ dark: isDarkTheme }">
+    <div class="page-wrapper">
+      <o-header @switchTheme="switchTheme" />
+      <div class="container">
+        <router-view />
+      </div>
+    </div>
+  </main>
 </template>
 
-<style>
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+<style lang="postcss">
+  .container {
+    @apply container mx-auto;
   }
 </style>

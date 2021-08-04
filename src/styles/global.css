@@ -1,0 +1,22 @@
+.main {
+  @apply antialiased sm:subpixel-antialiased md:antialiased;
+
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* .main *:focus {
+  @apply outline-black;
+}
+.main *:active {
+  @apply outline-transparent;
+}
+.main.dark *:focus {
+  @apply outline-white;
+} */
+
+.page-wrapper {
+  @apply min-h-screen
+    bg-warm-gray-50
+        text-cool-gray-600
+        dark:bg-dark-900 dark:text-purple-50;
+}
