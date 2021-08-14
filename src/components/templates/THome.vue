@@ -3,20 +3,24 @@
 
   import { TechSkill } from '@/types/index';
 
-  import OTechStack from '@/components/organisms/OTechStack/OTechStack.vue';
+  import OAboutMe from '../organisms/OAboutMe/OAboutMe.vue';
 
   export default defineComponent({
     name: 'THome',
-    components: { OTechStack },
+    components: { OAboutMe },
     props: {
       techStack: {
         required: true,
         type: Array as PropType<TechSkill[]>,
+      },
+      aboutMeText: {
+        required: true,
+        type: String as PropType<string>,
       },
     },
   });
 </script>
 
 <template>
-  <o-tech-stack :tech-stack="techStack" />
+  <o-about-me :tech-stack="techStack" :about-me-text="aboutMeText" />
 </template>

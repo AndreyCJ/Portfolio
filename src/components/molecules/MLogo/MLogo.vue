@@ -9,7 +9,7 @@
 </script>
 
 <template>
-  <a-heading tag="h3" text="A.ch" class="m-logo" />
+  <a-heading tag="h4" text="A.ch" class="m-logo" />
 </template>
 
 <style scoped lang="postcss">

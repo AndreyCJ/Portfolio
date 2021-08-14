@@ -26,7 +26,7 @@
 
 <style scoped lang="postcss">
   .a-heading {
-    @apply font-bold text-gray-900 dark:text-light-900 pb-4;
+    @apply font-bold text-dark-800 dark:text-light-800 pb-4;
   }
 
   h1.a-heading {
@@ -42,7 +42,7 @@
   }
 
   h4.a-heading {
-    @apply text-lg md:text-xl capitalize;
+    @apply text-lg md:text-xl text-gray-700 dark:text-light-900 capitalize;
   }
 
   h5.a-heading {

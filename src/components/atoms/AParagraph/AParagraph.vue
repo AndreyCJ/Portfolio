@@ -20,6 +20,9 @@
 
 <style scoped lang="postcss">
   .a-paragraph {
-    @apply text-gray-900 dark:text-warm-gray-100;
+    @apply text-dark-700 dark:text-warm-gray-200;
+
+    line-height: 1.8;
+    max-width: 44em;
   }
 </style>

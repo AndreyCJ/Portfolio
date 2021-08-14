@@ -5,13 +5,32 @@
 
   import { TechSkill } from '@/types/index';
 
+  // Iconify icons
+  import IconTypeScript from 'virtual:vite-icons/logos/typescript-icon';
+  import IconJavaScript from 'virtual:vite-icons/logos/javascript';
+  import IconVue from 'virtual:vite-icons/logos/vue';
+  import IconHTML from 'virtual:vite-icons/logos/html-5';
+  import IconCSS from 'virtual:vite-icons/logos/css-3';
+
   export default defineComponent({
     name: 'OTechStack',
-    components: { MChip },
+    components: {
+      MChip,
+      IconTypeScript,
+      IconJavaScript,
+      IconVue,
+      IconHTML,
+      IconCSS,
+    },
     props: {
       techStack: {
         type: Array as PropType<TechSkill[]>,
         required: true,
+      },
+    },
+    methods: {
+      getIconName(name: string): string {
+        return 'Icon' + name;
       },
     },
   });
@@ -21,7 +40,7 @@
   <section class="o-techStack">
     <m-chip v-for="(skill, i) in techStack" :key="i" :text="skill.name">
       <template #prefix>
-        <i-mdi-language-typescript class="text-lg text-blue-500" />
+        <component :is="getIconName(skill.name)" />
       </template>
     </m-chip>
   </section>
@@ -29,6 +48,6 @@
 
 <style lang="postcss" scoped>
   .o-techStack {
-    @apply flex;
+    @apply flex flex-wrap;
   }
 </style>

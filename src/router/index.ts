@@ -7,6 +7,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'home',
     component: () => import('@/pages/PHome.vue'),
   },
+  {
+    path: '/projects',
+    name: 'projects',
+    component: () => import('@/pages/PTest.vue'),
+  },
   // { path: '/:pathMatch(.*)*', name: 'not-found', component: NotFound },
 ];
 
