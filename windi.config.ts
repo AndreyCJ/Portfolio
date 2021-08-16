@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite-plugin-windicss';
-import { transform } from 'windicss/helpers';
 
 // import colors from 'windicss/colors';
 
 export default defineConfig({
   darkMode: 'class',
+  plugins: [require('@windicss/plugin-scrollbar')],
   theme: {
     extend: {
       colors: {
@@ -15,7 +15,6 @@ export default defineConfig({
       },
     },
   },
-  plugins: [transform('scrollbar')],
   // theme: {
   //   extend: {
   //     typography: {

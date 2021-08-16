@@ -4,7 +4,7 @@
   import AParagraph from '@/components/atoms/AParagraph/AParagraph.vue';
 
   export default defineComponent({
-    name: 'MLogo',
+    name: 'PTest',
     components: { AParagraph },
     setup() {
       const dummyText = ref(
@@ -19,5 +19,13 @@
 </script>
 
 <template>
-  <a-paragraph :text="dummyText" />
+  <section class="test">
+    <a-paragraph :text="dummyText" />
+  </section>
 </template>
+
+<style lang="postcss" scoped>
+  .test {
+    padding-top: 5em;
+  }
+</style>

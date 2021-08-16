@@ -5,10 +5,14 @@
     emits: {
       click: null,
     },
-    methods: {
-      onClick() {
-        this.$emit('click');
-      },
+    setup(props, { emit }) {
+      const onClick = () => {
+        emit('click');
+      };
+
+      return {
+        onClick,
+      };
     },
   });
 </script>

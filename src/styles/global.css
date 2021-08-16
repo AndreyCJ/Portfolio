@@ -1,18 +1,12 @@
+html {
+  @apply scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300 dark:scrollbar-thumb-gray-300 !dark:scrollbar-track-gray-900;
+}
+
 .main {
   @apply antialiased sm:subpixel-antialiased md:antialiased;
 
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
-
-/* .main *:focus {
-  @apply outline-black;
-}
-.main *:active {
-  @apply outline-transparent;
-}
-.main.dark *:focus {
-  @apply outline-white;
-} */
 
 .page-wrapper {
   @apply min-h-screen

@@ -1,5 +1,2 @@
-// TODO!: deconstruct into modules;
-
-export type TechSkill = {
-  name: string;
-};
+export * from './services';
+export * from './styles';

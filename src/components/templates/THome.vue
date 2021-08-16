@@ -22,5 +22,13 @@
 </script>
 
 <template>
-  <o-about-me :tech-stack="techStack" :about-me-text="aboutMeText" />
+  <section class="t-home">
+    <o-about-me :tech-stack="techStack" :about-me-text="aboutMeText" />
+  </section>
 </template>
+
+<style lang="postcss" scoped>
+  .t-home {
+    @apply flex h-screen justify-center items-center;
+  }
+</style>

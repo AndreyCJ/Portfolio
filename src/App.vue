@@ -1,26 +1,31 @@
 <script lang="ts">
-  import { defineComponent } from 'vue';
-  import DesignTokens from '@/styles/design-tokens.json';
+  import { defineComponent, ref } from 'vue';
 
   import OHeader from '@/components/organisms/OHeader/OHeader.vue';
+  import { useDesignTokens } from './composables/useDesignTokens';
 
   export default defineComponent({
     name: 'App',
     components: {
       OHeader,
     },
-    provide: {
-      designTokens: DesignTokens as typeof DesignTokens,
-    },
-    data() {
+    setup() {
+      const isDarkTheme = ref(true);
+      const cssVars = useDesignTokens();
+
+      function switchTheme(): void {
+        isDarkTheme.value = !isDarkTheme.value;
+
+        // example of using design tokens
+        console.log('before', cssVars['--color-primary']);
+        cssVars['--color-primary'] = isDarkTheme.value ? 'pink' : 'green';
+        console.log('after', cssVars['--color-primary']);
+      }
+
       return {
-        isDarkTheme: true,
+        isDarkTheme,
+        switchTheme,
       };
-    },
-    methods: {
-      switchTheme(): void {
-        this.isDarkTheme = !this.isDarkTheme;
-      },
     },
   });
 </script>
@@ -37,9 +42,9 @@
       <o-header @switchTheme="switchTheme" />
       <router-view v-slot="{ Component }">
         <div class="container">
-          <transition name="fade">
-            <component :is="Component" />
-          </transition>
+          <!-- <transition name="fade"> -->
+          <component :is="Component" />
+          <!-- </transition> -->
         </div>
       </router-view>
     </div>
@@ -47,15 +52,10 @@
 </template>
 
 <style lang="postcss">
-  * {
-    @apply scrollbar-thin scrollbar-thumb-blue-700 scrollbar-track-blue-300;
-  }
-
   .container {
-    @apply container !max-w-780px mx-auto;
+    @apply container h-full !max-w-780px mx-auto;
 
-    padding-top: 80px;
-    height: 200vh;
+    /* height: 10000px; */
   }
 
   .fade {

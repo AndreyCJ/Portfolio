@@ -42,16 +42,17 @@
   }
 
   .adaptive-glass {
-    @apply bg-background dark:bg-background-dark;
+    @apply bg-background bg-opacity-97 shadow-dark-900 shadow-sm dark:(bg-background-dark bg-opacity-97 shadow-light-900 shadow-sm);
+
+    @supports (
+      (-webkit-backdrop-filter: blur(18px)) or (backdrop-filter: blur(18px))
+    ) {
+      @apply bg-background bg-opacity-35 shadow-dark-900 shadow-sm dark:(bg-background-dark bg-opacity-35 shadow-light-900 shadow-sm);
+
+      backdrop-filter: blur(18px);
+    }
 
     position: fixed;
-    z-index: 1;
-    backdrop-filter: saturate(200%) blur(18px);
-
-    --glass-lightness: 100%;
-
-    @media (prefers-color-scheme: dark) {
-      --glass-lightness: 0%;
-    }
+    z-index: 2;
   }
 </style>
