@@ -5,13 +5,12 @@ html {
 .main {
   @apply antialiased sm:subpixel-antialiased md:antialiased;
 
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
 }
 
 .page-wrapper {
   @apply min-h-screen
-    bg-background
+    !bg[var(--color-white-warm)]
     text-cool-gray-600
-    dark:bg-background-dark
-    dark:text-purple-50;
+    dark:(!bg[var(--color-dark)] !text[var(--color-white-warm)]);
 }

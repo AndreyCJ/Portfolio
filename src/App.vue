@@ -1,8 +1,10 @@
 <script lang="ts">
-  import { defineComponent, ref } from 'vue';
+  import { defineComponent, ref, provide, onBeforeMount, reactive } from 'vue';
 
   import OHeader from '@/components/organisms/OHeader/OHeader.vue';
-  import { useDesignTokens } from './composables/useDesignTokens';
+  import { DesignTokensKey } from './constants';
+  import DesignTokensState from '@/styles/design-tokens.json';
+  import { applyAllCssVars } from '@/composables/useDesignTokens';
 
   export default defineComponent({
     name: 'App',
@@ -11,16 +13,17 @@
     },
     setup() {
       const isDarkTheme = ref(true);
-      const cssVars = useDesignTokens();
+      const cssVars = reactive(DesignTokensState);
+
+      provide(DesignTokensKey, cssVars);
 
       function switchTheme(): void {
         isDarkTheme.value = !isDarkTheme.value;
-
-        // example of using design tokens
-        console.log('before', cssVars['--color-primary']);
-        cssVars['--color-primary'] = isDarkTheme.value ? 'pink' : 'green';
-        console.log('after', cssVars['--color-primary']);
       }
+
+      onBeforeMount(() => {
+        applyAllCssVars(cssVars);
+      });
 
       return {
         isDarkTheme,

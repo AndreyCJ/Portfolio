@@ -1,27 +1,23 @@
-import { onBeforeMount, provide, reactive, watch } from 'vue';
-
-import DesignTokensState from '@/styles/design-tokens.json';
-import { DesignTokensKey } from '@/constants';
 import { DesignTokens } from '@/types';
+import { injectStrict } from '@/utils/strictInjection';
+import { DesignTokensKey } from '@/constants';
 
 export function useDesignTokens() {
-  const designTokens = reactive(DesignTokensState);
+  const cssVars = injectStrict(DesignTokensKey);
 
-  provide(DesignTokensKey, designTokens);
-
-  function updateVariables(cssVars: DesignTokens) {
-    Object.entries(cssVars).forEach(([key, value]) => {
-      document.documentElement.style.setProperty(key, value);
-    });
+  function setCssVariable(name: keyof DesignTokens, value: string) {
+    cssVars[name] = value;
+    document.documentElement.style.setProperty(name, value);
   }
 
-  watch(designTokens, (n) => {
-    updateVariables(n);
-  });
+  return {
+    cssVars,
+    setCssVariable,
+  };
+}
 
-  onBeforeMount(() => {
-    updateVariables(designTokens);
+export function applyAllCssVars(cssVars: DesignTokens) {
+  Object.entries(cssVars).forEach(([key, value]) => {
+    document.documentElement.style.setProperty(key, value);
   });
-
-  return designTokens;
 }

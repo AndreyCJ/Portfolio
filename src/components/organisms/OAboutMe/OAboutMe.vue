@@ -1,10 +1,7 @@
 <script lang="ts">
   import AHeading from '@/components/atoms/AHeading/AHeading.vue';
-  import AParagraph from '@/components/atoms/AParagraph/AParagraph.vue';
+  // import AParagraph from '@/components/atoms/AParagraph/AParagraph.vue';
   import { defineComponent, PropType } from 'vue';
-
-  import OTechStack from '@/components/organisms/OTechStack/OTechStack.vue';
-  import { TechSkill } from '@/types';
 
   // TODO!: deconstruct into organisms/molecules
 
@@ -12,16 +9,11 @@
     name: 'OAboutMe',
     components: {
       AHeading,
-      AParagraph,
-      OTechStack,
+      // AParagraph,
     },
     props: {
       aboutMeText: {
         type: String as PropType<string>,
-        required: true,
-      },
-      techStack: {
-        type: Array as PropType<TechSkill[]>,
         required: true,
       },
     },
@@ -36,15 +28,13 @@
         <a-heading
           tag="h4"
           :text="'Frontend разработчик'"
-          class="p-0 m-0 !font-thin"
+          class="p-0 m-0 !font-extralight"
         />
       </div>
-      <div class="o-aboutMe__col"></div>
     </div>
 
-    <div class="o-aboutMe__col mt-4">
-      <a-paragraph :text="aboutMeText" />
-      <o-tech-stack :tech-stack="techStack" class="mt-4 justify-center" />
-    </div>
+    <!-- <div class="o-aboutMe__col mt-4">
+      <a-paragraph class="text-lg" :text="aboutMeText" />
+    </div> -->
   </section>
 </template>

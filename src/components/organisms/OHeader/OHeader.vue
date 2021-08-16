@@ -8,7 +8,16 @@
     name: 'OHeader',
     components: { MLogo, ALink, AButton },
     emits: {
-      switchTheme: null,
+      switchTheme: () => Boolean,
+    },
+    setup(props, { emit }) {
+      function switchTheme(): void {
+        emit('switchTheme');
+      }
+
+      return {
+        switchTheme,
+      };
     },
   });
 </script>
@@ -22,7 +31,7 @@
         <a-link text="Projects" :to="{ name: 'projects' }" alt="Projects" />
       </div>
     </div>
-    <a-button class="p-1.6 text-xs" @click="$emit('switchTheme')">
+    <a-button class="p-1.6 text-xs" @click="switchTheme">
       <i-heroicons-outline-sun />
     </a-button>
   </header>
