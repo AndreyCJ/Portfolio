@@ -45,9 +45,9 @@
       <o-header @switchTheme="switchTheme" />
       <router-view v-slot="{ Component }">
         <div class="container">
-          <!-- <transition name="fade"> -->
-          <component :is="Component" />
-          <!-- </transition> -->
+          <transition name="fade" mode="out-in">
+            <component :is="Component" />
+          </transition>
         </div>
       </router-view>
     </div>
@@ -106,7 +106,7 @@
 
     &-enter-active {
       /* &-leave-active { */
-      transition: all 0.3s ease;
+      transition: all 2s ease;
     }
   }
 </style>
