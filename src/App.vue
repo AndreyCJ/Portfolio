@@ -44,23 +44,15 @@
     >
       <o-header @switchTheme="switchTheme" />
       <router-view v-slot="{ Component }">
-        <div class="container">
-          <transition name="fade" mode="out-in">
-            <component :is="Component" />
-          </transition>
-        </div>
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
       </router-view>
     </div>
   </main>
 </template>
 
 <style lang="postcss">
-  .container {
-    @apply container h-full !max-w-780px mx-auto;
-
-    /* height: 10000px; */
-  }
-
   .fade {
     &-enter-from {
       opacity: 0;

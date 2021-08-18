@@ -5,5 +5,8 @@
   "--color-blue": "light-blue",
   "--color-pure-black": "#000",
   "--color-dark": "#0A0A0A",
-  "--color-white-warm": "#FAFAF9"
+  "--color-white-warm": "#FAFAF9",
+  "--color-blue-gray": "rgba(75, 85, 99)",
+  "--color-blue-gray-light": "rgba(209, 213, 219)",
+  "--color-light-yellow": "#f4eb42"
 }

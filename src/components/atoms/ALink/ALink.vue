@@ -22,19 +22,18 @@
 </script>
 
 <template>
-  <router-link
-    class="a-link"
-    :to="to"
-    :alt="alt"
-    active-class="a-link a-link--active"
-  >
+  <router-link class="a-link" :to="to" :alt="alt" active-class="a-link--active">
     {{ text }}
   </router-link>
 </template>
 
 <style lang="postcss" scoped>
   .a-link {
-    @apply font-semibold hover:(opacity-60 border-dotted border-b-gray-600 border-b-[3px]);
+    @apply font-semibold pb-[3px] text[var(--color-blue-gray)] dark:text[var(--color-blue-gray-light)];
+
+    &:not(.a-link--active) {
+      @apply hover:(opacity-60 border-dotted border-b-gray-700 border-b-[3px]);
+    }
 
     &--active {
       @apply border-solid border-b-[var(--color-primary)] border-b-[3px];

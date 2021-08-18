@@ -6,11 +6,18 @@ html {
   @apply antialiased sm:subpixel-antialiased md:antialiased;
 
   font-family: 'Inter', Helvetica, sans-serif;
+  position: relative;
 }
 
 .page-wrapper {
   @apply min-h-screen
     !bg[var(--color-white-warm)]
-    text-cool-gray-600
     dark:(!bg[var(--color-dark)] !text[var(--color-white-warm)]);
+}
+
+.container {
+  @apply container h-full px-6 !max-w-780px mx-auto;
+
+  /* TODO: delete this */
+  height: 10000px;
 }

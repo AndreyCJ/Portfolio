@@ -28,7 +28,7 @@
         <a-heading
           tag="h4"
           :text="'Frontend разработчик'"
-          class="p-0 m-0 !font-extralight"
+          class="p-0 m-0 !font-light"
         />
       </div>
     </div>

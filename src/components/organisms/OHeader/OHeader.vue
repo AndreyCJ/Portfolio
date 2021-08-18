@@ -27,7 +27,7 @@
     <m-logo />
     <div class="navbar">
       <div class="nav-links text-sm">
-        <a-link text="Home" :to="{ name: 'home' }" class="mx-2" alt="Home" />
+        <a-link text="Home" :to="{ name: 'home' }" alt="Home" />
         <a-link text="Projects" :to="{ name: 'projects' }" alt="Projects" />
       </div>
     </div>
@@ -43,20 +43,26 @@
       flex
       items-center
       justify-between
-      px-4
-      py-2.5
+      px-6
+      py-4
       mb-6;
 
     top: 0;
+
+    .nav-links {
+      a {
+        @apply mr-2 last: mr-0;
+      }
+    }
   }
 
   .adaptive-glass {
-    @apply bg-background bg-opacity-97 shadow-dark-900 shadow-sm dark:(bg-background-dark bg-opacity-97 shadow-light-900 shadow-sm);
+    @apply bg-background bg-opacity-97 dark:(bg-background-dark bg-opacity-97);
 
     @supports (
       (-webkit-backdrop-filter: blur(18px)) or (backdrop-filter: blur(18px))
     ) {
-      @apply bg-background bg-opacity-35 shadow-dark-900 shadow-sm dark:(bg-background-dark bg-opacity-35 shadow-light-900 shadow-sm);
+      @apply bg-background bg-opacity-35 dark:(bg-background-dark bg-opacity-35);
 
       backdrop-filter: blur(18px);
     }

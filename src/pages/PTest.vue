@@ -28,8 +28,10 @@
 
 <template>
   <section class="test">
-    <a-paragraph :text="dummyText" />
-    <input type="color" @input="updateBgColor" />
+    <div class="container">
+      <a-paragraph :text="dummyText" />
+      <input type="color" @input="updateBgColor" />
+    </div>
   </section>
 </template>
 

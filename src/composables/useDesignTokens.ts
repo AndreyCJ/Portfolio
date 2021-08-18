@@ -16,7 +16,7 @@ export function useDesignTokens() {
   };
 }
 
-export function applyAllCssVars(cssVars: DesignTokens) {
+export function applyAllCssVars(cssVars: Partial<DesignTokens>) {
   Object.entries(cssVars).forEach(([key, value]) => {
     document.documentElement.style.setProperty(key, value);
   });
