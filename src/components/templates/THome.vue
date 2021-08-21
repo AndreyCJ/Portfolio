@@ -1,17 +1,16 @@
 <script lang="ts">
   import { defineComponent, PropType } from 'vue';
 
-  import OAboutMe from '../organisms/OAboutMe/OAboutMe.vue';
   import MBlackhole from '../molecules/MBlackhole/MBlackhole.vue';
   import MSpaceStar from '../molecules/MSpaceStar/MSpaceStar.vue';
 
   export default defineComponent({
     name: 'THome',
-    components: { OAboutMe, MBlackhole, MSpaceStar },
+    components: { MBlackhole, MSpaceStar },
     props: {
-      aboutMeText: {
+      text: {
         required: true,
-        type: String as PropType<string>,
+        type: Object as PropType<{ myName: string; myPosition: string }>,
       },
     },
   });
@@ -19,14 +18,18 @@
 
 <template>
   <div class="mask">
-    <div class="container">
-      <section class="t-home">
-        <o-about-me class="z-1" :about-me-text="aboutMeText" />
-        <m-blackhole />
-        <!-- TODO: add :amount to props -->
-        <m-space-star :amount="5" />
-      </section>
-    </div>
+    <section class="t-home">
+      <div class="my-info z-1">
+        <a-heading tag="h2" :text="text.myName" class="p-0 m-0" />
+        <a-heading
+          tag="h4"
+          :text="text.myPosition"
+          class="p-0 m-0 !font-light"
+        />
+      </div>
+      <m-blackhole />
+      <m-space-star :amount="5" />
+    </section>
   </div>
 </template>
 

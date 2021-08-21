@@ -1,22 +1,34 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
+  import { useI18n } from 'vue-i18n';
+
   import MLogo from '@/components/molecules/MLogo/MLogo.vue';
-  import ALink from '@/components/atoms/ALink/ALink.vue';
   import AButton from '@/components/atoms/AButton/AButton.vue';
+  import ONavbar from '@/components/organisms/ONavbar/ONavbar.vue';
 
   export default defineComponent({
     name: 'OHeader',
-    components: { MLogo, ALink, AButton },
+    components: { MLogo, AButton, ONavbar },
     emits: {
       switchTheme: () => Boolean,
     },
     setup(props, { emit }) {
+      const { availableLocales, locale } = useI18n();
+
       function switchTheme(): void {
         emit('switchTheme');
       }
 
+      function switchLocale(): void {
+        const locales = availableLocales;
+        locale.value =
+          locales[(locales.indexOf(locale.value) + 1) % locales.length];
+      }
+
       return {
+        locale,
         switchTheme,
+        switchLocale,
       };
     },
   });
@@ -25,15 +37,15 @@
 <template>
   <header class="header adaptive-glass">
     <m-logo />
-    <div class="navbar">
-      <div class="nav-links text-sm">
-        <a-link text="Home" :to="{ name: 'home' }" alt="Home" />
-        <a-link text="Projects" :to="{ name: 'projects' }" alt="Projects" />
-      </div>
+    <ONavbar />
+    <div class="right-side flex">
+      <code class="mr-2 hover:cursor-pointer" @click="switchLocale">
+        {{ locale }}
+      </code>
+      <a-button class="p-1.6 text-xs" @click="switchTheme">
+        <i-heroicons-outline-sun />
+      </a-button>
     </div>
-    <a-button class="p-1.6 text-xs" @click="switchTheme">
-      <i-heroicons-outline-sun />
-    </a-button>
   </header>
 </template>
 
@@ -48,12 +60,6 @@
       mb-6;
 
     top: 0;
-
-    .nav-links {
-      a {
-        @apply mr-2 last: mr-0;
-      }
-    }
   }
 
   .adaptive-glass {

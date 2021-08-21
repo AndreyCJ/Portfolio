@@ -34,9 +34,3 @@
     </div>
   </section>
 </template>
-
-<style lang="postcss" scoped>
-  .test {
-    padding-top: 5em;
-  }
-</style>

@@ -1,26 +1,48 @@
 <script lang="ts">
+  import {
+    computed,
+    defineComponent,
+    reactive,
+    WritableComputedRef,
+  } from 'vue';
+  import { useI18n } from 'vue-i18n';
+
   import THome from '@/components/templates/THome.vue';
-  import { useDesignTokens } from '@/composables/useDesignTokens';
-  import { defineComponent, onMounted } from 'vue';
 
   export default defineComponent({
     name: 'PHome',
     components: { THome },
     setup() {
-      const { cssVars } = useDesignTokens();
-      const aboutMeText = `Основной стек технологий, который я использую: JavaScript (Typescript), Vue.js, Vuex. \n Уверенное знание JavaScript, Vue.js, компонентной архитектуры, атомарного дизайна, методологии БЭМ, HTML/CSS адаптивной верстки. \n Умение работать с системой контроля версий Git (conventional commits). Есть опыт разработки бекенда и REST API для web-приложений (NodeJS, Express, NestJS, MongoDB, MySQL, Redis).`;
+      const { t } = useI18n();
+      const myName: WritableComputedRef<string> = computed({
+        get() {
+          return t('my-full-name');
+        },
+        set(n) {
+          text.myName = n;
+        },
+      });
+      const myPosition: WritableComputedRef<string> = computed({
+        get() {
+          return t('my-position');
+        },
+        set(n) {
+          text.myPosition = n;
+        },
+      });
 
-      onMounted(() => {
-        console.log('home css vars', cssVars);
+      const text = reactive({
+        myName: myName,
+        myPosition: myPosition,
       });
 
       return {
-        aboutMeText,
+        text,
       };
     },
   });
 </script>
 
 <template>
-  <t-home :about-me-text="aboutMeText" />
+  <t-home :text="text" />
 </template>

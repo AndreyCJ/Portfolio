@@ -18,6 +18,9 @@ html {
 .container {
   @apply container h-full px-6 !max-w-780px mx-auto;
 
+  transform: translateY(75px);
+
   /* TODO: delete this */
-  height: 10000px;
+
+  /* height: 10000px; */
 }

@@ -8,5 +8,7 @@
   "css.lint.unknownAtRules": "ignore",
   "editor.quickSuggestions": {
     "strings": true
-  }
+  },
+  "i18n-ally.localesPaths": ["locales"],
+  "i18n-ally.keystyle": "nested"
 }

@@ -2,6 +2,7 @@
   import { defineComponent, ref, provide, onBeforeMount, reactive } from 'vue';
 
   import OHeader from '@/components/organisms/OHeader/OHeader.vue';
+
   import { DesignTokensKey } from './constants';
   import DesignTokensState from '@/styles/design-tokens.json';
   import { applyAllCssVars } from '@/composables/useDesignTokens';
