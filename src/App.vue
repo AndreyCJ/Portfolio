@@ -1,11 +1,7 @@
 <script lang="ts">
-  import { defineComponent, ref, provide, onBeforeMount, reactive } from 'vue';
+  import { defineComponent, ref } from 'vue';
 
   import OHeader from '@/components/organisms/OHeader/OHeader.vue';
-
-  import { DesignTokensKey } from './constants';
-  import DesignTokensState from '@/styles/design-tokens.json';
-  import { applyAllCssVars } from '@/composables/useDesignTokens';
 
   export default defineComponent({
     name: 'App',
@@ -14,17 +10,10 @@
     },
     setup() {
       const isDarkTheme = ref(true);
-      const cssVars = reactive(DesignTokensState);
-
-      provide(DesignTokensKey, cssVars);
 
       function switchTheme(): void {
         isDarkTheme.value = !isDarkTheme.value;
       }
-
-      onBeforeMount(() => {
-        applyAllCssVars(cssVars);
-      });
 
       return {
         isDarkTheme,
