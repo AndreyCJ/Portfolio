@@ -52,6 +52,10 @@
 
 <style lang="postcss" scoped>
   .o-techStack {
-    @apply flex flex-wrap;
+    @apply flex flex-wrap w-full justify-end items-center <md:(justify-center border-t-light-900 border-t-2px pt-2 mt-2);
+
+    & > div {
+      @apply mr-3 last:mr-0;
+    }
   }
 </style>

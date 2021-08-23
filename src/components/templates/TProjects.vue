@@ -65,9 +65,9 @@
       <div class="project__img">
         <img :src="project.imgSrc" :alt="project.name" />
       </div>
-      <div class="project__specs">
-        <div class="container">
-          <div class="flex flex-wrap justify-center items-center">
+      <div class="container">
+        <div class="project__specs">
+          <div class="project__heading">
             <AHeading :text="project.name" tag="h4" class="!p-0 m-0 mr-2" />
             <AExternalLink
               text="Try Live"
@@ -75,10 +75,13 @@
               class="text-sm"
             />
           </div>
-          <OTechStack :tech-stack="project.teckStack" class="tech-stack" />
+          <OTechStack
+            :tech-stack="project.teckStack"
+            class="project__techstack"
+          />
         </div>
       </div>
-      <div class="project-description">
+      <div class="project__description">
         <div class="container">
           <AParagraph :text="project.description.value" class="mt-2" />
         </div>
@@ -92,7 +95,7 @@
     @apply mb-4em;
 
     &__img {
-      @apply px-6 mx-auto max-w-[950px];
+      @apply px-6 mx-auto max-w-[850px];
 
       img {
         @apply rounded-lg shadow-md shadow-black h-auto w-full;
@@ -100,16 +103,13 @@
     }
 
     &__specs {
-      @apply mt-3;
+      @apply mt-3 px-6 py-2;
+      @apply flex justify-between items-center <md:(flex-wrap  px-3);
+      @apply bg-white dark:(bg-dark-800 border-dark-400) border-solid border-width-1px border-light-600 rounded-lg;
+    }
 
-      & > div {
-        @apply flex justify-between items-center;
-        @apply py-1 bg-white dark:(bg-dark-800 border-dark-400) border-solid border-width-1px border-light-600 rounded-lg;
-      }
-
-      .tech-stack {
-        @apply text-xs;
-      }
+    &__heading {
+      @apply flex flex-wrap  items-center <md:(justify-between w-full );
     }
   }
 </style>

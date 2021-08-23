@@ -28,7 +28,7 @@
 
       function handleScroll(): void {
         if (window.scrollY !== 0) {
-          headerClass.value = '!py-2.2 shadow-sm';
+          headerClass.value = '!py-2.2 shadow-sm dark:shadow-light-50';
         } else {
           headerClass.value = '';
         }
@@ -79,10 +79,12 @@
       px-6
       py-4
       top-0
-			fixed
-			transition-all
+      fixed
+			transition-shadow
 			ease-linear
 			z-10;
+
+    transition: padding 0.1s linear;
   }
 
   .adaptive-glass {

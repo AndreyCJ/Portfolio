@@ -31,7 +31,7 @@
 
 <style lang="postcss" scoped>
   .m-chip {
-    @apply flex items-center justify-center h-full  px-2 py-1 m-1 rounded-lg w-min;
+    @apply flex items-center justify-center h-full rounded-lg w-min;
   }
 
   .m-chip__prefix {
