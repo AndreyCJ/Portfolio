@@ -13,7 +13,8 @@
       },
       alt: {
         type: String as PropType<string>,
-        required: true,
+        required: false,
+        default: () => '',
       },
     },
   });
@@ -21,12 +22,18 @@
 
 <template>
   <a
-    class="a-link a-link--external"
+    class="a-external-link"
     target="_blank"
     rel="noopener noreferrer"
     :href="href"
     :alt="alt"
   >
-    {{ text }}
+    {{ text }} ->
   </a>
 </template>
+
+<style lang="postcss" scoped>
+  .a-external-link {
+    @apply text-[var(--color-blue)] hover:opacity-50;
+  }
+</style>

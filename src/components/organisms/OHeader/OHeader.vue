@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent } from 'vue';
+  import { defineComponent, onMounted, onUnmounted, reactive, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
 
   import MLogo from '@/components/molecules/MLogo/MLogo.vue';
@@ -14,6 +14,7 @@
     },
     setup(props, { emit }) {
       const { availableLocales, locale } = useI18n();
+      const headerClass = ref('');
 
       function switchTheme(): void {
         emit('switchTheme');
@@ -25,8 +26,25 @@
           locales[(locales.indexOf(locale.value) + 1) % locales.length];
       }
 
+      function handleScroll(): void {
+        if (window.scrollY !== 0) {
+          headerClass.value = '!py-2.2 shadow-sm';
+        } else {
+          headerClass.value = '';
+        }
+      }
+
+      onMounted(() => {
+        window.addEventListener('scroll', handleScroll);
+      });
+
+      onUnmounted(() => {
+        window.removeEventListener('scroll', handleScroll);
+      });
+
       return {
         locale,
+        headerClass,
         switchTheme,
         switchLocale,
       };
@@ -35,13 +53,16 @@
 </script>
 
 <template>
-  <header class="header adaptive-glass">
+  <header class="header adaptive-glass" :class="headerClass">
     <m-logo />
     <ONavbar />
     <div class="right-side flex">
-      <code class="mr-2 hover:cursor-pointer" @click="switchLocale">
+      <div
+        class="font-semibold mr-2 hover:cursor-pointer"
+        @click="switchLocale"
+      >
         {{ locale }}
-      </code>
+      </div>
       <a-button class="p-1.6 text-xs" @click="switchTheme">
         <i-heroicons-outline-sun />
       </a-button>
@@ -57,9 +78,11 @@
       justify-between
       px-6
       py-4
-      mb-6;
-
-    top: 0;
+      top-0
+			fixed
+			transition-all
+			ease-linear
+			z-10;
   }
 
   .adaptive-glass {
@@ -72,8 +95,5 @@
 
       backdrop-filter: blur(18px);
     }
-
-    position: fixed;
-    z-index: 2;
   }
 </style>

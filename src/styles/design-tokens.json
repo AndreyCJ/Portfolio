@@ -2,7 +2,7 @@
   "--color-primary": "#285577",
   "--color-back": "#f5f5f5",
   "--color-fore": "#444",
-  "--color-blue": "light-blue",
+  "--color-blue": "rgba(59, 130, 246)",
   "--color-pure-black": "#000",
   "--color-dark": "#0A0A0A",
   "--color-white-warm": "#FAFAF9",

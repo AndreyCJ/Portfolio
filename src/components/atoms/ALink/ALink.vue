@@ -29,14 +29,14 @@
 
 <style lang="postcss" scoped>
   .a-link {
-    @apply font-semibold pb-[3px] text[var(--color-blue-gray)] dark:text[var(--color-blue-gray-light)];
+    @apply pb-[3px] text[var(--color-blue-gray)] dark:text[var(--color-blue-gray-light)];
 
     &:not(.a-link--active) {
-      @apply hover:(opacity-60 border-dotted border-b-gray-700 border-b-[3px]);
+      @apply hover:(opacity-60 border-dotted border-b-gray-700 border-b-[2px]);
     }
 
     &--active {
-      @apply border-solid border-b-[var(--color-primary)] border-b-[3px];
+      @apply border-solid border-b-[var(--color-primary)] border-b-[2px];
     }
   }
 </style>

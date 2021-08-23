@@ -1,0 +1,11 @@
+button:
+  projects: Проекты
+  home: Главная
+  about: О себе
+not-found: Не Найдено
+my-full-name: Андрей Чеботарь
+my-position: Frontend Разработчик
+about-me: "Основной стек технологий, который я использую: JavaScript (Typescript), Vue.js (v2, v3), Vuex. \n Уверенное знание JavaScript, Vue.js, компонентной архитектуры, атомарного дизайна, методологии БЭМ, HTML/CSS адаптивной верстки. \n Умение работать с системой контроля версий Git (conventional commits). Есть опыт разработки бекенда и REST API для web-приложений (NodeJS, Express, NestJS, MongoDB, MySQL, Redis)."
+projects:
+  timetable:
+    description: 'Прогрессивное web-приложение для просмотра расписания занятий, звонов, замен. Разработанное с использованием React, Node, Express, MongoDB.'

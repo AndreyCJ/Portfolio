@@ -2,11 +2,13 @@
   import { defineComponent, ref } from 'vue';
 
   import OHeader from '@/components/organisms/OHeader/OHeader.vue';
+  import OFooter from '@/components/organisms/OFooter/OFooter.vue';
 
   export default defineComponent({
     name: 'App',
     components: {
       OHeader,
+      OFooter,
     },
     setup() {
       const isDarkTheme = ref(true);
@@ -32,17 +34,25 @@
         duration-100
       "
     >
-      <o-header @switchTheme="switchTheme" />
-      <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
+      <OHeader @switchTheme="switchTheme" />
+      <div class="content">
+        <router-view v-slot="{ Component }">
+          <transition name="fade" mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
+      </div>
+      <OFooter />
     </div>
   </main>
 </template>
 
 <style lang="postcss">
+  .content {
+    flex: 1;
+    padding-top: 4rem;
+  }
+
   .fade {
     &-enter-from {
       opacity: 0;

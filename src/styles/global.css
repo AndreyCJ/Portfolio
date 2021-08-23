@@ -10,7 +10,7 @@ html {
 }
 
 .page-wrapper {
-  @apply min-h-screen
+  @apply min-h-screen flex flex-col
     !bg[var(--color-white-warm)]
     dark:(!bg[var(--color-dark)] !text[var(--color-white-warm)]);
 }
@@ -18,7 +18,7 @@ html {
 .container {
   @apply container h-full px-6 !max-w-780px mx-auto;
 
-  transform: translateY(75px);
+  /* transform: translateY(75px); */
 
   /* TODO: delete this */
 

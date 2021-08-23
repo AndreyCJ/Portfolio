@@ -25,7 +25,7 @@
 
 <style lang="postcss" scoped>
   .a-button {
-    @apply flex items-center font-semibold rounded-lg shadow-md outline-transparent dark:outline-transparent transition duration-200 ease-in-out;
+    @apply px-3 py-1 text-sm flex items-center rounded-md shadow-md outline-transparent dark:outline-transparent transition duration-200 ease-in-out;
   }
 
   .a-button--base {

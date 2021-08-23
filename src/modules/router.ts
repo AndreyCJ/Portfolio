@@ -11,7 +11,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/projects',
     name: 'projects',
-    component: () => import('@/pages/PTest.vue'),
+    component: () => import('@/pages/PProjects.vue'),
   },
   {
     path: '/about',

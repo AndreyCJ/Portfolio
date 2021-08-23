@@ -1,0 +1,115 @@
+<script lang="ts">
+  import { computed, defineComponent } from 'vue';
+  import { useI18n } from 'vue-i18n';
+
+  import AHeading from '@/components/atoms/AHeading/AHeading.vue';
+  import AExternalLink from '@/components/atoms/AExternalLink/AExternalLink.vue';
+  import AParagraph from '@/components/atoms/AParagraph/AParagraph.vue';
+  import OTechStack from '@/components/organisms/OTechStack/OTechStack.vue';
+
+  import useAssets from '@/composables/useAssets';
+  import { TechSkill } from '@/types';
+
+  export default defineComponent({
+    name: 'TProjects',
+    components: {
+      AHeading,
+      AParagraph,
+      AExternalLink,
+      OTechStack,
+    },
+    setup() {
+      const { t } = useI18n();
+      const { depools } = useAssets();
+      const projects = [
+        {
+          imgSrc: depools?.light?.png,
+          name: 'DePools Staking',
+          description: computed(() => t('projects.timetable.description')),
+          demo: 'https://depools.koshelek.ru/',
+          teckStack: [
+            { name: 'JavaScript' },
+            { name: 'Vue' },
+            { name: 'NodeJS' },
+            { name: 'Redis' },
+            { name: 'CSS' },
+          ] as TechSkill[],
+        },
+        {
+          imgSrc: depools?.light?.png,
+          name: 'NotesApp',
+          description: computed(() => t('projects.timetable.description')),
+          demo: 'https://example.com',
+          teckStack: [
+            {
+              name: 'JavaScript',
+            },
+            {
+              name: 'CSS',
+            },
+          ] as TechSkill[],
+        },
+      ];
+
+      return { t, projects };
+    },
+  });
+</script>
+
+<template>
+  <section class="projects">
+    <div class="container">
+      <AHeading :text="t('button.projects')" tag="h2" />
+    </div>
+    <div v-for="project in projects" :key="project.name" class="project">
+      <div class="project__img">
+        <img :src="project.imgSrc" :alt="project.name" />
+      </div>
+      <div class="project__specs">
+        <div class="container">
+          <div class="flex flex-wrap justify-center items-center">
+            <AHeading :text="project.name" tag="h4" class="!p-0 m-0 mr-2" />
+            <AExternalLink
+              text="Try Live"
+              :href="project.demo"
+              class="text-sm"
+            />
+          </div>
+          <OTechStack :tech-stack="project.teckStack" class="tech-stack" />
+        </div>
+      </div>
+      <div class="project-description">
+        <div class="container">
+          <AParagraph :text="project.description.value" class="mt-2" />
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style lang="postcss" scoped>
+  .project {
+    @apply mb-4em;
+
+    &__img {
+      @apply px-6 mx-auto max-w-[950px];
+
+      img {
+        @apply rounded-lg shadow-md shadow-black h-auto w-full;
+      }
+    }
+
+    &__specs {
+      @apply mt-3;
+
+      & > div {
+        @apply flex justify-between items-center;
+        @apply py-1 bg-white dark:(bg-dark-800 border-dark-400) border-solid border-width-1px border-light-600 rounded-lg;
+      }
+
+      .tech-stack {
+        @apply text-xs;
+      }
+    }
+  }
+</style>

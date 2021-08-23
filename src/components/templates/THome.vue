@@ -17,20 +17,14 @@
 </script>
 
 <template>
-  <div class="mask">
-    <section class="t-home">
-      <div class="my-info z-1">
-        <a-heading tag="h2" :text="text.myName" class="p-0 m-0" />
-        <a-heading
-          tag="h4"
-          :text="text.myPosition"
-          class="p-0 m-0 !font-light"
-        />
-      </div>
-      <m-blackhole />
-      <m-space-star :amount="5" />
-    </section>
-  </div>
+  <section class="t-home">
+    <div class="my-info z-1">
+      <a-heading tag="h2" :text="text.myName" class="p-0 m-0" />
+      <a-heading tag="h4" :text="text.myPosition" class="p-0 m-0 !font-light" />
+    </div>
+    <m-blackhole />
+    <m-space-star :amount="5" />
+  </section>
 </template>
 
 <style lang="postcss" scoped>
@@ -38,11 +32,11 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 1;
     overflow: hidden;
+    top: 0;
   }
 
   .t-home {
-    @apply flex h-screen justify-center items-center;
+    @apply flex overflow-hidden absolute w-full top-0 z-0 h-screen justify-center items-center;
   }
 </style>

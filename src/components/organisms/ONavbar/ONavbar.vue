@@ -55,7 +55,7 @@
 <style lang="postcss" scoped>
   .nav-links {
     a {
-      @apply mr-2 last: mr-0;
+      @apply mr-4 last: mr-0;
     }
   }
 </style>

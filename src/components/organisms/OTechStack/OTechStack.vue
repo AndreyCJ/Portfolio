@@ -8,6 +8,8 @@
   // Iconify icons
   import IconTypeScript from 'virtual:vite-icons/logos/typescript-icon';
   import IconJavaScript from 'virtual:vite-icons/logos/javascript';
+  import IconNodeJS from 'virtual:vite-icons/logos/nodejs';
+  import IconRedis from 'virtual:vite-icons/logos/redis';
   import IconVue from 'virtual:vite-icons/logos/vue';
   import IconHTML from 'virtual:vite-icons/logos/html-5';
   import IconCSS from 'virtual:vite-icons/logos/css-3';
@@ -18,6 +20,8 @@
       MChip,
       IconTypeScript,
       IconJavaScript,
+      IconNodeJS,
+      IconRedis,
       IconVue,
       IconHTML,
       IconCSS,
