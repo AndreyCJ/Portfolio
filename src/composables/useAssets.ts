@@ -1,6 +1,6 @@
 import { Assets, ImgType } from '@/types';
 
-export default function useAssets(): Partial<Assets> {
+export default function useAssets<T>(): Assets<T> {
   const pngs = import.meta.globEager(`/src/assets/*.png`);
 
   function getImagePath(imgName: string, imgType: ImgType): string {
