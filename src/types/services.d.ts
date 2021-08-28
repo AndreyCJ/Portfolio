@@ -13,3 +13,5 @@ export interface Assets extends ImgAsset {
     universal?: ImgAsset;
   };
 }
+
+export type CarouselItem = { id: number; imgSrc: string };

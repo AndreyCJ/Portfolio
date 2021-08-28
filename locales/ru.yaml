@@ -2,6 +2,8 @@ button:
   projects: Проекты
   home: Главная
   about: О себе
+  next: Далее
+  back: Назад
 not-found: Не Найдено
 my-full-name: Андрей Чеботарь
 my-position: Frontend Разработчик

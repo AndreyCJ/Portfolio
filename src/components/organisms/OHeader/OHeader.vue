@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent, onMounted, onUnmounted, reactive, ref } from 'vue';
+  import { defineComponent, onMounted, onUnmounted, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
 
   import MLogo from '@/components/molecules/MLogo/MLogo.vue';
@@ -56,14 +56,11 @@
   <header class="header adaptive-glass" :class="headerClass">
     <m-logo />
     <ONavbar />
-    <div class="right-side flex">
-      <div
-        class="font-semibold mr-2 hover:cursor-pointer"
-        @click="switchLocale"
-      >
+    <div class="right-side flex items-center">
+      <a-button class="header__btn header__btn--lang" @click="switchLocale">
         {{ locale }}
-      </div>
-      <a-button class="p-1.6 text-xs" @click="switchTheme">
+      </a-button>
+      <a-button class="header__btn header__btn--theme" @click="switchTheme">
         <i-heroicons-outline-sun />
       </a-button>
     </div>
@@ -80,11 +77,24 @@
       py-4
       top-0
       fixed
-			transition-shadow
-			ease-linear
-			z-10;
+      transition-shadow
+  	ease-linear
+  	z-10;
 
     transition: padding 0.1s linear;
+
+    &__btn {
+      @apply px-2 text-sm mr-1 bg-transparent text[var(--color-dark)] shadow-none hover:text[var(--color-white-warm)];
+      @apply dark:(bg-transparent text[var(--color-white-warm)]);
+
+      &:last-child {
+        @apply mr-0;
+      }
+
+      &--theme {
+        @apply py-1.4;
+      }
+    }
   }
 
   .adaptive-glass {

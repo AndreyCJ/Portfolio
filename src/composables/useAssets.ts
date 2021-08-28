@@ -1,4 +1,4 @@
-import { Assets, ImgAsset, ImgType } from '@/types';
+import { Assets, ImgType } from '@/types';
 
 export default function useAssets(): Partial<Assets> {
   const pngs = import.meta.globEager(`/src/assets/*.png`);
@@ -20,6 +20,14 @@ export default function useAssets(): Partial<Assets> {
       },
       dark: {
         png: getImagePath('depools-main-dark', 'png'),
+      },
+    },
+    depoolsStakes: {
+      light: {
+        png: getImagePath('depools-stakes-light', 'png'),
+      },
+      dark: {
+        png: getImagePath('depools-stakes-dark', 'png'),
       },
     },
     logo: {

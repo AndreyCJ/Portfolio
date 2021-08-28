@@ -2,10 +2,15 @@ import { DesignTokens } from '@/types';
 import { injectStrict } from '@/utils/strictInjection';
 import { DesignTokensKey } from '@/constants';
 
-export function useDesignTokens() {
-  const cssVars = injectStrict(DesignTokensKey);
+interface IUseDesignTokens {
+  cssVars: DesignTokens;
+  setCssVariable: (name: keyof DesignTokens, value: string) => void;
+}
 
-  function setCssVariable(name: keyof DesignTokens, value: string) {
+export function useDesignTokens(): IUseDesignTokens {
+  const cssVars: DesignTokens = injectStrict(DesignTokensKey);
+
+  function setCssVariable(name: keyof DesignTokens, value: string): void {
     cssVars[name] = value;
     document.documentElement.style.setProperty(name, value);
   }
@@ -16,7 +21,7 @@ export function useDesignTokens() {
   };
 }
 
-export function applyAllCssVars(cssVars: Partial<DesignTokens>) {
+export function applyAllCssVars(cssVars: Partial<DesignTokens>): void {
   Object.entries(cssVars).forEach(([key, value]) => {
     document.documentElement.style.setProperty(key, value);
   });

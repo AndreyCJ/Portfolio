@@ -2,6 +2,8 @@ button:
   projects: Projects
   home: Home
   about: About
+  next: Next
+  back: Previous
 not-found: Not Found
 my-full-name: Andrey Chebotar
 my-position: Frontend Developer
