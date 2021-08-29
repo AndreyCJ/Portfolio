@@ -8,5 +8,6 @@
   "--color-white-warm": "#FAFAF9",
   "--color-blue-gray": "rgba(75, 85, 99)",
   "--color-blue-gray-light": "rgba(209, 213, 219)",
-  "--color-light-yellow": "#f4eb42"
+  "--color-light-yellow": "#f4eb42",
+  "--container-padding": "0 1.5rem"
 }

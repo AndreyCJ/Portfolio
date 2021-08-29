@@ -22,6 +22,7 @@ export interface IProject {
   name: string;
   description: ComputedRef<string>;
   images: CarouselItem[];
-  demo: string;
   techStack: TechSkill[];
+  demo?: string;
+  github?: string;
 }

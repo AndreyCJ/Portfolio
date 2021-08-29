@@ -20,37 +20,33 @@
       },
     },
     setup(props) {
-      const currSlideIndex = ref(0);
+      const currSlideIndex = ref(1);
       const { observeLazyImg } = useLazyImg();
       const { t } = useI18n();
 
-      const isCurrSlideFirst = computed(() => currSlideIndex.value === 0);
+      const isCurrSlideFirst = computed(() => currSlideIndex.value === 1);
       const isCurrSlideLast = computed(
-        () => currSlideIndex.value === props.items.length - 1
+        () => currSlideIndex.value === props.items.length
       );
-      const slideStyle = computed(() => {
-        return { marginLeft: '-' + String(100 * currSlideIndex.value) + '%' };
-      });
 
       function showNextSlide() {
-        if (currSlideIndex.value < props.items.length - 1) {
+        if (!isCurrSlideLast.value) {
           currSlideIndex.value += 1;
-        } else {
-          currSlideIndex.value = 0;
         }
       }
       function showPrevSlide() {
-        if (currSlideIndex.value > 0) {
+        if (!isCurrSlideFirst.value) {
           currSlideIndex.value -= 1;
-        } else {
-          currSlideIndex.value = props.items.length - 1;
         }
+      }
+      function isSlideActive(id: number): boolean {
+        return id === currSlideIndex.value;
       }
 
       return {
-        slideStyle,
         isCurrSlideFirst,
         isCurrSlideLast,
+        isSlideActive,
         showPrevSlide,
         showNextSlide,
         observeLazyImg,
@@ -60,26 +56,30 @@
   });
 </script>
 <template>
-  <section class="o-carousel">
-    <div class="o-carousel__wrapper" :style="slideStyle">
+  <section
+    class="o-carousel"
+    :class="{ 'o-carousel--multi': items.length > 1 }"
+  >
+    <div class="o-carousel__wrapper">
       <MCarouselItem
         v-for="item in items"
         :key="item.id"
         :carousel-item="item"
         class="o-carousel__item"
+        :class="{ 'o-carousel__item--active': isSlideActive(item.id) }"
         @on-img-el-mounted="observeLazyImg"
       />
     </div>
-    <div class="o-carousel__buttons">
+    <div v-if="items.length > 1" class="o-carousel__buttons">
       <a-button
-        v-show="!isCurrSlideFirst"
+        :disabled="isCurrSlideFirst"
         class="o-carousel__button o-carousel__button--left"
         @click="showPrevSlide"
       >
         {{ t('button.back') }}
       </a-button>
       <a-button
-        v-show="!isCurrSlideLast"
+        :disabled="isCurrSlideLast"
         class="o-carousel__button o-carousel__button--right"
         @click="showNextSlide"
       >
@@ -91,22 +91,24 @@
 
 <style lang="postcss" scoped>
   .o-carousel {
-    @apply mx-auto max-w-[850px] overflow-hidden h-full relative;
+    @apply mx-auto overflow-hidden h-full relative max-w-[850px];
 
-    &:hover {
-      .o-carousel__buttons {
-        display: flex !important;
+    &--multi {
+      &:hover {
+        .o-carousel__buttons {
+          display: flex !important;
+        }
       }
+    }
 
-      &::before {
-        content: '';
-        width: 100%;
+    &__item {
+      @apply transition-all ease-in-out;
+
+      display: none;
+
+      &--active {
         display: block;
-        height: 80px;
-        bottom: 0;
-        position: absolute;
-
-        @apply bg-gradient-to-t to-transparent from-true-gray-500 dark:from-dark-50 rounded;
+        margin: 0 auto;
       }
     }
 
@@ -115,11 +117,11 @@
     }
 
     &__buttons {
-      @apply absolute z-10 bottom-0 hidden justify-center !w-full;
+      @apply absolute z-10 bottom-0 hidden justify-center !w-full transition-all ease-in-out;
     }
 
     &__button {
-      @apply py-2 px-5 mb-2 mx-2 !shadow-none !bg-transparent font-extrabold hover:(!bg[var(--color-blue)]);
+      @apply py-2 px-5 mb-2 mx-2  font-extrabold hover:(!bg[var(--color-blue)]) transition-all ease-in-out;
     }
   }
 </style>

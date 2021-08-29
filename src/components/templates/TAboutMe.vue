@@ -30,12 +30,3 @@
     </div>
   </section>
 </template>
-
-<style lang="postcss" scoped>
-  /* .t-about-me {
-    @apply flex justify-center;
-    .container {
-      @apply flex overflow-hidden absolute w-full top-0 z-0 h-screen justify-center items-center;
-    }
-  } */
-</style>

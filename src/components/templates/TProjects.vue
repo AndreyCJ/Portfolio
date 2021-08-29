@@ -44,6 +44,13 @@
           <div class="project__heading">
             <AHeading :text="project.name" tag="h4" class="!p-0 m-0 mr-2" />
             <AExternalLink
+              v-if="project.github"
+              text="GitHub"
+              :href="project.github"
+              class="text-sm mr-2"
+            />
+            <AExternalLink
+              v-if="project.demo"
               text="Try Live"
               :href="project.demo"
               class="text-sm"

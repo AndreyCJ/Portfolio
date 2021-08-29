@@ -14,7 +14,14 @@
     },
     setup() {
       const { t } = useI18n();
-      const { depools, depoolsStakes } = useAssets();
+      const {
+        depools,
+        depoolsStakes,
+        notesApp,
+        schoolApp,
+        timetableCalls,
+        timetableMain,
+      } = useAssets();
 
       const projects: IProject[] = [
         {
@@ -27,9 +34,17 @@
               id: 2,
               imgSrc: depools.dark.png,
             },
+            {
+              id: 3,
+              imgSrc: depoolsStakes.light.png,
+            },
+            {
+              id: 4,
+              imgSrc: depoolsStakes.dark.png,
+            },
           ],
           name: 'DePools Staking',
-          description: computed(() => t('projects.timetable.description')),
+          description: computed(() => t('projects.depools.description')),
           demo: 'https://depools.koshelek.ru/',
           techStack: [
             { name: 'JavaScript' },
@@ -43,16 +58,61 @@
           images: [
             {
               id: 1,
-              imgSrc: depoolsStakes?.light.png,
+              imgSrc: timetableMain.universal,
             },
             {
               id: 2,
-              imgSrc: depoolsStakes?.dark.png,
+              imgSrc: timetableCalls.universal,
+            },
+          ],
+          name: 'TimetableApp',
+          description: computed(() => t('projects.timetable.description')),
+          demo: 'https://example.com',
+          techStack: [
+            {
+              name: 'JavaScript',
+            },
+            {
+              name: 'React',
+            },
+            {
+              name: 'Express',
+            },
+            {
+              name: 'CSS',
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              id: 1,
+              imgSrc: notesApp.universal,
             },
           ],
           name: 'NotesApp',
-          description: computed(() => t('projects.timetable.description')),
+          description: computed(() => t('projects.notesApp.description')),
           demo: 'https://example.com',
+          techStack: [
+            {
+              name: 'JavaScript',
+            },
+            {
+              name: 'CSS',
+            },
+          ],
+        },
+        {
+          images: [
+            {
+              id: 1,
+              imgSrc: schoolApp.universal,
+            },
+          ],
+          name: '1SchoolApp',
+          description: computed(() => t('projects.1school.description')),
+          demo: 'https://1school-wptheme.000webhostapp.com/',
+          github: 'https://github.com/AndreyCJ/1school_WpTheme',
           techStack: [
             {
               name: 'JavaScript',

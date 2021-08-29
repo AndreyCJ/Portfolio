@@ -3,10 +3,11 @@ html {
 }
 
 .main {
-  @apply antialiased sm:subpixel-antialiased md:antialiased;
+  @apply antialiased sm:subpixel-antialiased md:antialiased <md:text-sm;
 
   font-family: 'Inter', Helvetica, sans-serif;
   position: relative;
+  overflow: hidden;
 }
 
 .page-wrapper {
@@ -16,11 +17,5 @@ html {
 }
 
 .container {
-  @apply container h-full px-6 !max-w-780px mx-auto;
-
-  /* transform: translateY(75px); */
-
-  /* TODO: delete this */
-
-  /* height: 10000px; */
+  @apply container h-full p-[var(--container-padding)] !max-w-780px mx-auto overflow-hidden;
 }

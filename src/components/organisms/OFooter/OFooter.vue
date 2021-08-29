@@ -8,6 +8,7 @@
     setup() {
       const { t } = useI18n();
       const currentYear = new Date().getFullYear();
+
       return { t, myEmail, currentYear };
     },
   });
@@ -15,13 +16,13 @@
 
 <template>
   <footer>
-    <span> {{ t('my-full-name') }} &copy; {{ currentYear }} </span>
+    <span class="mr-2"> {{ t('my-full-name') }} &copy; {{ currentYear }} </span>
     <span> {{ myEmail }} </span>
   </footer>
 </template>
 
 <style lang="postcss" scoped>
   footer {
-    @apply flex flex-wrap justify-between py-2 px-6 text-center text-xs opacity-40 font-extralight dark:(opacity-20);
+    @apply flex flex-wrap justify-between py-2 px-6 text-center text-xs opacity-40 font-extralight dark:(opacity-20) <md:justify-center;
   }
 </style>

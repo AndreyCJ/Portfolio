@@ -18,7 +18,7 @@ export function useLazyImg(
   );
 
   function loadContent(el: HTMLImageElement) {
-    if (!el.dataset || !el.dataset.src)
+    if (!el.dataset.src)
       throw new Error("You should provide element's data src");
     el.src = el.dataset.src;
   }
