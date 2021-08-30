@@ -53,9 +53,9 @@
     }
   },
   "lint-staged": {
-    "*.{ts,vue}": "eslint --fix",
-    "*.{css,scss,vue}": "stylelint --fix",
-    "*": "prettier -w -u"
+    "src/*.{ts,vue}": "eslint --fix",
+    "src/*.{css,scss,vue}": "stylelint --fix",
+    "src/*": "prettier -w -u"
   },
   "config": {
     "commitizen": {
