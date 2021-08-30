@@ -4,7 +4,8 @@ import { resolve } from 'path';
 // Plugins
 import Vue from '@vitejs/plugin-vue';
 import Components from 'vite-plugin-components';
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
+import Icons from 'unplugin-icons/vite';
+import IconsResolver from 'unplugin-icons/resolver';
 import WindiCSS from 'vite-plugin-windicss';
 import PostcssNested from 'postcss-nested';
 import VueI18n from '@intlify/vite-plugin-vue-i18n';
@@ -20,9 +21,9 @@ export default defineConfig({
   plugins: [
     Vue(),
     Components({
-      customComponentResolvers: ViteIconsResolver(),
+      customComponentResolvers: IconsResolver(),
     }),
-    ViteIcons(),
+    Icons({ compiler: 'vue3' }),
     WindiCSS({
       safelist: 'prose prose-sm m-auto',
     }),

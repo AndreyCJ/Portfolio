@@ -48,7 +48,7 @@
 
 <style lang="postcss" scoped>
   .m-carousel-item {
-    @apply w-full h-0 relative pt-[53%] overflow-hidden <md:!mx-2;
+    @apply w-full pt-[53%] relative  overflow-hidden <md:!mx-2;
 
     border-radius: 8px;
 
@@ -60,7 +60,7 @@
     }
 
     &__img {
-      @apply absolute top-0 left-0 w-full shadow-md shadow-black object-cover transition-all ease-in-out;
+      @apply absolute top-0 left-0 w-full  shadow-md shadow-black object-cover transition-all ease-in-out;
 
       max-width: 100%;
     }

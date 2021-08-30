@@ -6,13 +6,14 @@
   import { TechSkill } from '@/types/index';
 
   // Iconify icons
-  import IconTypeScript from 'virtual:vite-icons/logos/typescript-icon';
-  import IconJavaScript from 'virtual:vite-icons/logos/javascript';
-  import IconNodeJS from 'virtual:vite-icons/logos/nodejs';
-  import IconRedis from 'virtual:vite-icons/logos/redis';
-  import IconVue from 'virtual:vite-icons/logos/vue';
-  import IconHTML from 'virtual:vite-icons/logos/html-5';
-  import IconCSS from 'virtual:vite-icons/logos/css-3';
+  import IconTypeScript from '~icons/logos/typescript-icon';
+  import IconJavaScript from '~icons/logos/javascript';
+  import IconNodeJS from '~icons/logos/nodejs';
+  import IconRedis from '~icons/logos/redis';
+  import IconVue from '~icons/logos/vue';
+  import IconHTML from '~icons/logos/html-5';
+  import IconCSS from '~icons/logos/css-3';
+  import IconReact from '~icons/logos/react';
 
   export default defineComponent({
     name: 'OTechStack',
@@ -25,6 +26,7 @@
       IconVue,
       IconHTML,
       IconCSS,
+      IconReact,
     },
     props: {
       techStack: {

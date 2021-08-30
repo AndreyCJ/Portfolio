@@ -9,6 +9,12 @@
     components: {
       ALink,
     },
+    props: {
+      vertical: {
+        type: Boolean,
+        default: () => false,
+      },
+    },
     setup() {
       const { t } = useI18n();
       const pages = [
@@ -40,7 +46,7 @@
 </script>
 <template>
   <div class="navbar">
-    <div class="nav-links text-sm">
+    <div class="nav-links text-sm" :class="{ 'nav-links--vertical': vertical }">
       <ALink
         v-for="page in pages"
         :key="page.to.name"
@@ -55,7 +61,19 @@
 <style lang="postcss" scoped>
   .nav-links {
     a {
-      @apply mr-4 last: mr-0;
+      @apply mr-4 last:mr-0;
+    }
+
+    &--vertical {
+      display: flex;
+      flex-direction: column;
+      font-size: 1.1rem;
+
+      a {
+        margin-right: 0;
+        margin-bottom: 0.9em;
+        text-align: center;
+      }
     }
   }
 </style>

@@ -9,8 +9,8 @@ export function useLazyImg(
 ): IUseLazyImg {
   const defaultObserverOptions: IntersectionObserverInit = {
     root: null,
-    rootMargin: '10px',
-    threshold: 0.5,
+    rootMargin: '30px',
+    threshold: 0,
   };
   const observer = new IntersectionObserver(
     intersectionHandler,
@@ -29,7 +29,6 @@ export function useLazyImg(
   ): void {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log('loading');
         loadContent(entry.target as HTMLImageElement);
         observer.unobserve(entry.target);
       }
@@ -40,13 +39,8 @@ export function useLazyImg(
     observer.observe(imgEl);
   }
 
-  onMounted(() => {
-    console.log('mounted');
-  });
-
   onUnmounted(() => {
     observer.disconnect();
-    console.log('unmounting observer');
   });
 
   return {
