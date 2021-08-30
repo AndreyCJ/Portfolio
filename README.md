@@ -1,1 +1,0 @@
-Portfolio made by Andrey Chebotar
