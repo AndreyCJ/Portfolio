@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "author": "Andrey Chebotar",
   "license": "MIT",
+  "homepage": "http://andreycj.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint:markup": "vue-tsc --noEmit",
     "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
     "lint:style": "stylelint src/**/*.{css,scss,vue}",
-    "commit": "cz"
+    "commit": "cz",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^3.2.1",
@@ -32,6 +35,7 @@
     "eslint": "^7.30.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.13.0",
+    "gh-pages": "^3.2.3",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.0",
     "postcss-nested": "^5.0.6",
@@ -53,9 +57,9 @@
     }
   },
   "lint-staged": {
-    "src/*.{ts,vue}": "eslint --fix",
-    "src/*.{css,scss,vue}": "stylelint --fix",
-    "src/*": "prettier -w -u"
+    "src/**/*.{ts,vue}": "eslint --fix",
+    "src/**/*.{css,scss,vue}": "stylelint --fix",
+    "src/**/*": "prettier -w -u"
   },
   "config": {
     "commitizen": {

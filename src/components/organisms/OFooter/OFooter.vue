@@ -16,13 +16,13 @@
 
 <template>
   <footer>
-    <span class="mr-2"> {{ t('my-full-name') }} &copy; {{ currentYear }} </span>
+    <span> {{ t('my-full-name') }} &copy; {{ currentYear }} </span>
     <span> {{ myEmail }} </span>
   </footer>
 </template>
 
 <style lang="postcss" scoped>
   footer {
-    @apply flex flex-wrap justify-between py-2 px-6 text-center text-xs opacity-40 font-extralight dark:(opacity-20) <md:justify-center;
+    @apply flex justify-between py-2 px-6 text-center text-xs opacity-40 font-extralight dark:(opacity-20) <md:(justify-center flex-col);
   }
 </style>

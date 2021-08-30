@@ -1,5 +1,5 @@
 import { AppModule } from '@/types';
-import { createWebHistory, createRouter } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import { RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
 
 export const install: AppModule = (app) => {
   const router = createRouter({
-    history: createWebHistory('/Portfolio/'),
+    history: createWebHashHistory('/Portfolio/'),
     routes,
   });
 

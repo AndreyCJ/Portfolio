@@ -50,7 +50,7 @@
 <style lang="postcss">
   .content {
     flex: 1;
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 
   .fade {

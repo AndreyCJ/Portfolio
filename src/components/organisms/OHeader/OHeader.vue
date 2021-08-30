@@ -28,25 +28,9 @@
           locales[(locales.indexOf(locale.value) + 1) % locales.length];
       }
 
-      function handleScroll(): void {
-        if (window.scrollY !== 0) {
-          headerClass.value = '!py-2.2 shadow-sm dark:shadow-light-50';
-        } else {
-          headerClass.value = '';
-        }
-      }
-
       function toggleNavDrawer(): void {
         isNavDrawerOpen.value = !isNavDrawerOpen.value;
       }
-
-      onMounted(() => {
-        window.addEventListener('scroll', handleScroll);
-      });
-
-      onUnmounted(() => {
-        window.removeEventListener('scroll', handleScroll);
-      });
 
       return {
         locale,
@@ -96,7 +80,7 @@
       fixed
       transition-shadow
       ease-linear
-  		z-10
+      z-10
 			relative;
 
     transition: padding 0.1s linear;
