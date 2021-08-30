@@ -45,7 +45,7 @@
     "vite": "^2.5.0",
     "vite-plugin-components": "^0.13.2",
     "vite-plugin-windicss": "^1.2.7",
-    "vue-tsc": "^0.2.0"
+    "vue-tsc": "^0.3.0"
   },
   "husky": {
     "hooks": {
