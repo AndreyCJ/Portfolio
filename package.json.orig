@@ -1,0 +1,69 @@
+{
+  "name": "portfolio-vue3-vite",
+  "version": "0.0.0",
+  "author": "Andrey Chebotar",
+  "license": "MIT",
+  "homepage": "http://andreycj.github.io/Portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint:markup": "vue-tsc --noEmit",
+    "lint:script": "eslint --ext .ts,vue --ignore-path .gitignore .",
+    "lint:style": "stylelint src/**/*.{css,scss,vue}",
+    "commit": "cz",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "vue": "^3.2.1",
+    "vue-i18n": "^9.1.7",
+    "vue-router": "^4.0.10"
+  },
+  "devDependencies": {
+    "@iconify/json": "^1.1.395",
+    "@intlify/vite-plugin-vue-i18n": "^2.4.0",
+    "@types/node": "^16.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.28.2",
+    "@typescript-eslint/parser": "^4.28.2",
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vue/compiler-sfc": "^3.1.4",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@windicss/plugin-scrollbar": "^1.2.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.30.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.13.0",
+    "gh-pages": "^3.2.3",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-scss": "^4.0.0",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "typescript": "^4.3.5",
+    "unplugin-icons": "^0.7.2",
+    "vite": "^2.5.0",
+    "vite-plugin-components": "^0.13.2",
+    "vite-plugin-windicss": "^1.2.7",
+    "vue-tsc": "^0.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,vue}": "eslint --fix",
+    "src/**/*.{css,scss,vue}": "stylelint --fix",
+    "src/**/*": "prettier -w -u"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

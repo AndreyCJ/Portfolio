@@ -1,0 +1,19 @@
+button:
+  projects: Projects
+  home: Home
+  about: About
+  next: Next
+  back: Previous
+not-found: Not Found
+my-full-name: Andrey Chebotar
+my-position: Frontend Developer
+about-me: "The main technology stack I use: JavaScript (Typescript), Vue.js (v2, v3), Vuex. Strong knowledge of JavaScript, Vue.js, component architecture, atomic design, BEM methodology, HTML / CSS responsive layout. \ n Ability to work with the Git version control system (conventional commits). Experience in developing backend and REST API for web applications (NodeJS, Express, NestJS, MongoDB, MySQL, Redis)."
+projects:
+  timetable:
+    description: Progressive web-application for viewing the schedule of classes, ringing, substitutions. Developed with React, Node, Express, MongoDB.
+  depools:
+    description: Service for tracking all depools, with the ability to view your transactions in them, managing stakes.
+  1school:
+    description: Wordpress site with support for custom slider, posts, site search, widgets.
+  notesApp:
+    description: SPA note-taking application developed using AJAX asynchronous rendering techniques in pure JavaScript, PHP, MySQL.
