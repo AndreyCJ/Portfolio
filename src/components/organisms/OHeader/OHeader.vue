@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { defineComponent, onMounted, onUnmounted, ref } from 'vue';
+  import { defineComponent, ref } from 'vue';
   import { useI18n } from 'vue-i18n';
 
   import MLogo from '@/components/molecules/MLogo/MLogo.vue';
@@ -81,7 +81,7 @@
       transition-shadow
       ease-linear
       z-10
-			relative;
+      relative;
 
     transition: padding 0.1s linear;
 

@@ -10,10 +10,14 @@ const messages = Object.fromEntries(
   )
 );
 
+const defaultLocale = navigator.language
+  ? navigator.language.slice(0, 2)
+  : 'en';
+
 export const install: AppModule = (app) => {
   const i18n = createI18n({
     legacy: false,
-    locale: 'en',
+    locale: defaultLocale,
     fallbackLocale: 'en',
     messages,
   });
