@@ -1,0 +1,1 @@
+import{d as r,p as t,h as p,o,e as s,t as n}from"./vendor.0ad29569.js";var e=r({name:"AParagraph",props:{text:{type:String,required:!0}}});t("data-v-58e306d3");const _={class:"a-paragraph"};p();function d(a,c,i,u,h,l){return o(),s("p",_,n(a.text),1)}e.render=d;e.__scopeId="data-v-58e306d3";export{e as _};
