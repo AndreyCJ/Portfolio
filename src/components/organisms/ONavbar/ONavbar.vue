@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { computed, defineComponent } from 'vue';
+  import { computed, defineComponent, PropType } from 'vue';
   import { useI18n } from 'vue-i18n';
 
   import ALink from '@/components/atoms/ALink/ALink.vue';
@@ -11,11 +11,14 @@
     },
     props: {
       vertical: {
-        type: Boolean,
+        type: Boolean as PropType<boolean>,
         default: () => false,
       },
     },
-    setup() {
+    emits: {
+      linkClick: null,
+    },
+    setup(props, { emit }) {
       const { t } = useI18n();
       const pages = [
         {
@@ -38,8 +41,13 @@
         },
       ];
 
+      function handleLinkClick() {
+        emit('linkClick');
+      }
+
       return {
         pages,
+        handleLinkClick,
       };
     },
   });
@@ -47,12 +55,13 @@
 <template>
   <div class="navbar">
     <div class="nav-links text-sm" :class="{ 'nav-links--vertical': vertical }">
-      <ALink
+      <a-link
         v-for="page in pages"
         :key="page.to.name"
         :text="page.text.value"
         :to="page.to"
         :alt="page.text.value"
+        @click="handleLinkClick"
       />
     </div>
   </div>

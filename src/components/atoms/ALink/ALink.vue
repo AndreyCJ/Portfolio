@@ -18,11 +18,29 @@
         required: true,
       },
     },
+    emits: {
+      click: null,
+    },
+    setup(props, { emit }) {
+      function handleClick() {
+        emit('click');
+      }
+
+      return {
+        handleClick,
+      };
+    },
   });
 </script>
 
 <template>
-  <router-link class="a-link" :to="to" :alt="alt" active-class="a-link--active">
+  <router-link
+    class="a-link"
+    :to="to"
+    :alt="alt"
+    active-class="a-link--active"
+    @click="handleClick"
+  >
     {{ text }}
   </router-link>
 </template>

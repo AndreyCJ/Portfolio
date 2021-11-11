@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { defineProps, HTMLAttributes } from 'vue';
+  import { HTMLAttributes } from 'vue';
   import { getRandomBetween } from '@/utils/getRandomBetween';
 
   const props = defineProps({
