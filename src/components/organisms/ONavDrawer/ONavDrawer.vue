@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { defineComponent } from '@vue/runtime-core';
+  import { defineComponent, watch } from 'vue';
+  import { useRoute } from 'vue-router';
 
   export default defineComponent({
     name: 'ONavDrawer',
@@ -7,17 +8,16 @@
       closeMenu: () => Boolean,
     },
     setup(props, { emit }) {
+      const route = useRoute();
+
+      watch(() => route.name, closeMenu);
+
       function closeMenu() {
         emit('closeMenu');
       }
 
-      function closeWithDelay() {
-        setTimeout(closeMenu, 0);
-      }
-
       return {
         closeMenu,
-        closeWithDelay,
       };
     },
   });
@@ -30,7 +30,7 @@
         <i-eva-close-circle-outline />
       </a-button>
     </div>
-    <div class="nav-drawer__items" @click="closeWithDelay">
+    <div class="nav-drawer__items">
       <slot name="nav-items" />
     </div>
   </section>

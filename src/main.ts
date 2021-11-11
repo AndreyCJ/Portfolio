@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from '@/App.vue';
-import '@/styles/global.css';
+import '@/styles/global.postcss';
 import 'windi.css';
 
 const app = createApp(App);

@@ -48,11 +48,13 @@
   <header class="header header--adaptive-glass" :class="headerClass">
     <m-logo />
     <ONavbar class="<md:hidden" />
-    <o-nav-drawer v-if="isNavDrawerOpen" @close-menu="toggleNavDrawer">
-      <template #nav-items>
-        <ONavbar vertical />
-      </template>
-    </o-nav-drawer>
+    <transition name="fade" mode="in-out">
+      <o-nav-drawer v-if="isNavDrawerOpen" @close-menu="toggleNavDrawer">
+        <template #nav-items>
+          <ONavbar vertical />
+        </template>
+      </o-nav-drawer>
+    </transition>
     <div class="flex items-center">
       <a-button class="header__btn header__btn--lang" @click="switchLocale">
         {{ locale }}
